@@ -9,6 +9,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { telHref, whatsappHref, PHONE_NUMBER_DISPLAY } from "./lib/contact";
 
 /**
  * ------------------------------------------------------------------
@@ -45,7 +46,7 @@ const VEHICLES: Vehicle[] = [
       "Sellerie cuir exécutive",
     ],
     image:
-      "https://images.unsplash.com/photo-1678026039241-75a1becd25e5?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1536883442700-ffaa4d76e372?auto=format&fit=crop&w=1600&q=80",
   },
   {
     id: "v-class",
@@ -402,12 +403,43 @@ function Fleet() {
  */
 function QuickBooking() {
   const [selectedVehicle, setSelectedVehicle] = useState(VEHICLES[0].id);
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // Brancher ici votre logique de réservation (API, e-mail, CRM…)
-    console.log("Demande de réservation envoyée pour :", selectedVehicle);
+    setStatus("sending");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      vehicle:
+        VEHICLES.find((v) => v.id === selectedVehicle)?.name ??
+        selectedVehicle,
+      date: String(formData.get("date") ?? ""),
+      time: String(formData.get("time") ?? ""),
+      name: String(formData.get("name") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+    };
+
+    try {
+      const response = await fetch("/api/reservation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) throw new Error("send_failed");
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
+
+  const whatsappMessage =
+    "Bonjour, je souhaite réserver un trajet avec Black Excellence.";
 
   return (
     <section
@@ -423,8 +455,9 @@ function QuickBooking() {
             <RevealLine text="rapide" delay={0.1} />
           </h2>
           <p className="mt-5 max-w-sm text-neutral-400">
-            Indiquez vos dates et vos coordonnées : notre équipe confirme
-            votre réservation sous 30 minutes, 7 jours sur 7.
+            Indiquez vos dates et vos coordonnées : votre demande nous
+            parvient directement par e-mail et notre équipe confirme sous
+            30 minutes, 7 jours sur 7.
           </p>
 
           <ul className="mt-10 space-y-4 text-sm text-neutral-400">
@@ -441,6 +474,30 @@ function QuickBooking() {
               Disponible aussi par WhatsApp
             </li>
           </ul>
+
+          {/* Contact direct — toujours visible, en alternative au formulaire */}
+          <div className="mt-10 rounded-sm border border-white/10 bg-neutral-900/40 p-6">
+            <p className="text-sm text-neutral-300">
+              Besoin d&apos;une réponse immédiate ? Contactez directement
+              votre chauffeur.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a
+                href={telHref()}
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm text-neutral-100 transition-colors hover:border-white/50"
+              >
+                Appeler · {PHONE_NUMBER_DISPLAY}
+              </a>
+              <a
+                href={whatsappHref(whatsappMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#25D366]/10 border border-[#25D366]/40 px-5 py-2.5 text-sm text-[#25D366] transition-colors hover:bg-[#25D366]/20"
+              >
+                WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
 
         <motion.form
@@ -455,6 +512,7 @@ function QuickBooking() {
             <label className="flex flex-col gap-2 sm:col-span-2">
               <span className="text-xs text-neutral-400">Véhicule souhaité</span>
               <select
+                name="vehicle"
                 value={selectedVehicle}
                 onChange={(e) => setSelectedVehicle(e.target.value)}
                 className="rounded-sm border border-white/15 bg-neutral-950 px-4 py-3 text-sm text-neutral-100 outline-none transition-colors focus:border-gold"
@@ -470,6 +528,7 @@ function QuickBooking() {
             <label className="flex flex-col gap-2">
               <span className="text-xs text-neutral-400">Prise en charge</span>
               <input
+                name="date"
                 type="date"
                 required
                 className="rounded-sm border border-white/15 bg-neutral-950 px-4 py-3 text-sm text-neutral-100 outline-none transition-colors focus:border-gold"
@@ -479,6 +538,7 @@ function QuickBooking() {
             <label className="flex flex-col gap-2">
               <span className="text-xs text-neutral-400">Heure</span>
               <input
+                name="time"
                 type="time"
                 required
                 className="rounded-sm border border-white/15 bg-neutral-950 px-4 py-3 text-sm text-neutral-100 outline-none transition-colors focus:border-gold"
@@ -488,6 +548,7 @@ function QuickBooking() {
             <label className="flex flex-col gap-2">
               <span className="text-xs text-neutral-400">Nom complet</span>
               <input
+                name="name"
                 type="text"
                 required
                 placeholder="Jean Dupont"
@@ -498,6 +559,7 @@ function QuickBooking() {
             <label className="flex flex-col gap-2">
               <span className="text-xs text-neutral-400">Téléphone</span>
               <input
+                name="phone"
                 type="tel"
                 required
                 placeholder="+41 79 000 00 00"
@@ -508,14 +570,39 @@ function QuickBooking() {
 
           <button
             type="submit"
-            className="mt-8 w-full rounded-full bg-gold-soft py-3.5 text-sm font-medium text-neutral-950 transition-colors duration-300 hover:bg-gold-light"
+            disabled={status === "sending"}
+            className="mt-8 w-full rounded-full bg-gold-soft py-3.5 text-sm font-medium text-neutral-950 transition-colors duration-300 hover:bg-gold-light disabled:cursor-not-allowed disabled:opacity-60"
           >
-            Confirmer la demande
+            {status === "sending" ? "Envoi en cours…" : "Confirmer la demande"}
           </button>
 
-          <p className="mt-4 text-center text-xs text-neutral-500">
-            Aucun paiement n&apos;est requis à cette étape.
-          </p>
+          {status === "success" && (
+            <p className="mt-4 text-center text-sm text-emerald-400">
+              Votre demande a bien été envoyée par e-mail. Nous revenons
+              vers vous très vite.
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className="mt-4 text-center text-sm text-red-400">
+              L&apos;envoi a échoué. Merci de nous contacter directement par{" "}
+              <a
+                href={whatsappHref(whatsappMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                WhatsApp
+              </a>{" "}
+              ou par téléphone au {PHONE_NUMBER_DISPLAY}.
+            </p>
+          )}
+
+          {status === "idle" && (
+            <p className="mt-4 text-center text-xs text-neutral-500">
+              Aucun paiement n&apos;est requis à cette étape.
+            </p>
+          )}
         </motion.form>
       </div>
     </section>
@@ -546,6 +633,35 @@ function Footer() {
 
 /**
  * ------------------------------------------------------------------
+ *  COMPOSANT : WhatsAppFab
+ *  Bouton flottant persistant — contact direct à tout moment.
+ * ------------------------------------------------------------------
+ */
+function WhatsAppFab() {
+  return (
+    <a
+      href={whatsappHref(
+        "Bonjour, je souhaite réserver un trajet avec Black Excellence."
+      )}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contacter Black Excellence sur WhatsApp"
+      className="fixed bottom-5 left-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-neutral-950 shadow-[0_10px_30px_-8px_rgba(37,211,102,0.6)] transition-transform hover:scale-105"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-6 w-6 text-neutral-950"
+        aria-hidden="true"
+      >
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.87 9.87 0 0 0 4.62 1.17h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.85 14.02c-.25.7-1.45 1.34-2 1.42-.53.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.25.6.85 2.08.92 2.23.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.45.29.15.46.13.63-.08.17-.2.72-.84.92-1.13.2-.29.4-.24.66-.14.27.1 1.72.81 2.02.96.29.15.49.22.56.34.07.13.07.75-.18 1.45Z" />
+      </svg>
+    </a>
+  );
+}
+
+/**
+ * ------------------------------------------------------------------
  *  PAGE D'ACCUEIL
  * ------------------------------------------------------------------
  */
@@ -557,6 +673,7 @@ export default function Home() {
       <Fleet />
       <QuickBooking />
       <Footer />
+      <WhatsAppFab />
     </main>
   );
 }

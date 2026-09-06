@@ -3,6 +3,36 @@
 Site vitrine + réservation pour un chauffeur VTC indépendant en Suisse.
 Next.js 14 (App Router) · Tailwind CSS · Framer Motion · PWA installable.
 
+## Réservation par e-mail
+
+Le formulaire de réservation envoie les demandes par e-mail via
+[Resend](https://resend.com) (gratuit jusqu'à 100 e-mails/jour).
+
+1. Créez un compte sur resend.com et récupérez une clé API.
+2. Copiez `.env.example` en `.env.local` et renseignez les 3 variables
+   (`RESEND_API_KEY`, `RESERVATION_EMAIL_FROM`, `RESERVATION_EMAIL_TO`).
+3. Sur Vercel : Project Settings → Environment Variables → ajoutez les
+   3 mêmes variables avant de déployer.
+4. Pour la production, vérifiez votre propre domaine dans Resend afin
+   d'envoyer depuis une adresse comme `reservation@votredomaine.ch`
+   plutôt que l'adresse de test `onboarding@resend.dev`.
+
+Si l'envoi échoue (variables non configurées, panne du service…), le
+formulaire affiche automatiquement un message invitant le client à
+contacter le chauffeur par WhatsApp ou par téléphone — ces coordonnées
+sont également toujours visibles à côté du formulaire et via le bouton
+WhatsApp flottant.
+
+## Coordonnées de contact (téléphone / WhatsApp)
+
+À modifier dans `app/lib/contact.ts` :
+
+```ts
+export const PHONE_NUMBER_DISPLAY = "+41 79 000 00 00"; // affiché
+export const PHONE_NUMBER_E164 = "41790000000";          // pour tel:
+export const WHATSAPP_NUMBER = "41790000000";             // pour wa.me
+```
+
 ## PWA — installation sur iPhone / Android
 
 - Le site est une PWA complète : `public/manifest.json` + `public/sw.js`
