@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import PwaRegister from "./components/PwaRegister";
 import InstallPrompt from "./components/InstallPrompt";
@@ -58,6 +58,8 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   if (!locales.includes(locale)) notFound();
+
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 
