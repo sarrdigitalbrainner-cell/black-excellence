@@ -9,86 +9,67 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { telHref, whatsappHref, PHONE_NUMBER_DISPLAY } from "./lib/contact";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 /**
  * ------------------------------------------------------------------
- *  DONNÉES STATIQUES — À REMPLACER PAR VOS VRAIES DONNÉES / CMS
- *  Les tarifs sont symboliques, à ajuster selon votre grille réelle.
- *  Flotte alignée sur la référence client (Tesla Y, V-Class, S-Class).
+ *  DONNÉES STATIQUES (non traduites) — images, tarifs, identifiants.
+ *  Le texte affiché vient des fichiers /messages/<locale>.json.
+ *  Note images : les photos combinant précisément "ce modèle" + "ce
+ *  décor suisse" n'existent pas en stock gratuit — voir la légende
+ *  affichée sous chaque véhicule.
  * ------------------------------------------------------------------
  */
-type Vehicle = {
-  id: string;
-  name: string;
-  tagline: string;
-  category: string;
-  price: number;
-  seats: string;
-  bags: string;
-  features: string[];
-  image: string;
-};
-
-const VEHICLES: Vehicle[] = [
-  {
-    id: "tesla-y",
-    name: "Tesla Model Y",
-    tagline: "L'élégance silencieuse",
-    category: "Berline exécutive électrique",
-    price: 149,
-    seats: "3 places",
-    bags: "3 bagages",
-    features: [
-      "Conduite 100% électrique et silencieuse",
-      "Wi-Fi à bord offert",
-      "Eau et rafraîchissements",
-      "Sellerie cuir exécutive",
-    ],
+const VEHICLE_STATIC = {
+  eclass: {
+    price: 179,
     image:
-      "https://images.unsplash.com/photo-1536883442700-ffaa4d76e372?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1762393060999-ba7e0cc31379?auto=format&fit=crop&w=1600&q=80",
   },
-  {
-    id: "v-class",
-    name: "Mercedes-Benz Classe V",
-    tagline: "L'espace pour vos groupes",
-    category: "Van de luxe",
+  teslaY: {
+    price: 149,
+    image:
+      "https://images.unsplash.com/photo-1678026039241-75a1becd25e5?auto=format&fit=crop&w=1600&q=80",
+  },
+  vclass: {
     price: 219,
-    seats: "7 places",
-    bags: "8 bagages",
-    features: [
-      "Jusqu'à 7 passagers",
-      "Grand volume pour bagages et équipement de ski",
-      "Cabine climatisée",
-      "Rafraîchissements à bord",
-    ],
     image:
       "https://images.unsplash.com/photo-1578557904035-f68542b3770e?auto=format&fit=crop&w=1600&q=80",
   },
+} as const;
+
+const VEHICLE_IDS = ["eclass", "teslaY", "vclass"] as const;
+
+const SERVICE_STATIC = [
   {
-    id: "s-class",
-    name: "Mercedes-Benz Classe S",
-    tagline: "Le confort absolu",
-    category: "Berline First Class",
-    price: 259,
-    seats: "3 places",
-    bags: "3 bagages",
-    features: [
-      "Sièges arrière massants",
-      "Vitres à isolation renforcée",
-      "Champagne sur demande",
-      "Chauffeur professionnel dédié",
-    ],
     image:
-      "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1684838200815-36eef38f353c?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1760552973872-231e623c793f?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1762393060999-ba7e0cc31379?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1757584666096-59deb41f1124?auto=format&fit=crop&w=1200&q=80",
   },
 ];
+
+const SERVICE_VIDEO = {
+  src: "https://videos.pexels.com/video-files/8345154/8345154-uhd_1440_2560_25fps.mp4",
+  poster:
+    "https://images.pexels.com/videos/8345154/pexels-photo-8345154.jpeg?auto=compress&w=1200",
+};
 
 /**
  * ------------------------------------------------------------------
  *  COMPOSANT : RevealLine
- *  Masque le texte (overflow-hidden) et le fait glisser du bas
- *  vers le haut lors de son apparition dans le viewport.
  * ------------------------------------------------------------------
  */
 function RevealLine({
@@ -121,44 +102,55 @@ function RevealLine({
  * ------------------------------------------------------------------
  */
 function Header() {
+  const t = useTranslations("nav");
+
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-white/5 bg-neutral-950/70 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 sm:px-10">
         <a href="#top" className="flex items-center gap-3">
           <span className="relative h-10 w-10 overflow-hidden rounded-full border border-gold/40">
             <Image
               src="/icon-192.png"
-              alt="Black Excellence"
+              alt="Black Excellence Transport"
               fill
               className="object-cover"
             />
           </span>
-          <span className="font-display text-lg tracking-wide text-neutral-50">
+          <span className="font-display hidden text-lg tracking-wide text-neutral-50 sm:inline">
             BLACK <span className="text-gold-light">EXCELLENCE</span>
           </span>
         </a>
 
         <nav className="hidden items-center gap-8 text-sm text-neutral-300 md:flex">
           <a href="#flotte" className="transition-colors hover:text-gold-light">
-            Notre flotte
+            {t("fleet")}
+          </a>
+          <a
+            href="#services"
+            className="transition-colors hover:text-gold-light"
+          >
+            {t("services")}
           </a>
           <a
             href="#reservation"
             className="transition-colors hover:text-gold-light"
           >
-            Réservation
+            {t("booking")}
           </a>
           <a href="#contact" className="transition-colors hover:text-gold-light">
-            Contact
+            {t("contact")}
           </a>
         </nav>
 
-        <a
-          href="#reservation"
-          className="rounded-full border border-gold/50 px-5 py-2 text-sm text-gold-light transition-colors hover:border-gold hover:bg-gold/10"
-        >
-          Réserver
-        </a>
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
+          <a
+            href="#reservation"
+            className="hidden rounded-full border border-gold/50 px-5 py-2 text-sm text-gold-light transition-colors hover:border-gold hover:bg-gold/10 sm:inline-block"
+          >
+            {t("reserve")}
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -167,13 +159,20 @@ function Header() {
 /**
  * ------------------------------------------------------------------
  *  COMPOSANT : VehicleCard
- *  Parallax + fondu de l'image au scroll (useScroll / useTransform),
- *  et effet 3D au survol (tilt selon la position du curseur).
  * ------------------------------------------------------------------
  */
-function VehicleCard({ vehicle, index }: { vehicle: Vehicle; index: number }) {
+function VehicleCard({
+  id,
+  index,
+}: {
+  id: (typeof VEHICLE_IDS)[number];
+  index: number;
+}) {
+  const t = useTranslations();
   const cardRef = useRef<HTMLDivElement>(null);
   const tiltRef = useRef<HTMLDivElement>(null);
+  const { image, price } = VEHICLE_STATIC[id];
+  const features = t.raw(`vehicles.${id}.features`) as string[];
 
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -187,7 +186,6 @@ function VehicleCard({ vehicle, index }: { vehicle: Vehicle; index: number }) {
   );
   const imageY = useTransform(scrollYProgress, [0, 1], ["12%", "-12%"]);
 
-  // Effet 3D : la carte s'incline légèrement en suivant le curseur.
   const rotateX = useSpring(useMotionValue(0), { stiffness: 200, damping: 20 });
   const rotateY = useSpring(useMotionValue(0), { stiffness: 200, damping: 20 });
 
@@ -222,15 +220,14 @@ function VehicleCard({ vehicle, index }: { vehicle: Vehicle; index: number }) {
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         className="group relative flex flex-col overflow-hidden rounded-sm border border-white/10 bg-neutral-900/40 transition-shadow duration-500 hover:shadow-[0_30px_80px_-20px_rgba(212,175,55,0.4)]"
       >
-        {/* Image avec parallax au scroll + zoom au survol */}
         <div className="relative h-72 w-full overflow-hidden sm:h-80">
           <motion.div
             style={{ opacity: imageOpacity, y: imageY }}
             className="absolute inset-0 scale-110"
           >
             <Image
-              src={vehicle.image}
-              alt={vehicle.name}
+              src={image}
+              alt={t(`vehicles.${id}.name`)}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -239,26 +236,37 @@ function VehicleCard({ vehicle, index }: { vehicle: Vehicle; index: number }) {
           </motion.div>
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/10 to-transparent" />
           <span className="absolute left-5 top-5 rounded-full border border-white/15 bg-neutral-950/60 px-3 py-1 text-xs tracking-wide text-neutral-200 backdrop-blur-sm">
-            {vehicle.category}
+            {t(`vehicles.${id}.category`)}
+          </span>
+          <span className="absolute bottom-3 right-4 text-[10px] italic text-neutral-400">
+            {t("fleet.imageNote")}
           </span>
         </div>
 
-        {/* Contenu de la carte */}
-        <div className="flex flex-1 flex-col gap-5 p-7" style={{ transform: "translateZ(30px)" }}>
+        <div
+          className="flex flex-1 flex-col gap-5 p-7"
+          style={{ transform: "translateZ(30px)" }}
+        >
           <div>
             <h3 className="font-display text-2xl text-neutral-50">
-              {vehicle.name}
+              {t(`vehicles.${id}.name`)}
             </h3>
-            <p className="mt-1 text-sm text-neutral-400">{vehicle.tagline}</p>
+            <p className="mt-1 text-sm text-neutral-400">
+              {t(`vehicles.${id}.tagline`)}
+            </p>
           </div>
 
           <ul className="space-y-1.5 border-y border-white/10 py-4 text-sm text-neutral-300">
             <li className="flex items-center gap-2 text-neutral-400">
-              <span className="text-gold-light">{vehicle.seats}</span>
+              <span className="text-gold-light">
+                {t(`vehicles.${id}.seats`)}
+              </span>
               <span>·</span>
-              <span className="text-gold-light">{vehicle.bags}</span>
+              <span className="text-gold-light">
+                {t(`vehicles.${id}.bags`)}
+              </span>
             </li>
-            {vehicle.features.map((feature) => (
+            {features.map((feature) => (
               <li key={feature} className="flex items-start gap-2">
                 <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gold" />
                 {feature}
@@ -269,15 +277,17 @@ function VehicleCard({ vehicle, index }: { vehicle: Vehicle; index: number }) {
           <div className="mt-auto flex items-center justify-between pt-2">
             <p className="text-neutral-100">
               <span className="font-display text-2xl text-gold-soft">
-                dès {vehicle.price}
+                {t("fleet.from")} {price}
               </span>{" "}
-              <span className="text-sm text-neutral-400">CHF</span>
+              <span className="text-sm text-neutral-400">
+                {t("fleet.currency")}
+              </span>
             </p>
             <a
               href="#reservation"
               className="rounded-full border border-gold/50 px-5 py-2 text-sm text-gold-light transition-colors duration-300 hover:border-gold hover:bg-gold/10"
             >
-              Réserver
+              {t("fleet.reserveBtn")}
             </a>
           </div>
         </div>
@@ -292,6 +302,7 @@ function VehicleCard({ vehicle, index }: { vehicle: Vehicle; index: number }) {
  * ------------------------------------------------------------------
  */
 function Hero() {
+  const t = useTranslations("hero");
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -314,7 +325,7 @@ function Hero() {
       >
         <Image
           src="https://images.unsplash.com/photo-1617814065893-00757125efab?auto=format&fit=crop&w=2400&q=80"
-          alt="Berline de luxe pour chauffeur privé en Suisse"
+          alt="Luxury chauffeur vehicle in Switzerland"
           fill
           priority
           className="object-cover"
@@ -327,24 +338,20 @@ function Hero() {
         style={{ opacity: contentOpacity }}
         className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-40 sm:px-10"
       >
-        <p className="mb-6 text-sm text-neutral-300">
-          Chauffeur privé indépendant — Genève &amp; toute la Suisse
-        </p>
+        <p className="mb-6 text-sm text-neutral-300">{t("kicker")}</p>
 
         <h1 className="font-display max-w-3xl text-5xl leading-[1.05] text-neutral-50 sm:text-6xl md:text-7xl">
-          <RevealLine text="Votre chauffeur." delay={0.1} />
-          <RevealLine text="Notre excellence." delay={0.25} />
+          <RevealLine text={t("line1")} delay={0.1} />
+          <RevealLine text={t("line2")} delay={0.25} />
           <RevealLine
-            text="Chaque trajet compte."
+            text={t("line3")}
             delay={0.4}
             className="italic text-gold-soft"
           />
         </h1>
 
         <p className="mt-8 max-w-md text-base leading-relaxed text-neutral-300">
-          Transferts aéroport, trajets d&apos;affaires et longue distance à
-          bord d&apos;une flotte Tesla et Mercedes-Benz. Notre équipe vous
-          accompagne 24h/24, avec un prix fixe annoncé à l&apos;avance.
+          {t("paragraph")}
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -352,13 +359,13 @@ function Hero() {
             href="#reservation"
             className="rounded-full bg-gold-soft px-7 py-3 text-sm font-medium text-neutral-950 transition-colors duration-300 hover:bg-gold-light"
           >
-            Devis instantané
+            {t("ctaPrimary")}
           </a>
           <a
             href="#flotte"
             className="rounded-full border border-white/25 px-7 py-3 text-sm text-neutral-100 transition-colors duration-300 hover:border-white/60"
           >
-            Découvrir la flotte
+            {t("ctaSecondary")}
           </a>
         </div>
       </motion.div>
@@ -368,27 +375,25 @@ function Hero() {
 
 /**
  * ------------------------------------------------------------------
- *  COMPOSANT : Fleet (grille de véhicules)
+ *  COMPOSANT : Fleet
  * ------------------------------------------------------------------
  */
 function Fleet() {
+  const t = useTranslations("fleet");
+
   return (
     <section id="flotte" className="bg-neutral-950 px-6 py-28 sm:px-10">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-xl">
           <h2 className="font-display text-4xl text-neutral-50 sm:text-5xl">
-            <RevealLine text="Notre flotte" />
+            <RevealLine text={t("heading")} />
           </h2>
-          <p className="mt-5 text-neutral-400">
-            Trois véhicules entretenus au standard que notre équipe exige
-            pour chaque trajet — silencieux, spacieux ou premium selon
-            votre besoin.
-          </p>
+          <p className="mt-5 text-neutral-400">{t("intro")}</p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {VEHICLES.map((vehicle, index) => (
-            <VehicleCard key={vehicle.id} vehicle={vehicle} index={index} />
+          {VEHICLE_IDS.map((id, index) => (
+            <VehicleCard key={id} id={id} index={index} />
           ))}
         </div>
       </div>
@@ -398,11 +403,130 @@ function Fleet() {
 
 /**
  * ------------------------------------------------------------------
- *  COMPOSANT : QuickBooking (section de réservation rapide)
+ *  COMPOSANT : FloatingServiceCard
+ *  Carte illustrant un service, avec un léger flottement continu
+ *  (animation en boucle) en plus du fondu à l'apparition.
+ * ------------------------------------------------------------------
+ */
+function FloatingServiceCard({
+  image,
+  title,
+  description,
+  index,
+}: {
+  image: string;
+  title: string;
+  description: string;
+  index: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10%" }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="group"
+    >
+      <motion.div
+        animate={{ y: [0, -8, 0] }}
+        transition={{
+          duration: 4 + index * 0.6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="overflow-hidden rounded-sm border border-white/10 bg-neutral-900/40 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)] transition-shadow duration-500 group-hover:shadow-[0_25px_60px_-15px_rgba(212,175,55,0.35)]"
+      >
+        <div className="relative h-48 w-full overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 25vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent" />
+        </div>
+        <div className="p-5">
+          <h3 className="font-display text-lg text-neutral-50">{title}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-neutral-400">
+            {description}
+          </p>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+/**
+ * ------------------------------------------------------------------
+ *  COMPOSANT : Services
+ *  Vidéo (chauffeur ouvrant la porte) + cartes flottantes illustrant
+ *  les services (aéroport, champagne à bord, Alpes, Genève).
+ * ------------------------------------------------------------------
+ */
+function Services() {
+  const t = useTranslations("services");
+  const items = t.raw("items") as { title: string; description: string }[];
+
+  return (
+    <section id="services" className="bg-neutral-950 px-6 py-28 sm:px-10">
+      <div className="mx-auto max-w-6xl">
+        <div className="max-w-xl">
+          <h2 className="font-display text-4xl text-neutral-50 sm:text-5xl">
+            <RevealLine text={t("heading")} />
+          </h2>
+          <p className="mt-5 text-neutral-400">{t("intro")}</p>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 0.7 }}
+            className="relative row-span-2 overflow-hidden rounded-sm border border-gold/20"
+          >
+            <video
+              className="h-full min-h-[420px] w-full object-cover"
+              src={SERVICE_VIDEO.src}
+              poster={SERVICE_VIDEO.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/10 to-transparent" />
+            <p className="absolute bottom-5 left-5 font-display text-lg text-neutral-50">
+              {t("videoCaption")}
+            </p>
+          </motion.div>
+
+          {items.map((item, index) => (
+            <FloatingServiceCard
+              key={item.title}
+              image={SERVICE_STATIC[index]?.image ?? SERVICE_STATIC[0].image}
+              title={item.title}
+              description={item.description}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * ------------------------------------------------------------------
+ *  COMPOSANT : QuickBooking
  * ------------------------------------------------------------------
  */
 function QuickBooking() {
-  const [selectedVehicle, setSelectedVehicle] = useState(VEHICLES[0].id);
+  const t = useTranslations("booking");
+  const tVehicles = useTranslations("vehicles");
+  const [selectedVehicle, setSelectedVehicle] = useState<
+    (typeof VEHICLE_IDS)[number]
+  >(VEHICLE_IDS[0]);
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
@@ -414,9 +538,7 @@ function QuickBooking() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     const payload = {
-      vehicle:
-        VEHICLES.find((v) => v.id === selectedVehicle)?.name ??
-        selectedVehicle,
+      vehicle: tVehicles(`${selectedVehicle}.name`),
       date: String(formData.get("date") ?? ""),
       time: String(formData.get("time") ?? ""),
       name: String(formData.get("name") ?? ""),
@@ -438,8 +560,7 @@ function QuickBooking() {
     }
   }
 
-  const whatsappMessage =
-    "Bonjour, je souhaite réserver un trajet avec Black Excellence.";
+  const whatsappMessage = t("whatsappMessage");
 
   return (
     <section
@@ -451,50 +572,42 @@ function QuickBooking() {
       <div className="relative mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <h2 className="font-display text-4xl text-neutral-50 sm:text-5xl">
-            <RevealLine text="Réservation" />
-            <RevealLine text="rapide" delay={0.1} />
+            <RevealLine text={t("heading1")} />
+            <RevealLine text={t("heading2")} delay={0.1} />
           </h2>
-          <p className="mt-5 max-w-sm text-neutral-400">
-            Indiquez vos dates et vos coordonnées : votre demande nous
-            parvient directement par e-mail et notre équipe confirme sous
-            30 minutes, 7 jours sur 7.
-          </p>
+          <p className="mt-5 max-w-sm text-neutral-400">{t("intro")}</p>
 
           <ul className="mt-10 space-y-4 text-sm text-neutral-400">
             <li className="flex items-center gap-3">
               <span className="h-px w-8 bg-gold" />
-              Suivi de vol en temps réel pour les transferts aéroport
+              {t("bullet1")}
             </li>
             <li className="flex items-center gap-3">
               <span className="h-px w-8 bg-gold" />
-              Prix fixe, annoncé avant la course
+              {t("bullet2")}
             </li>
             <li className="flex items-center gap-3">
               <span className="h-px w-8 bg-gold" />
-              Disponible aussi par WhatsApp
+              {t("bullet3")}
             </li>
           </ul>
 
-          {/* Contact direct — toujours visible, en alternative au formulaire */}
           <div className="mt-10 rounded-sm border border-white/10 bg-neutral-900/40 p-6">
-            <p className="text-sm text-neutral-300">
-              Besoin d&apos;une réponse immédiate ? Contactez directement
-              votre chauffeur.
-            </p>
+            <p className="text-sm text-neutral-300">{t("contactHeading")}</p>
             <div className="mt-4 flex flex-wrap gap-3">
               <a
                 href={telHref()}
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm text-neutral-100 transition-colors hover:border-white/50"
               >
-                Appeler · {PHONE_NUMBER_DISPLAY}
+                {t("callBtn")} · {PHONE_NUMBER_DISPLAY}
               </a>
               <a
                 href={whatsappHref(whatsappMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#25D366]/10 border border-[#25D366]/40 px-5 py-2.5 text-sm text-[#25D366] transition-colors hover:bg-[#25D366]/20"
+                className="inline-flex items-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-2.5 text-sm text-[#25D366] transition-colors hover:bg-[#25D366]/20"
               >
-                WhatsApp
+                {t("whatsappBtn")}
               </a>
             </div>
           </div>
@@ -510,23 +623,31 @@ function QuickBooking() {
         >
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <label className="flex flex-col gap-2 sm:col-span-2">
-              <span className="text-xs text-neutral-400">Véhicule souhaité</span>
+              <span className="text-xs text-neutral-400">
+                {t("vehicleLabel")}
+              </span>
               <select
                 name="vehicle"
                 value={selectedVehicle}
-                onChange={(e) => setSelectedVehicle(e.target.value)}
+                onChange={(e) =>
+                  setSelectedVehicle(
+                    e.target.value as (typeof VEHICLE_IDS)[number]
+                  )
+                }
                 className="rounded-sm border border-white/15 bg-neutral-950 px-4 py-3 text-sm text-neutral-100 outline-none transition-colors focus:border-gold"
               >
-                {VEHICLES.map((vehicle) => (
-                  <option key={vehicle.id} value={vehicle.id}>
-                    {vehicle.name} — dès {vehicle.price} CHF
+                {VEHICLE_IDS.map((id) => (
+                  <option key={id} value={id}>
+                    {tVehicles(`${id}.name`)}
                   </option>
                 ))}
               </select>
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-xs text-neutral-400">Prise en charge</span>
+              <span className="text-xs text-neutral-400">
+                {t("dateLabel")}
+              </span>
               <input
                 name="date"
                 type="date"
@@ -536,7 +657,9 @@ function QuickBooking() {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-xs text-neutral-400">Heure</span>
+              <span className="text-xs text-neutral-400">
+                {t("timeLabel")}
+              </span>
               <input
                 name="time"
                 type="time"
@@ -546,23 +669,27 @@ function QuickBooking() {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-xs text-neutral-400">Nom complet</span>
+              <span className="text-xs text-neutral-400">
+                {t("nameLabel")}
+              </span>
               <input
                 name="name"
                 type="text"
                 required
-                placeholder="Jean Dupont"
+                placeholder={t("namePlaceholder")}
                 className="rounded-sm border border-white/15 bg-neutral-950 px-4 py-3 text-sm text-neutral-100 outline-none transition-colors placeholder:text-neutral-600 focus:border-gold"
               />
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-xs text-neutral-400">Téléphone</span>
+              <span className="text-xs text-neutral-400">
+                {t("phoneLabel")}
+              </span>
               <input
                 name="phone"
                 type="tel"
                 required
-                placeholder="+41 79 000 00 00"
+                placeholder={t("phonePlaceholder")}
                 className="rounded-sm border border-white/15 bg-neutral-950 px-4 py-3 text-sm text-neutral-100 outline-none transition-colors placeholder:text-neutral-600 focus:border-gold"
               />
             </label>
@@ -573,19 +700,18 @@ function QuickBooking() {
             disabled={status === "sending"}
             className="mt-8 w-full rounded-full bg-gold-soft py-3.5 text-sm font-medium text-neutral-950 transition-colors duration-300 hover:bg-gold-light disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {status === "sending" ? "Envoi en cours…" : "Confirmer la demande"}
+            {status === "sending" ? t("sending") : t("submit")}
           </button>
 
           {status === "success" && (
             <p className="mt-4 text-center text-sm text-emerald-400">
-              Votre demande a bien été envoyée par e-mail. Nous revenons
-              vers vous très vite.
+              {t("success")}
             </p>
           )}
 
           {status === "error" && (
             <p className="mt-4 text-center text-sm text-red-400">
-              L&apos;envoi a échoué. Merci de nous contacter directement par{" "}
+              {t("errorText")}{" "}
               <a
                 href={whatsappHref(whatsappMessage)}
                 target="_blank"
@@ -594,13 +720,13 @@ function QuickBooking() {
               >
                 WhatsApp
               </a>{" "}
-              ou par téléphone au {PHONE_NUMBER_DISPLAY}.
+              {t("errorOr")} {PHONE_NUMBER_DISPLAY}.
             </p>
           )}
 
           {status === "idle" && (
             <p className="mt-4 text-center text-xs text-neutral-500">
-              Aucun paiement n&apos;est requis à cette étape.
+              {t("idleNote")}
             </p>
           )}
         </motion.form>
@@ -615,6 +741,8 @@ function QuickBooking() {
  * ------------------------------------------------------------------
  */
 function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer
       id="contact"
@@ -622,10 +750,12 @@ function Footer() {
     >
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center text-sm text-neutral-500 sm:flex-row sm:text-left">
         <p className="font-display text-neutral-300">
-          BLACK <span className="text-gold-light">EXCELLENCE</span>
+          BLACK <span className="text-gold-light">EXCELLENCE TRANSPORT</span>
         </p>
-        <p>Genève, Suisse — disponible 24h/24, 7j/7</p>
-        <p>© {new Date().getFullYear()} Black Excellence. Tous droits réservés.</p>
+        <p>{t("location")}</p>
+        <p>
+          © {new Date().getFullYear()} Black Excellence Transport. {t("rights")}
+        </p>
       </div>
     </footer>
   );
@@ -634,18 +764,17 @@ function Footer() {
 /**
  * ------------------------------------------------------------------
  *  COMPOSANT : WhatsAppFab
- *  Bouton flottant persistant — contact direct à tout moment.
  * ------------------------------------------------------------------
  */
 function WhatsAppFab() {
+  const t = useTranslations("booking");
+
   return (
     <a
-      href={whatsappHref(
-        "Bonjour, je souhaite réserver un trajet avec Black Excellence."
-      )}
+      href={whatsappHref(t("whatsappMessage"))}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contacter Black Excellence sur WhatsApp"
+      aria-label="WhatsApp"
       className="fixed bottom-5 left-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-neutral-950 shadow-[0_10px_30px_-8px_rgba(37,211,102,0.6)] transition-transform hover:scale-105"
     >
       <svg
@@ -671,6 +800,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Fleet />
+      <Services />
       <QuickBooking />
       <Footer />
       <WhatsAppFab />

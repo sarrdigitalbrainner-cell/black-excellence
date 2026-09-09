@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "fleet": "Unsere Flotte",
+    "services": "Leistungen",
+    "booking": "Buchung",
+    "contact": "Kontakt",
+    "reserve": "Buchen"
+  },
+  "hero": {
+    "kicker": "Unabhängiger Privatchauffeur — Genf und die ganze Schweiz",
+    "line1": "Ihr Chauffeur.",
+    "line2": "Unsere Exzellenz.",
+    "line3": "Jede Fahrt zählt.",
+    "paragraph": "Flughafentransfers, Geschäftsreisen und Langstreckenfahrten mit einer Tesla- und Mercedes-Benz-Flotte. Unser Team ist rund um die Uhr für Sie da, mit einem Festpreis, der vor der Fahrt vereinbart wird.",
+    "ctaPrimary": "Sofortangebot",
+    "ctaSecondary": "Flotte entdecken"
+  },
+  "fleet": {
+    "heading": "Unsere Flotte",
+    "intro": "Drei Fahrzeuge, gepflegt nach dem Standard, den unser Team für jede Fahrt verlangt — leise, geräumig oder gehoben, je nach Bedarf.",
+    "from": "ab",
+    "currency": "CHF",
+    "reserveBtn": "Buchen",
+    "imageNote": "Illustrationsfoto"
+  },
+  "vehicles": {
+    "eclass": {
+      "name": "Mercedes-Benz E-Klasse",
+      "tagline": "Business, verfeinert",
+      "category": "Business-Limousine",
+      "seats": "3 Plätze",
+      "bags": "3 Gepäckstücke",
+      "features": [
+        "Großzügiger Fahrkomfort",
+        "Ambiente-Innenbeleuchtung",
+        "WLAN an Bord",
+        "Leise, ruhige Fahrt"
+      ]
+    },
+    "teslaY": {
+      "name": "Tesla Model Y",
+      "tagline": "Stille Eleganz",
+      "category": "Elektrisches Business-SUV",
+      "seats": "4 Plätze",
+      "bags": "4 Gepäckstücke",
+      "features": [
+        "100% elektrisch, null Emissionen",
+        "Panorama-Glasdach",
+        "Wasser & WLAN an Bord",
+        "Besonders leise Kabine"
+      ]
+    },
+    "vclass": {
+      "name": "Mercedes-Benz V-Klasse",
+      "tagline": "Platz für Ihre Gruppe",
+      "category": "Luxus-Van",
+      "seats": "7 Plätze",
+      "bags": "8 Gepäckstücke",
+      "features": [
+        "Bis zu 7 Passagiere",
+        "Viel Platz für Gepäck und Skiausrüstung",
+        "Klimatisierte Kabine",
+        "Erfrischungen an Bord"
+      ]
+    }
+  },
+  "services": {
+    "heading": "Unsere Leistungen",
+    "intro": "Ein Einblick, wie sich eine Fahrt mit Black Excellence Transport anfühlt.",
+    "videoCaption": "Ihr Fahrer, immer pünktlich",
+    "items": [
+      {
+        "title": "Flughafen & Privatluftfahrt",
+        "description": "Persönlicher Empfang am Flughafen Genf, Flugverfolgung in Echtzeit und reibungslose Transfers für Kunden der Privatluftfahrt."
+      },
+      {
+        "title": "Champagner-Service an Bord",
+        "description": "Gekühlter Champagner und Erfrischungen in der Kabine, auf Wunsch, für Feiern und besondere Anlässe."
+      },
+      {
+        "title": "Alpine und grenzüberschreitende Fahrten",
+        "description": "Skiorte, Bergretreats und grenzüberschreitende Fahrten durch die Alpen, von Tür zu Tür organisiert."
+      },
+      {
+        "title": "Genf, von Tür zu Tür",
+        "description": "Geschäftstermine, Veranstaltungen und Stadtfahrten in Genf, stets mit derselben Diskretion und Pünktlichkeit."
+      }
+    ]
+  },
+  "booking": {
+    "heading1": "Schnelle",
+    "heading2": "Buchung",
+    "intro": "Teilen Sie uns Ihre Daten mit: Ihre Anfrage erreicht uns direkt per E-Mail, und unser Team bestätigt innerhalb von 30 Minuten, 7 Tage die Woche.",
+    "bullet1": "Echtzeit-Flugverfolgung für Flughafentransfers",
+    "bullet2": "Festpreis, vor der Fahrt vereinbart",
+    "bullet3": "Auch über WhatsApp erreichbar",
+    "contactHeading": "Sofortige Antwort nötig? Kontaktieren Sie Ihren Chauffeur direkt.",
+    "callBtn": "Anrufen",
+    "whatsappBtn": "WhatsApp",
+    "whatsappMessage": "Guten Tag, ich möchte eine Fahrt mit Black Excellence Transport buchen.",
+    "vehicleLabel": "Gewünschtes Fahrzeug",
+    "dateLabel": "Abholdatum",
+    "timeLabel": "Uhrzeit",
+    "nameLabel": "Vollständiger Name",
+    "namePlaceholder": "Max Mustermann",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+41 79 000 00 00",
+    "submit": "Anfrage bestätigen",
+    "sending": "Wird gesendet…",
+    "success": "Ihre Anfrage wurde per E-Mail gesendet. Wir melden uns in Kürze bei Ihnen.",
+    "errorText": "Der Versand ist fehlgeschlagen. Bitte kontaktieren Sie uns direkt per",
+    "errorOr": "oder telefonisch unter",
+    "idleNote": "In diesem Schritt ist keine Zahlung erforderlich."
+  },
+  "footer": {
+    "location": "Genf, Schweiz — rund um die Uhr verfügbar",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "install": {
+    "title": "Black Excellence Transport installieren",
+    "iosText1": "Tippen Sie auf",
+    "iosShare": "Teilen",
+    "iosText2": "dann auf",
+    "iosAdd": "Zum Home-Bildschirm",
+    "androidText": "Schnellerer Zugriff auf Ihren Chauffeur, wie eine App.",
+    "installBtn": "Installieren",
+    "laterBtn": "Später"
+  },
+  "languageSwitcher": {
+    "label": "Sprache"
+  }
+}

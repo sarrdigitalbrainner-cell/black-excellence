@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "fleet": "Our Fleet",
+    "services": "Services",
+    "booking": "Booking",
+    "contact": "Contact",
+    "reserve": "Reserve"
+  },
+  "hero": {
+    "kicker": "Independent private chauffeur — Geneva & all of Switzerland",
+    "line1": "Your chauffeur.",
+    "line2": "Our excellence.",
+    "line3": "Every journey matters.",
+    "paragraph": "Airport transfers, business travel and long-distance journeys aboard a Tesla and Mercedes-Benz fleet. Our team is with you 24/7, with a fixed price agreed before you travel.",
+    "ctaPrimary": "Instant quote",
+    "ctaSecondary": "Discover the fleet"
+  },
+  "fleet": {
+    "heading": "Our Fleet",
+    "intro": "Three vehicles maintained to the standard our team demands for every journey — silent, spacious or premium, whatever you need.",
+    "from": "from",
+    "currency": "CHF",
+    "reserveBtn": "Reserve",
+    "imageNote": "Illustrative photo"
+  },
+  "vehicles": {
+    "eclass": {
+      "name": "Mercedes-Benz E-Class",
+      "tagline": "Business, refined",
+      "category": "Executive Sedan",
+      "seats": "3 seats",
+      "bags": "3 bags",
+      "features": [
+        "Extended cabin comfort",
+        "Ambient interior lighting",
+        "Wi-Fi on board",
+        "Quiet, composed ride"
+      ]
+    },
+    "teslaY": {
+      "name": "Tesla Model Y",
+      "tagline": "Silent elegance",
+      "category": "Electric Executive SUV",
+      "seats": "4 seats",
+      "bags": "4 bags",
+      "features": [
+        "Fully electric, zero emissions",
+        "Panoramic glass roof",
+        "Bottled water & Wi-Fi",
+        "Whisper-quiet cabin"
+      ]
+    },
+    "vclass": {
+      "name": "Mercedes-Benz V-Class",
+      "tagline": "Room for your group",
+      "category": "Luxury Van",
+      "seats": "7 seats",
+      "bags": "8 bags",
+      "features": [
+        "Seats up to 7 passengers",
+        "Generous space for luggage & ski gear",
+        "Climate-controlled cabin",
+        "Refreshments on board"
+      ]
+    }
+  },
+  "services": {
+    "heading": "Our Services",
+    "intro": "A closer look at what a journey with Black Excellence Transport feels like.",
+    "videoCaption": "Your driver, always on time",
+    "items": [
+      {
+        "title": "Airport & Private Aviation",
+        "description": "Meet & greet at Geneva Airport, live flight tracking, and seamless transfers for private aviation clients."
+      },
+      {
+        "title": "Onboard Champagne Service",
+        "description": "Chilled champagne and refreshments in the cabin, on request, for celebrations and special occasions."
+      },
+      {
+        "title": "Alpine & Cross-Border Journeys",
+        "description": "Ski resorts, mountain retreats and cross-border trips through the Alps, handled door to door."
+      },
+      {
+        "title": "Geneva, Door to Door",
+        "description": "Business meetings, events and city travel across Geneva, with the same discretion and punctuality every time."
+      }
+    ]
+  },
+  "booking": {
+    "heading1": "Quick",
+    "heading2": "Booking",
+    "intro": "Share your dates and details: your request reaches us directly by e-mail, and our team confirms within 30 minutes, 7 days a week.",
+    "bullet1": "Live flight tracking for airport transfers",
+    "bullet2": "Fixed price, agreed before the journey",
+    "bullet3": "Also available on WhatsApp",
+    "contactHeading": "Need an immediate answer? Contact your chauffeur directly.",
+    "callBtn": "Call",
+    "whatsappBtn": "WhatsApp",
+    "whatsappMessage": "Hello, I'd like to book a journey with Black Excellence Transport.",
+    "vehicleLabel": "Preferred vehicle",
+    "dateLabel": "Pick-up date",
+    "timeLabel": "Time",
+    "nameLabel": "Full name",
+    "namePlaceholder": "John Smith",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "+41 79 000 00 00",
+    "submit": "Confirm request",
+    "sending": "Sending…",
+    "success": "Your request has been sent by e-mail. We'll get back to you shortly.",
+    "errorText": "Sending failed. Please contact us directly by",
+    "errorOr": "or by phone at",
+    "idleNote": "No payment is required at this stage."
+  },
+  "footer": {
+    "location": "Geneva, Switzerland — available 24/7",
+    "rights": "All rights reserved."
+  },
+  "install": {
+    "title": "Install Black Excellence Transport",
+    "iosText1": "Tap",
+    "iosShare": "Share",
+    "iosText2": "then",
+    "iosAdd": "Add to Home Screen",
+    "androidText": "Get faster access to your chauffeur, like an app.",
+    "installBtn": "Install",
+    "laterBtn": "Later"
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  }
+}

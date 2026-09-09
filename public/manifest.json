@@ -1,14 +1,14 @@
 {
-  "name": "Black Excellence — Chauffeur privé Suisse",
+  "name": "Black Excellence Transport — Private Chauffeur Switzerland",
   "short_name": "Black Excellence",
-  "description": "Service de chauffeur privé VTC indépendant en Suisse — transferts aéroport, trajets longue distance, service VIP.",
+  "description": "Independent private chauffeur service in Switzerland — airport transfers, long-distance journeys, VIP service.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#0A0A0A",
   "theme_color": "#0A0A0A",
-  "lang": "fr-CH",
+  "lang": "en",
   "icons": [
     {
       "src": "/icon-192.png",

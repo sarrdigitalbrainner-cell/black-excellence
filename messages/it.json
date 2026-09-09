@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "fleet": "La nostra flotta",
+    "services": "Servizi",
+    "booking": "Prenotazione",
+    "contact": "Contatti",
+    "reserve": "Prenota"
+  },
+  "hero": {
+    "kicker": "Autista privato indipendente — Ginevra e tutta la Svizzera",
+    "line1": "Il vostro autista.",
+    "line2": "La nostra eccellenza.",
+    "line3": "Ogni viaggio conta.",
+    "paragraph": "Transfer aeroportuali, viaggi di lavoro e lunghe percorrenze a bordo di una flotta Tesla e Mercedes-Benz. Il nostro team è al vostro fianco 24 ore su 24, con una tariffa fissa concordata prima della corsa.",
+    "ctaPrimary": "Preventivo immediato",
+    "ctaSecondary": "Scoprire la flotta"
+  },
+  "fleet": {
+    "heading": "La nostra flotta",
+    "intro": "Tre veicoli mantenuti secondo lo standard che il nostro team richiede per ogni corsa — silenziosi, spaziosi o premium, a seconda delle esigenze.",
+    "from": "da",
+    "currency": "CHF",
+    "reserveBtn": "Prenota",
+    "imageNote": "Foto illustrativa"
+  },
+  "vehicles": {
+    "eclass": {
+      "name": "Mercedes-Benz Classe E",
+      "tagline": "L'eleganza del business",
+      "category": "Berlina executive",
+      "seats": "3 posti",
+      "bags": "3 bagagli",
+      "features": [
+        "Comfort di guida superiore",
+        "Illuminazione d'atmosfera",
+        "Wi-Fi a bordo",
+        "Marcia silenziosa e composta"
+      ]
+    },
+    "teslaY": {
+      "name": "Tesla Model Y",
+      "tagline": "Eleganza silenziosa",
+      "category": "SUV executive elettrico",
+      "seats": "4 posti",
+      "bags": "4 bagagli",
+      "features": [
+        "100% elettrico, zero emissioni",
+        "Tetto panoramico in vetro",
+        "Acqua e Wi-Fi a bordo",
+        "Abitacolo estremamente silenzioso"
+      ]
+    },
+    "vclass": {
+      "name": "Mercedes-Benz Classe V",
+      "tagline": "Spazio per il vostro gruppo",
+      "category": "Van di lusso",
+      "seats": "7 posti",
+      "bags": "8 bagagli",
+      "features": [
+        "Fino a 7 passeggeri",
+        "Ampio spazio per bagagli e attrezzatura da sci",
+        "Cabina climatizzata",
+        "Rinfreschi a bordo"
+      ]
+    }
+  },
+  "services": {
+    "heading": "I nostri servizi",
+    "intro": "Uno sguardo a cosa significa viaggiare con Black Excellence Transport.",
+    "videoCaption": "Il vostro autista, sempre puntuale",
+    "items": [
+      {
+        "title": "Aeroporto e aviazione privata",
+        "description": "Accoglienza personalizzata all'aeroporto di Ginevra, monitoraggio del volo in tempo reale e transfer impeccabili per la clientela dell'aviazione privata."
+      },
+      {
+        "title": "Servizio champagne a bordo",
+        "description": "Champagne fresco e rinfreschi in cabina, su richiesta, per celebrazioni e occasioni speciali."
+      },
+      {
+        "title": "Viaggi alpini e transfrontalieri",
+        "description": "Stazioni sciistiche, ritiri in montagna e viaggi transfrontalieri attraverso le Alpi, gestiti porta a porta."
+      },
+      {
+        "title": "Ginevra, porta a porta",
+        "description": "Riunioni di lavoro, eventi e spostamenti in città a Ginevra, con la stessa discrezione e puntualità ogni volta."
+      }
+    ]
+  },
+  "booking": {
+    "heading1": "Prenotazione",
+    "heading2": "rapida",
+    "intro": "Indicate le vostre date e i vostri dati: la richiesta ci arriva direttamente via e-mail e il nostro team conferma entro 30 minuti, 7 giorni su 7.",
+    "bullet1": "Monitoraggio del volo in tempo reale per i transfer aeroportuali",
+    "bullet2": "Tariffa fissa, concordata prima della corsa",
+    "bullet3": "Disponibile anche su WhatsApp",
+    "contactHeading": "Serve una risposta immediata? Contattate direttamente il vostro autista.",
+    "callBtn": "Chiama",
+    "whatsappBtn": "WhatsApp",
+    "whatsappMessage": "Buongiorno, vorrei prenotare una corsa con Black Excellence Transport.",
+    "vehicleLabel": "Veicolo desiderato",
+    "dateLabel": "Data di ritiro",
+    "timeLabel": "Orario",
+    "nameLabel": "Nome completo",
+    "namePlaceholder": "Mario Rossi",
+    "phoneLabel": "Telefono",
+    "phonePlaceholder": "+41 79 000 00 00",
+    "submit": "Conferma la richiesta",
+    "sending": "Invio in corso…",
+    "success": "La vostra richiesta è stata inviata via e-mail. Vi risponderemo a breve.",
+    "errorText": "L'invio non è riuscito. Vi preghiamo di contattarci direttamente su",
+    "errorOr": "o per telefono al",
+    "idleNote": "Nessun pagamento è richiesto in questa fase."
+  },
+  "footer": {
+    "location": "Ginevra, Svizzera — disponibile 24 ore su 24, 7 giorni su 7",
+    "rights": "Tutti i diritti riservati."
+  },
+  "install": {
+    "title": "Installa Black Excellence Transport",
+    "iosText1": "Tocca",
+    "iosShare": "Condividi",
+    "iosText2": "poi",
+    "iosAdd": "Aggiungi a Home",
+    "androidText": "Accedi più rapidamente al tuo autista, come un'app.",
+    "installBtn": "Installa",
+    "laterBtn": "Più tardi"
+  },
+  "languageSwitcher": {
+    "label": "Lingua"
+  }
+}

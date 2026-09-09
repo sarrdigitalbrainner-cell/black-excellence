@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "fleet": "Notre flotte",
+    "services": "Services",
+    "booking": "Réservation",
+    "contact": "Contact",
+    "reserve": "Réserver"
+  },
+  "hero": {
+    "kicker": "Chauffeur privé indépendant — Genève et toute la Suisse",
+    "line1": "Votre chauffeur.",
+    "line2": "Notre excellence.",
+    "line3": "Chaque trajet compte.",
+    "paragraph": "Transferts aéroport, trajets d'affaires et longue distance à bord d'une flotte Tesla et Mercedes-Benz. Notre équipe vous accompagne 24h/24, avec un prix fixe annoncé à l'avance.",
+    "ctaPrimary": "Devis instantané",
+    "ctaSecondary": "Découvrir la flotte"
+  },
+  "fleet": {
+    "heading": "Notre flotte",
+    "intro": "Trois véhicules entretenus au standard que notre équipe exige pour chaque trajet — silencieux, spacieux ou premium selon votre besoin.",
+    "from": "dès",
+    "currency": "CHF",
+    "reserveBtn": "Réserver",
+    "imageNote": "Photo d'illustration"
+  },
+  "vehicles": {
+    "eclass": {
+      "name": "Mercedes-Benz Classe E",
+      "tagline": "Le raffinement business",
+      "category": "Berline exécutive",
+      "seats": "3 places",
+      "bags": "3 bagages",
+      "features": [
+        "Habitacle au confort étendu",
+        "Éclairage d'ambiance intérieur",
+        "Wi-Fi à bord",
+        "Conduite silencieuse et posée"
+      ]
+    },
+    "teslaY": {
+      "name": "Tesla Model Y",
+      "tagline": "L'élégance silencieuse",
+      "category": "SUV exécutif électrique",
+      "seats": "4 places",
+      "bags": "4 bagages",
+      "features": [
+        "100% électrique, zéro émission",
+        "Toit vitré panoramique",
+        "Eau et Wi-Fi à bord",
+        "Cabine ultra-silencieuse"
+      ]
+    },
+    "vclass": {
+      "name": "Mercedes-Benz Classe V",
+      "tagline": "L'espace pour vos groupes",
+      "category": "Van de luxe",
+      "seats": "7 places",
+      "bags": "8 bagages",
+      "features": [
+        "Jusqu'à 7 passagers",
+        "Grand volume pour bagages et équipement de ski",
+        "Cabine climatisée",
+        "Rafraîchissements à bord"
+      ]
+    }
+  },
+  "services": {
+    "heading": "Nos services",
+    "intro": "Un aperçu de ce que représente un trajet avec Black Excellence Transport.",
+    "videoCaption": "Votre chauffeur, toujours à l'heure",
+    "items": [
+      {
+        "title": "Aéroport & aviation privée",
+        "description": "Accueil personnalisé à l'aéroport de Genève, suivi de vol en temps réel et transferts fluides pour la clientèle de l'aviation privée."
+      },
+      {
+        "title": "Service champagne à bord",
+        "description": "Champagne frais et rafraîchissements en cabine, sur demande, pour vos célébrations et occasions spéciales."
+      },
+      {
+        "title": "Trajets alpins et transfrontaliers",
+        "description": "Stations de ski, retraites en montagne et trajets transfrontaliers à travers les Alpes, gérés de bout en bout."
+      },
+      {
+        "title": "Genève, porte à porte",
+        "description": "Réunions d'affaires, événements et déplacements en ville à Genève, avec la même discrétion et la même ponctualité à chaque fois."
+      }
+    ]
+  },
+  "booking": {
+    "heading1": "Réservation",
+    "heading2": "rapide",
+    "intro": "Indiquez vos dates et vos coordonnées : votre demande nous parvient directement par e-mail et notre équipe confirme sous 30 minutes, 7 jours sur 7.",
+    "bullet1": "Suivi de vol en temps réel pour les transferts aéroport",
+    "bullet2": "Prix fixe, annoncé avant la course",
+    "bullet3": "Disponible aussi par WhatsApp",
+    "contactHeading": "Besoin d'une réponse immédiate ? Contactez directement votre chauffeur.",
+    "callBtn": "Appeler",
+    "whatsappBtn": "WhatsApp",
+    "whatsappMessage": "Bonjour, je souhaite réserver un trajet avec Black Excellence Transport.",
+    "vehicleLabel": "Véhicule souhaité",
+    "dateLabel": "Prise en charge",
+    "timeLabel": "Heure",
+    "nameLabel": "Nom complet",
+    "namePlaceholder": "Jean Dupont",
+    "phoneLabel": "Téléphone",
+    "phonePlaceholder": "+41 79 000 00 00",
+    "submit": "Confirmer la demande",
+    "sending": "Envoi en cours…",
+    "success": "Votre demande a bien été envoyée par e-mail. Nous revenons vers vous très vite.",
+    "errorText": "L'envoi a échoué. Merci de nous contacter directement par",
+    "errorOr": "ou par téléphone au",
+    "idleNote": "Aucun paiement n'est requis à cette étape."
+  },
+  "footer": {
+    "location": "Genève, Suisse — disponible 24h/24, 7j/7",
+    "rights": "Tous droits réservés."
+  },
+  "install": {
+    "title": "Installer Black Excellence Transport",
+    "iosText1": "Appuyez sur",
+    "iosShare": "Partager",
+    "iosText2": "puis sur",
+    "iosAdd": "Sur l'écran d'accueil",
+    "androidText": "Accédez plus vite à votre chauffeur, comme une application.",
+    "installBtn": "Installer",
+    "laterBtn": "Plus tard"
+  },
+  "languageSwitcher": {
+    "label": "Langue"
+  }
+}

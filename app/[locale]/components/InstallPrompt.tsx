@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type BeforeInstallPromptEvent = Event & {
   prompt: () => Promise<void>;
@@ -26,6 +27,7 @@ function isInStandaloneMode() {
 }
 
 export default function InstallPrompt() {
+  const t = useTranslations("install");
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
   const [showBanner, setShowBanner] = useState(false);
@@ -35,7 +37,6 @@ export default function InstallPrompt() {
     if (isInStandaloneMode()) return;
     if (window.localStorage.getItem(DISMISS_KEY)) return;
 
-    // Android / Chrome / Edge : événement natif interceptable
     function handleBeforeInstallPrompt(event: Event) {
       event.preventDefault();
       setDeferredPrompt(event as BeforeInstallPromptEvent);
@@ -44,8 +45,6 @@ export default function InstallPrompt() {
     }
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
-    // iOS Safari : pas d'événement natif, on affiche des instructions
-    // après un court délai pour ne pas gêner l'arrivée sur le site.
     let iosTimer: ReturnType<typeof setTimeout> | undefined;
     if (isIos()) {
       iosTimer = setTimeout(() => {
@@ -86,12 +85,12 @@ export default function InstallPrompt() {
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="fixed inset-x-4 bottom-4 z-50 mx-auto flex max-w-md items-center gap-4 rounded-lg border border-gold/30 bg-neutral-950/95 p-4 shadow-[0_20px_60px_-15px_rgba(212,175,55,0.35)] backdrop-blur-md sm:inset-x-auto sm:right-6 sm:bottom-6"
           role="dialog"
-          aria-label="Installer l'application Black Excellence"
+          aria-label={t("title")}
         >
           <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-gold/40">
             <Image
               src="/icon-192.png"
-              alt="Black Excellence"
+              alt="Black Excellence Transport"
               fill
               className="object-cover"
             />
@@ -99,20 +98,18 @@ export default function InstallPrompt() {
 
           <div className="flex-1">
             <p className="text-sm font-medium text-neutral-50">
-              Installer Black Excellence
+              {t("title")}
             </p>
             {platform === "ios" ? (
               <p className="mt-1 text-xs leading-relaxed text-neutral-400">
-                Appuyez sur{" "}
-                <span className="text-gold-light">Partager</span> puis sur{" "}
-                <span className="text-gold-light">
-                  Sur l&apos;écran d&apos;accueil
-                </span>
-                .
+                {t("iosText1")}{" "}
+                <span className="text-gold-light">{t("iosShare")}</span>{" "}
+                {t("iosText2")}{" "}
+                <span className="text-gold-light">{t("iosAdd")}</span>.
               </p>
             ) : (
               <p className="mt-1 text-xs text-neutral-400">
-                Accédez plus vite à votre chauffeur, comme une application.
+                {t("androidText")}
               </p>
             )}
           </div>
@@ -124,7 +121,7 @@ export default function InstallPrompt() {
                 onClick={handleInstall}
                 className="rounded-full bg-gold-soft px-4 py-1.5 text-xs font-medium text-neutral-950 transition-colors hover:bg-gold-light"
               >
-                Installer
+                {t("installBtn")}
               </button>
             )}
             <button
@@ -132,7 +129,7 @@ export default function InstallPrompt() {
               onClick={dismiss}
               className="text-xs text-neutral-500 transition-colors hover:text-neutral-300"
             >
-              Plus tard
+              {t("laterBtn")}
             </button>
           </div>
         </motion.div>
