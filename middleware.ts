@@ -11,8 +11,7 @@ export default createMiddleware({
 
 export const config = {
   // Applique le middleware à toutes les routes sauf les fichiers
-  // statiques, les assets PWA et les routes API.
-  matcher: [
-    "/((?!api|_next|_vercel|manifest.json|sw.js|icon-|apple-touch-icon|favicon|logo-).*)",
-  ],
+  // statiques (tout chemin contenant une extension, ex. .png, .jpg,
+  // .mp4, .json...), les routes API et les internes Next.js.
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };
