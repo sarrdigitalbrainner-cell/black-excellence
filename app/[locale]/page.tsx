@@ -569,39 +569,39 @@ function QuickBooking() {
       <div className="pointer-events-none absolute -right-40 top-0 h-[500px] w-[500px] rounded-full bg-gold/10 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <h2 className="font-display text-4xl text-neutral-50 sm:text-5xl">
-            <RevealLine text={t("heading1")} />
-            <RevealLine text={t("heading2")} delay={0.1} />
-          </h2>
-          <p className="mt-5 max-w-sm text-neutral-400">{t("intro")}</p>
+        <div className="relative overflow-hidden rounded-sm p-6 sm:p-8">
+          <Image
+            src="/images/booking/steering-wheel-bg.jpg"
+            alt=""
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-neutral-950/85" />
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/75 to-neutral-950/55" />
 
-          <ul className="mt-10 space-y-4 text-sm text-neutral-400">
-            <li className="flex items-center gap-3">
-              <span className="h-px w-8 bg-gold" />
-              {t("bullet1")}
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="h-px w-8 bg-gold" />
-              {t("bullet2")}
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="h-px w-8 bg-gold" />
-              {t("bullet3")}
-            </li>
-          </ul>
+          <div className="relative">
+            <h2 className="font-display text-4xl text-neutral-50 sm:text-5xl">
+              <RevealLine text={t("heading1")} />
+              <RevealLine text={t("heading2")} delay={0.1} />
+            </h2>
+            <p className="mt-5 max-w-sm text-neutral-400">{t("intro")}</p>
 
-          <div className="relative mt-10 overflow-hidden rounded-sm border border-white/10 p-6">
-            <Image
-              src="/images/booking/steering-wheel-bg.jpg"
-              alt=""
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-neutral-950/80" />
-            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/70 to-neutral-950/40" />
+            <ul className="mt-10 space-y-4 text-sm text-neutral-400">
+              <li className="flex items-center gap-3">
+                <span className="h-px w-8 bg-gold" />
+                {t("bullet1")}
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-px w-8 bg-gold" />
+                {t("bullet2")}
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-px w-8 bg-gold" />
+                {t("bullet3")}
+              </li>
+            </ul>
 
-            <div className="relative">
+            <div className="mt-10 rounded-sm border border-white/10 bg-neutral-950/40 p-6 backdrop-blur-sm">
               <p className="text-sm text-neutral-300">{t("contactHeading")}</p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <a
@@ -767,17 +767,17 @@ function Footer() {
       id="contact"
       className="border-t border-white/10 bg-neutral-950 px-6 pt-16 sm:px-10"
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 pb-12 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="relative overflow-hidden rounded-sm border border-white/10 p-6 lg:col-span-1">
-          <Image
-            src="/images/footer/mercedes-emblem.jpg"
-            alt=""
-            fill
-            className="object-cover opacity-25"
-          />
-          <div className="absolute inset-0 bg-neutral-950/75" />
+      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-sm">
+        <Image
+          src="/images/footer/mercedes-emblem.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-neutral-950/80" />
 
-          <div className="relative">
+        <div className="relative grid grid-cols-1 gap-12 p-6 pb-12 sm:grid-cols-2 sm:p-10 sm:pb-12 lg:grid-cols-4">
+          <div className="lg:col-span-1">
             <p className="font-display text-lg text-neutral-50">
               BLACK <span className="text-gold-light">EXCELLENCE</span>
             </p>
@@ -785,7 +785,6 @@ function Footer() {
               {t("description")}
             </p>
           </div>
-        </div>
 
         <div>
           <h3 className="font-display text-base text-neutral-50">
@@ -867,6 +866,7 @@ function Footer() {
               </a>
             </li>
           </ul>
+        </div>
         </div>
       </div>
 
