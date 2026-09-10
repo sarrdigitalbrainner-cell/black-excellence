@@ -114,7 +114,12 @@
   },
   "footer": {
     "location": "Genf, Schweiz — rund um die Uhr verfügbar",
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "description": "Unabhängiger privater Chauffeurservice in der Schweiz. Diskretes, pünktliches und stilvolles Fahren mit einer Mercedes-Benz- und Tesla-Flotte für Geschäftsreisen, Flughafentransfers und Ausflüge in die Alpen.",
+    "quickLinksTitle": "Schnellzugriff",
+    "followTitle": "Folgen Sie uns",
+    "contactTitle": "Kontakt",
+    "homeLabel": "Startseite"
   },
   "install": {
     "title": "Black Excellence Transport installieren",

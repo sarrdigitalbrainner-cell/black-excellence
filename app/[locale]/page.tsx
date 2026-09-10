@@ -10,7 +10,14 @@ import {
   useSpring,
 } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { telHref, whatsappHref, PHONE_NUMBER_DISPLAY } from "./lib/contact";
+import {
+  telHref,
+  whatsappHref,
+  PHONE_NUMBER_DISPLAY,
+  CONTACT_EMAIL,
+  INSTAGRAM_URL,
+  TIKTOK_URL,
+} from "./lib/contact";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
 /**
@@ -25,18 +32,15 @@ import LanguageSwitcher from "./components/LanguageSwitcher";
 const VEHICLE_STATIC = {
   eclass: {
     price: 179,
-    image:
-      "https://images.unsplash.com/photo-1762393060999-ba7e0cc31379?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/fleet/eclass.jpg",
   },
   teslaY: {
     price: 149,
-    image:
-      "https://images.unsplash.com/photo-1678026039241-75a1becd25e5?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/fleet/tesla-y.jpg",
   },
   vclass: {
     price: 219,
-    image:
-      "https://images.unsplash.com/photo-1578557904035-f68542b3770e?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/fleet/vclass.jpg",
   },
 } as const;
 
@@ -48,12 +52,10 @@ const SERVICE_STATIC = [
       "https://images.unsplash.com/photo-1684838200815-36eef38f353c?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1760552973872-231e623c793f?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/services/champagne-interior.jpg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1762393060999-ba7e0cc31379?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/services/alpine-van.jpg",
   },
   {
     image:
@@ -323,12 +325,14 @@ function Hero() {
         style={{ y: bgY, opacity: bgOpacity }}
         className="absolute inset-0"
       >
-        <Image
-          src="https://images.unsplash.com/photo-1617814065893-00757125efab?auto=format&fit=crop&w=2400&q=80"
-          alt="Luxury chauffeur vehicle in Switzerland"
-          fill
-          priority
-          className="object-cover"
+        <video
+          className="h-full w-full object-cover"
+          src="/videos/hero-bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-neutral-950/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/70 via-transparent to-transparent" />
@@ -742,16 +746,123 @@ function QuickBooking() {
  */
 function Footer() {
   const t = useTranslations("footer");
+  const tNav = useTranslations("nav");
+
+  const quickLinks = [
+    { href: "#top", label: t("homeLabel") },
+    { href: "#flotte", label: tNav("fleet") },
+    { href: "#services", label: tNav("services") },
+    { href: "#reservation", label: tNav("booking") },
+    { href: "#contact", label: tNav("contact") },
+  ];
 
   return (
     <footer
       id="contact"
-      className="border-t border-white/10 bg-neutral-950 px-6 py-10 sm:px-10"
+      className="border-t border-white/10 bg-neutral-950 px-6 pt-16 sm:px-10"
     >
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center text-sm text-neutral-500 sm:flex-row sm:text-left">
-        <p className="font-display text-neutral-300">
-          BLACK <span className="text-gold-light">EXCELLENCE TRANSPORT</span>
-        </p>
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 pb-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="lg:col-span-1">
+          <div className="relative h-14 w-20 overflow-hidden">
+            <Image
+              src="/images/footer/mercedes-emblem.jpg"
+              alt="Mercedes-Benz"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+          <p className="font-display mt-4 text-lg text-neutral-50">
+            BLACK <span className="text-gold-light">EXCELLENCE</span>
+          </p>
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-neutral-400">
+            {t("description")}
+          </p>
+        </div>
+
+        <div>
+          <h3 className="font-display text-base text-neutral-50">
+            {t("quickLinksTitle")}
+          </h3>
+          <ul className="mt-4 space-y-2.5 text-sm text-neutral-400">
+            {quickLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="transition-colors hover:text-gold-light"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-display text-base text-neutral-50">
+            {t("followTitle")}
+          </h3>
+          <ul className="mt-4 space-y-2.5 text-sm text-neutral-400">
+            <li>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gold-light"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href={whatsappHref(
+                  "Bonjour, je souhaite en savoir plus sur Black Excellence Transport."
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gold-light"
+              >
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href={TIKTOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gold-light"
+              >
+                TikTok
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-display text-base text-neutral-50">
+            {t("contactTitle")}
+          </h3>
+          <ul className="mt-4 space-y-2.5 text-sm text-neutral-400">
+            <li>
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="transition-colors hover:text-gold-light"
+              >
+                {CONTACT_EMAIL}
+              </a>
+            </li>
+            <li>
+              <a
+                href={telHref()}
+                className="transition-colors hover:text-gold-light"
+              >
+                {PHONE_NUMBER_DISPLAY}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 py-6 text-center text-sm text-neutral-500 sm:flex-row sm:text-left">
         <p>{t("location")}</p>
         <p>
           © {new Date().getFullYear()} Black Excellence Transport. {t("rights")}

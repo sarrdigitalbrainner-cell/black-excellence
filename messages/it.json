@@ -114,7 +114,12 @@
   },
   "footer": {
     "location": "Ginevra, Svizzera — disponibile 24 ore su 24, 7 giorni su 7",
-    "rights": "Tutti i diritti riservati."
+    "rights": "Tutti i diritti riservati.",
+    "description": "Servizio di autista privato indipendente in Svizzera. Una guida discreta, puntuale e raffinata a bordo di una flotta Mercedes-Benz e Tesla, per i vostri viaggi di lavoro, transfer aeroportuali ed escursioni alpine.",
+    "quickLinksTitle": "Link rapidi",
+    "followTitle": "Seguici",
+    "contactTitle": "Contatti",
+    "homeLabel": "Home"
   },
   "install": {
     "title": "Installa Black Excellence Transport",

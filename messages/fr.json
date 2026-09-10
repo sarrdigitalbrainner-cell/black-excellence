@@ -114,7 +114,12 @@
   },
   "footer": {
     "location": "Genève, Suisse — disponible 24h/24, 7j/7",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "description": "Chauffeur privé indépendant en Suisse. Une conduite discrète, ponctuelle et raffinée, à bord d'une flotte Mercedes-Benz et Tesla, pour vos trajets d'affaires, transferts aéroport et escapades alpines.",
+    "quickLinksTitle": "Liens rapides",
+    "followTitle": "Suivez-nous",
+    "contactTitle": "Contact",
+    "homeLabel": "Accueil"
   },
   "install": {
     "title": "Installer Black Excellence Transport",

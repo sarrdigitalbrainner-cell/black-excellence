@@ -114,7 +114,12 @@
   },
   "footer": {
     "location": "Geneva, Switzerland — available 24/7",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "description": "Independent private chauffeur service in Switzerland. Discreet, punctual and refined driving aboard a Mercedes-Benz and Tesla fleet, for your business trips, airport transfers and alpine getaways.",
+    "quickLinksTitle": "Quick Links",
+    "followTitle": "Follow Us",
+    "contactTitle": "Contact",
+    "homeLabel": "Home"
   },
   "install": {
     "title": "Install Black Excellence Transport",
