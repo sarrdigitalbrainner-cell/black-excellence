@@ -7,7 +7,6 @@
     "reserve": "Réserver"
   },
   "hero": {
-    "kicker": "Chauffeur privé indépendant — Genève et toute la Suisse",
     "line1": "Votre chauffeur.",
     "line2": "Notre excellence.",
     "line3": "Chaque trajet compte.",
@@ -20,8 +19,7 @@
     "intro": "Trois véhicules entretenus au standard que notre équipe exige pour chaque trajet — silencieux, spacieux ou premium selon votre besoin.",
     "from": "dès",
     "currency": "CHF",
-    "reserveBtn": "Réserver",
-    "imageNote": "Photo d'illustration"
+    "reserveBtn": "Réserver"
   },
   "vehicles": {
     "eclass": {

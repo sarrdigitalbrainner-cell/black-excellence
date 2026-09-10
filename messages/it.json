@@ -7,7 +7,6 @@
     "reserve": "Prenota"
   },
   "hero": {
-    "kicker": "Autista privato indipendente — Ginevra e tutta la Svizzera",
     "line1": "Il vostro autista.",
     "line2": "La nostra eccellenza.",
     "line3": "Ogni viaggio conta.",
@@ -20,8 +19,7 @@
     "intro": "Tre veicoli mantenuti secondo lo standard che il nostro team richiede per ogni corsa — silenziosi, spaziosi o premium, a seconda delle esigenze.",
     "from": "da",
     "currency": "CHF",
-    "reserveBtn": "Prenota",
-    "imageNote": "Foto illustrativa"
+    "reserveBtn": "Prenota"
   },
   "vehicles": {
     "eclass": {

@@ -7,7 +7,6 @@
     "reserve": "Reserve"
   },
   "hero": {
-    "kicker": "Independent private chauffeur — Geneva & all of Switzerland",
     "line1": "Your chauffeur.",
     "line2": "Our excellence.",
     "line3": "Every journey matters.",
@@ -20,8 +19,7 @@
     "intro": "Three vehicles maintained to the standard our team demands for every journey — silent, spacious or premium, whatever you need.",
     "from": "from",
     "currency": "CHF",
-    "reserveBtn": "Reserve",
-    "imageNote": "Illustrative photo"
+    "reserveBtn": "Reserve"
   },
   "vehicles": {
     "eclass": {

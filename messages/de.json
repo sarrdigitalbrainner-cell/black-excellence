@@ -7,7 +7,6 @@
     "reserve": "Buchen"
   },
   "hero": {
-    "kicker": "Unabhängiger Privatchauffeur — Genf und die ganze Schweiz",
     "line1": "Ihr Chauffeur.",
     "line2": "Unsere Exzellenz.",
     "line3": "Jede Fahrt zählt.",
@@ -20,8 +19,7 @@
     "intro": "Drei Fahrzeuge, gepflegt nach dem Standard, den unser Team für jede Fahrt verlangt — leise, geräumig oder gehoben, je nach Bedarf.",
     "from": "ab",
     "currency": "CHF",
-    "reserveBtn": "Buchen",
-    "imageNote": "Illustrationsfoto"
+    "reserveBtn": "Buchen"
   },
   "vehicles": {
     "eclass": {

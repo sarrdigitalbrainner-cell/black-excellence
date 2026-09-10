@@ -240,9 +240,6 @@ function VehicleCard({
           <span className="absolute left-5 top-5 rounded-full border border-white/15 bg-neutral-950/60 px-3 py-1 text-xs tracking-wide text-neutral-200 backdrop-blur-sm">
             {t(`vehicles.${id}.category`)}
           </span>
-          <span className="absolute bottom-3 right-4 text-[10px] italic text-neutral-400">
-            {t("fleet.imageNote")}
-          </span>
         </div>
 
         <div
@@ -342,8 +339,6 @@ function Hero() {
         style={{ opacity: contentOpacity }}
         className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-40 sm:px-10"
       >
-        <p className="mb-6 text-sm text-neutral-300">{t("kicker")}</p>
-
         <h1 className="font-display max-w-3xl text-5xl leading-[1.05] text-neutral-50 sm:text-6xl md:text-7xl">
           <RevealLine text={t("line1")} delay={0.1} />
           <RevealLine text={t("line2")} delay={0.25} />
@@ -596,23 +591,34 @@ function QuickBooking() {
             </li>
           </ul>
 
-          <div className="mt-10 rounded-sm border border-white/10 bg-neutral-900/40 p-6">
-            <p className="text-sm text-neutral-300">{t("contactHeading")}</p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                href={telHref()}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm text-neutral-100 transition-colors hover:border-white/50"
-              >
-                {t("callBtn")} · {PHONE_NUMBER_DISPLAY}
-              </a>
-              <a
-                href={whatsappHref(whatsappMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-2.5 text-sm text-[#25D366] transition-colors hover:bg-[#25D366]/20"
-              >
-                {t("whatsappBtn")}
-              </a>
+          <div className="relative mt-10 overflow-hidden rounded-sm border border-white/10 p-6">
+            <Image
+              src="/images/booking/steering-wheel-bg.jpg"
+              alt=""
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-neutral-950/80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/70 to-neutral-950/40" />
+
+            <div className="relative">
+              <p className="text-sm text-neutral-300">{t("contactHeading")}</p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a
+                  href={telHref()}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm text-neutral-100 transition-colors hover:border-white/50"
+                >
+                  {t("callBtn")} · {PHONE_NUMBER_DISPLAY}
+                </a>
+                <a
+                  href={whatsappHref(whatsappMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-2.5 text-sm text-[#25D366] transition-colors hover:bg-[#25D366]/20"
+                >
+                  {t("whatsappBtn")}
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -762,21 +768,23 @@ function Footer() {
       className="border-t border-white/10 bg-neutral-950 px-6 pt-16 sm:px-10"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 pb-12 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="lg:col-span-1">
-          <div className="relative h-14 w-20 overflow-hidden">
-            <Image
-              src="/images/footer/mercedes-emblem.jpg"
-              alt="Mercedes-Benz"
-              fill
-              className="object-contain object-left"
-            />
+        <div className="relative overflow-hidden rounded-sm border border-white/10 p-6 lg:col-span-1">
+          <Image
+            src="/images/footer/mercedes-emblem.jpg"
+            alt=""
+            fill
+            className="object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-neutral-950/75" />
+
+          <div className="relative">
+            <p className="font-display text-lg text-neutral-50">
+              BLACK <span className="text-gold-light">EXCELLENCE</span>
+            </p>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-neutral-400">
+              {t("description")}
+            </p>
           </div>
-          <p className="font-display mt-4 text-lg text-neutral-50">
-            BLACK <span className="text-gold-light">EXCELLENCE</span>
-          </p>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-neutral-400">
-            {t("description")}
-          </p>
         </div>
 
         <div>

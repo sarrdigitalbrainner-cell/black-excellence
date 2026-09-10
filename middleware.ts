@@ -7,6 +7,11 @@ export default createMiddleware({
   // ("/fr", "/de", "/it") — pas de redirection surprise pour le client
   // qui arrive sur le domaine principal.
   localePrefix: "as-needed",
+  // Désactivé : sans ça, la détection automatique de la langue du
+  // navigateur redirige "/" vers "/fr" (ou "/de", "/it") pour un
+  // visiteur dont le navigateur est configuré dans cette langue,
+  // même s'il a explicitement choisi l'anglais via le sélecteur.
+  localeDetection: false,
 });
 
 export const config = {
