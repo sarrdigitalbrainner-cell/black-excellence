@@ -29,7 +29,15 @@ body {
   background-size: 180px 180px;
 }
 
-.grain-bg > * {
+/* Seul le contenu de page (<main>) a besoin de passer au-dessus du
+   grain : il est statique et se ferait sinon peindre derrière le
+   pseudo-élément fixe. Le header, le footer et les éléments flottants
+   (WhatsApp, installation PWA) gèrent déjà leur propre z-index via
+   Tailwind (position fixed + z-*) — cibler tous les enfants avec `*`
+   écrasait leur z-index (même spécificité, règle plus tardive dans la
+   feuille = elle gagnait), ce qui faisait passer le header sous le
+   contenu de la page et cachait le menu déroulant sous les images. */
+.grain-bg > main {
   position: relative;
   z-index: 1;
 }
