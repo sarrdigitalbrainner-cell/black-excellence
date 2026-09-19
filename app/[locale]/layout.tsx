@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -64,6 +64,9 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   if (!locales.includes(locale)) notFound();
+
+  // Active le rendu statique pour toutes les pages de cette langue.
+  unstable_setRequestLocale(locale);
 
   const messages = await getMessages();
 

@@ -13,6 +13,22 @@ npm run dev
 Anglais à la racine : http://localhost:3000
 Autres langues : `/fr`, `/de`, `/it`
 
+## Architecture serveur / client (important)
+
+next-intl impose que la langue soit déclarée dans un **composant
+serveur** pour autoriser le rendu statique. Chaque route est donc
+séparée en deux :
+
+- `app/[locale]/<route>/page.tsx` — composant **serveur**, appelle
+  `unstable_setRequestLocale(locale)` puis rend le composant de contenu.
+- `components/<X>Content.tsx` — composant **client** (`"use client"`),
+  qui contient toute l'interface et les animations.
+
+Si vous ajoutez une page, respectez ce découpage : sans l'appel à
+`unstable_setRequestLocale`, le build échoue avec
+« Usage of next-intl APIs in Server Components currently opts into
+dynamic rendering ».
+
 ## Pages
 
 | Route | Contenu |
