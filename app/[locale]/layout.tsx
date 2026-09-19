@@ -1,11 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import PwaRegister from "./components/PwaRegister";
-import InstallPrompt from "./components/InstallPrompt";
-import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import PwaRegister from "@/components/PwaRegister";
+import InstallPrompt from "@/components/InstallPrompt";
+import WhatsAppFab from "@/components/WhatsAppFab";
+import "../globals.css";
 
 const locales = ["en", "fr", "de", "it"];
 
@@ -29,9 +32,12 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Black Excellence Transport — Private Chauffeur in Switzerland",
+  title: {
+    default: "Black Elite Transfers — Private Chauffeur in Switzerland",
+    template: "%s | Black Elite Transfers",
+  },
   description:
-    "Independent private chauffeur service in Switzerland. Airport transfers, long-distance journeys and VIP service aboard a Tesla and Mercedes-Benz fleet.",
+    "Private chauffeur service across Switzerland and the Alps. Airport transfers, ski resort journeys and executive travel aboard a Mercedes-Benz and Tesla fleet.",
   manifest: "/manifest.json",
   icons: {
     icon: [{ url: "/favicon-32.png", sizes: "32x32", type: "image/png" }],
@@ -40,7 +46,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Black Excellence",
+    title: "Black Elite",
   },
 };
 
@@ -59,15 +65,16 @@ export default async function LocaleLayout({
 }) {
   if (!locales.includes(locale)) notFound();
 
-  setRequestLocale(locale);
-
   const messages = await getMessages();
 
   return (
     <html lang={locale} className={`${fraunces.variable} ${inter.variable}`}>
       <body className="font-body grain-bg bg-neutral-950 antialiased">
         <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
+          <Footer />
+          <WhatsAppFab />
           <PwaRegister />
           <InstallPrompt />
         </NextIntlClientProvider>

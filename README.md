@@ -1,95 +1,115 @@
-# Black Excellence Transport — Site multilingue (PWA)
+# Black Elite Transfers — Site multilingue (PWA)
 
-Site vitrine + réservation pour un chauffeur VTC indépendant en Suisse.
+Site vitrine multi-pages pour un service de chauffeur privé basé à Genève.
 Next.js 14 (App Router) · Tailwind CSS · Framer Motion · next-intl (EN/FR/DE/IT) · PWA installable.
 
-## Démarrer en local
+## Démarrer
 
 ```bash
 npm install
 npm run dev
 ```
 
-Ouvrez [http://localhost:3000](http://localhost:3000) (anglais, langue par
-défaut) — ou [http://localhost:3000/fr](http://localhost:3000/fr),
-`/de`, `/it` pour les autres langues.
+Anglais à la racine : http://localhost:3000
+Autres langues : `/fr`, `/de`, `/it`
 
-## Langues (EN par défaut, FR / DE / IT)
+## Pages
 
-- L'anglais est la langue par défaut et vit à la racine (`/`). Le
-  français, l'allemand et l'italien sont préfixés (`/fr`, `/de`, `/it`).
-- Tout le texte du site vient des fichiers `messages/en.json`,
-  `fr.json`, `de.json`, `it.json` — un objet par section (nav, hero,
-  flotte, véhicules, services, réservation, pied de page, PWA).
-- Pour modifier un texte, éditez la clé correspondante dans **les 4
-  fichiers** afin de garder les langues synchronisées.
-- Le sélecteur de langue (`app/[locale]/components/LanguageSwitcher.tsx`)
-  s'affiche dans le header et reste sur la même page en changeant
-  seulement le préfixe de langue.
-- Architecture technique : `middleware.ts` route les requêtes vers la
-  bonne langue, `i18n/request.ts` charge le bon fichier JSON,
-  `app/[locale]/layout.tsx` fournit les traductions à toute la page
-  via `NextIntlClientProvider`.
+| Route | Contenu |
+|---|---|
+| `/` | Hero, présentation, aperçu des services, flotte, zones desservies, atouts, CTA |
+| `/about` | Histoire de la société, valeurs, zones desservies |
+| `/fleet` | Les 3 véhicules en détail + standards d'entretien |
+| `/services/airport-transfers` | Transferts aéroport |
+| `/services/ski-resort-transfers` | Transferts stations de ski |
+| `/services/business-travel` | Déplacements d'affaires |
+| `/contact` | Formulaire de devis complet + contact direct |
+
+Les trois pages de services partagent le même gabarit
+(`components/ServicePage.tsx`) : hero, description longue, « ce qui est
+inclus », trajets populaires, FAQ en accordéon, formulaire de devis.
+Pour en ajouter une quatrième, il suffit d'ajouter une entrée dans
+`SERVICE_IDS` / `SERVICES` (`lib/data.ts`), le bloc de texte dans les
+4 fichiers de traduction, et un fichier `page.tsx` de 3 lignes.
+
+## Navigation
+
+`components/Header.tsx` :
+- menu déroulant **Services** au survol sur desktop, avec description
+  de chaque service et puce qui s'illumine au survol ;
+- tiroir plein écran sur mobile, avec accordéon pour les services et
+  entrées qui glissent en cascade ;
+- le header se densifie au scroll (fond opaque + filet doré animé) ;
+- sélecteur de langue en menu déroulant (EN/FR/DE/IT).
+
+## Effets visuels (dégradés / néon)
+
+Définis dans `app/globals.css`, réutilisables partout :
+
+| Classe | Effet |
+|---|---|
+| `.grain-bg` | Texture noir granulé (rappel du fond du logo) |
+| `.text-gradient-gold` | Texte en dégradé doré avec reflet qui balaie en boucle |
+| `.neon-border` | Bordure en dégradé doré révélée au survol |
+| `.glow-gold` / `.glow-gold-strong` | Halo lumineux doré |
+| `.hairline-gold` | Filet lumineux horizontal (séparateurs) |
+| `.nav-link` | Soulignement doré qui se déploie au survol |
+
+S'y ajoutent : inclinaison 3D des cartes véhicule au curseur, parallax
+des images au scroll, halos colorés qui changent selon le pays
+sélectionné, anneau pulsant sur le bouton WhatsApp, reveal de texte
+masqué sur tous les titres.
+
+## Zones desservies
+
+`components/ServiceAreas.tsx` — présentation volontairement différente
+de la référence : au lieu de quatre cartes plates alignées, un
+sélecteur de pays horizontal qui révèle les villes une par une, avec un
+halo lumineux aux couleurs du drapeau actif. Les villes se modifient
+dans `SERVICE_AREAS` (`lib/data.ts`), les noms de pays dans
+`areas.countries` des fichiers de traduction.
 
 ## Flotte
 
-Trois véhicules (`app/[locale]/page.tsx`, tableau `VEHICLE_STATIC`) :
-Mercedes-Benz Classe E, Tesla Model Y, Mercedes-Benz Classe V. Les
-tarifs et images sont définis dans ce tableau (non traduit — communs
-à toutes les langues) ; les noms, descriptions et caractéristiques
-viennent des fichiers de traduction (`vehicles.eclass`, `.teslaY`,
-`.vclass`).
+Mercedes-Benz Classe E · Tesla Model Y (2025) · Mercedes-Benz Classe V.
+Tarifs et images dans `VEHICLES` (`lib/data.ts`), textes dans
+`vehicles.*` des fichiers de traduction.
 
-**Important sur les images** : aucune photo libre de droits ne
-combine précisément "ce modèle de véhicule" + "décor suisse
-identifiable (Alpes, Genève)" — c'est une combinaison trop spécifique
-pour le stock gratuit. Les images utilisées sont les meilleures
-approximations disponibles (route de col alpin, ambiance urbaine
-européenne) ; une légende "Photo d'illustration" est affichée sous
-chaque véhicule pour rester honnête envers le client final. Pour des
-photos exactes des vrais véhicules en Suisse, il faut soit un
-shooting réel, soit des visuels générés par IA (je peux rédiger les
-prompts si besoin).
+**À vérifier avant mise en ligne** : la photo utilisée pour la Tesla
+provient d'Unsplash et correspond au millésime 2025 (« Juniper »), mais
+aucune banque d'images gratuite ne propose les vrais véhicules du
+client dans un décor suisse identifiable. Une mention « Photo
+d'illustration » s'affiche donc sur chaque carte. Dès que le client
+fournit ses propres photos, remplacez les URLs dans `lib/data.ts` et
+supprimez la mention (clé `fleet.imageNote`).
 
-## Section "Services"
+## Langues
 
-Nouvelle section (`app/[locale]/page.tsx`, composant `Services`) qui
-illustre l'expérience client :
-- Une vidéo en boucle (chauffeur ouvrant la portière) — actuellement
-  hébergée sur Pexels (`videos.pexels.com`, libre de droits, licence
-  Pexels). **Pour la production**, il est recommandé de télécharger
-  cette vidéo et de l'auto-héberger dans `public/` (fichier plus
-  petit, pas de dépendance à un service tiers) plutôt que de la
-  charger depuis Pexels à chaque visite.
-- Quatre cartes "flottantes" (légère animation de lévitation en
-  boucle via Framer Motion) illustrant : aéroport & aviation privée,
-  service champagne à bord, trajets alpins, Genève porte-à-porte.
-  Textes dans `services.items` de chaque fichier de traduction,
-  images dans `SERVICE_STATIC`.
+- Fichiers : `messages/en.json`, `fr.json`, `de.json`, `it.json`.
+- Les 4 fichiers ont exactement la même structure de clés — si vous
+  ajoutez une clé, ajoutez-la dans les 4.
+- `middleware.ts` route les requêtes, `i18n/request.ts` charge le bon
+  fichier, `i18n/navigation.ts` fournit un `<Link>` conscient de la langue.
 
 ## Réservation par e-mail
 
-Le formulaire envoie les demandes par e-mail via
-[Resend](https://resend.com) (gratuit jusqu'à 100 e-mails/jour).
+Le formulaire (`components/QuoteForm.tsx`) poste vers
+`app/api/reservation/route.ts`, qui envoie un e-mail récapitulatif via
+[Resend](https://resend.com).
 
-1. Créez un compte sur resend.com et récupérez une clé API.
-2. Copiez `.env.example` en `.env.local` et renseignez les 3 variables
-   (`RESEND_API_KEY`, `RESERVATION_EMAIL_FROM`, `RESERVATION_EMAIL_TO`).
-3. Sur Vercel : Project Settings → Environment Variables → ajoutez les
-   3 mêmes variables avant de déployer.
-4. Pour la production, vérifiez votre propre domaine dans Resend afin
-   d'envoyer depuis une adresse comme `reservation@votredomaine.ch`
-   plutôt que l'adresse de test `onboarding@resend.dev`.
+1. Créez un compte Resend, récupérez une clé API.
+2. Copiez `.env.example` en `.env.local` et remplissez les 3 variables.
+3. Sur Vercel : Settings → Environment Variables → ajoutez les mêmes.
+4. En production, vérifiez votre domaine dans Resend pour envoyer
+   depuis `reservation@votredomaine.ch`.
 
-Si l'envoi échoue (variables non configurées, panne du service…), le
-formulaire affiche un message invitant le client à contacter le
-chauffeur par WhatsApp ou par téléphone — ces coordonnées sont aussi
-toujours visibles à côté du formulaire et via le bouton WhatsApp
-flottant.
+L'adresse e-mail du client est passée en `reply_to` : le chauffeur peut
+répondre directement depuis sa boîte mail. Si l'envoi échoue, le
+formulaire bascule sur WhatsApp et téléphone.
 
-## Coordonnées de contact (téléphone / WhatsApp)
+## Coordonnées à renseigner
 
-À modifier dans `app/[locale]/lib/contact.ts` :
+`lib/contact.ts` — un seul endroit à modifier :
 
 ```ts
 export const PHONE_NUMBER_DISPLAY = "+41 79 000 00 00"; // affiché
@@ -97,31 +117,16 @@ export const PHONE_NUMBER_E164 = "41790000000";          // pour tel:
 export const WHATSAPP_NUMBER = "41790000000";             // pour wa.me
 ```
 
-## PWA — installation sur iPhone / Android
+## PWA
 
-- Le site est une PWA complète : `public/manifest.json` + `public/sw.js`.
-- Sur **Android/Chrome/Edge**, `InstallPrompt.tsx` intercepte
-  l'événement natif `beforeinstallprompt` et affiche une bannière avec
-  un bouton "Installer" qui déclenche le vrai pop-up d'installation.
-- Sur **iOS (Safari)**, il n'existe pas d'événement équivalent : la
-  bannière affiche des instructions ("Partager → Sur l'écran
-  d'accueil") après quelques secondes sur le site.
-- Icônes générées à partir du logo fourni par le client (trident doré
-  sur fond noir granulé).
+`public/manifest.json` + `public/sw.js` + `components/InstallPrompt.tsx`.
+Pop-up d'installation natif sur Android/Chrome ; sur iOS Safari (qui ne
+supporte pas `beforeinstallprompt`), bannière avec instructions
+« Partager → Sur l'écran d'accueil ». Icônes générées depuis le logo
+Black Elite Transfers.
 
-## Personnalisation de la marque
+## Note sur la vidéo
 
-- Couleurs "or" dans `tailwind.config.ts` (`gold`, `gold-light`,
-  `gold-soft`, `gold-deep`).
-- Texture "noir granulé" via la classe `.grain-bg` dans
-  `app/[locale]/globals.css`.
-- Logo : `public/logo-square.png` / `logo-wide.png` — remplacez-les
-  puis régénérez les icônes si le logo change.
-
-## Déployer sur Vercel
-
-1. Poussez ce dossier vers un dépôt Git, ou importez-le directement
-   depuis l'interface Vercel.
-2. Ajoutez les 3 variables d'environnement Resend (voir plus haut).
-3. Vercel détecte Next.js automatiquement — aucune configuration
-   supplémentaire n'est nécessaire.
+La vidéo de la page d'accueil est chargée depuis Pexels (libre de
+droits). Pour la production, téléchargez-la et placez-la dans `public/`
+plutôt que de dépendre d'un service tiers à chaque visite.

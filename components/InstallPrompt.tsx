@@ -90,7 +90,7 @@ export default function InstallPrompt() {
           <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-gold/40">
             <Image
               src="/icon-192.png"
-              alt="Black Excellence Transport"
+              alt="Black Elite Transfers"
               fill
               className="object-cover"
             />

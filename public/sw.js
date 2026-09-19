@@ -1,4 +1,4 @@
-const CACHE_NAME = "black-excellence-v1";
+const CACHE_NAME = "black-elite-v1";
 const CORE_ASSETS = ["/", "/manifest.json", "/icon-192.png", "/icon-512.png"];
 
 self.addEventListener("install", (event) => {

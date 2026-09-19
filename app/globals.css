@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #f5f3ef;
+}
+
+/* --- Texture "noir granulé" façon fond du logo -------------------- */
+.grain-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.grain-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 180px 180px;
+}
+
+.grain-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Texte en dégradé doré ---------------------------------------- */
+.text-gradient-gold {
+  background-image: linear-gradient(
+    100deg,
+    #9c7a22 0%,
+    #f1d583 35%,
+    #fff6da 50%,
+    #f1d583 65%,
+    #9c7a22 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* --- Bordure néon animée ------------------------------------------ */
+.neon-border {
+  position: relative;
+}
+
+.neon-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.7),
+    rgba(212, 175, 55, 0) 40%,
+    rgba(212, 175, 55, 0) 60%,
+    rgba(212, 175, 55, 0.5)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.neon-border:hover::after {
+  opacity: 1;
+}
+
+/* --- Halo lumineux réutilisable ----------------------------------- */
+.glow-gold {
+  box-shadow: 0 0 40px -12px rgba(212, 175, 55, 0.55);
+}
+
+.glow-gold-strong {
+  box-shadow: 0 0 60px -10px rgba(212, 175, 55, 0.75),
+    0 0 120px -40px rgba(212, 175, 55, 0.5);
+}
+
+/* --- Filet lumineux (séparateur) ---------------------------------- */
+.hairline-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.85),
+    transparent
+  );
+}
+
+/* --- Soulignement animé des liens de navigation -------------------- */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  background: linear-gradient(90deg, #9c7a22, #f1d583, #9c7a22);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link[data-active="true"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --- Respect des préférences de mouvement réduit ------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

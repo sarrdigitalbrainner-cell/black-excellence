@@ -1,126 +1,407 @@
 {
   "nav": {
-    "fleet": "La nostra flotta",
+    "home": "Home",
+    "about": "Chi siamo",
+    "fleet": "La flotta",
     "services": "Servizi",
-    "booking": "Prenotazione",
     "contact": "Contatti",
-    "reserve": "Prenota"
+    "book": "Prenota"
+  },
+  "common": {
+    "learnMore": "Scopri di più",
+    "faqKicker": "Utile sapere",
+    "faqHeading": "Domande frequenti",
+    "quoteKicker": "Prezzo fisso",
+    "quoteHeading": "Richiedi un preventivo"
   },
   "hero": {
-    "line1": "Il vostro autista.",
-    "line2": "La nostra eccellenza.",
-    "line3": "Ogni viaggio conta.",
-    "paragraph": "Transfer aeroportuali, viaggi di lavoro e lunghe percorrenze a bordo di una flotta Tesla e Mercedes-Benz. Il nostro team è al vostro fianco 24 ore su 24, con una tariffa fissa concordata prima della corsa.",
-    "ctaPrimary": "Preventivo immediato",
-    "ctaSecondary": "Scoprire la flotta"
+    "kicker": "Autista privato · Ginevra e le Alpi",
+    "line1": "Arrivate riposati.",
+    "line2": "Arrivate puntuali.",
+    "line3": "Arrivate con stile.",
+    "paragraph": "Black Elite Transfers vi accompagna attraverso la Svizzera e fin dentro le Alpi, a bordo di una Mercedes-Benz o di una Tesla, con un autista che conosce le strade, il meteo e le scorciatoie.",
+    "ctaPrimary": "Richiedi un prezzo fisso",
+    "ctaSecondary": "Vedi la flotta",
+    "badges": [
+      "Prezzi fissi, mai maggiorati",
+      "Monitoraggio del volo incluso",
+      "Disponibili 24 ore su 24",
+      "Quattro lingue a bordo"
+    ]
+  },
+  "homeIntro": {
+    "kicker": "Chi siamo",
+    "heading": "Un servizio di autista costruito su una sola promessa",
+    "paragraph1": "Siamo una società di autisti privati con sede a Ginevra, al servizio della Svizzera, delle Alpi francesi e italiane e della Germania meridionale. Ogni viaggio è quotato in anticipo, confermato da una persona e guidato da qualcuno che tratta la vostra agenda come la propria.",
+    "paragraph2": "Nessuna coda in un'applicazione, nessuna tariffa maggiorata, nessun dubbio sull'arrivo dell'auto. Voi prenotate, noi confermiamo entro trenta minuti e siamo lì quando arrivate.",
+    "stats": [
+      {
+        "value": "24/7",
+        "label": "Centrale e guida, ogni giorno dell'anno"
+      },
+      { "value": "4", "label": "Paesi serviti dalla nostra base di Ginevra" },
+      { "value": "30 min", "label": "Tempo medio di conferma di una prenotazione" }
+    ]
+  },
+  "services": {
+    "kicker": "Cosa facciamo",
+    "heading": "Tre modi di accompagnarvi",
+    "intro": "Transfer aeroportuali, viaggi in montagna e spostamenti di lavoro — ciascuno con il proprio ritmo, il proprio veicolo e la propria cura del dettaglio.",
+    "items": {
+      "airport": {
+        "title": "Transfer aeroportuali",
+        "teaser": "Accoglienza personalizzata a Ginevra, Zurigo, Basilea, Lione o Milano, con il vostro volo monitorato dal decollo all'atterraggio."
+      },
+      "ski": {
+        "title": "Transfer per le stazioni sciistiche",
+        "teaser": "Dalla porta allo chalet verso Verbier, Zermatt, Courchevel e oltre — gomme invernali, portasci, autisti esperti di montagna."
+      },
+      "business": {
+        "title": "Viaggi executive e di lavoro",
+        "teaser": "Mezze giornate e giornate intere a disposizione, roadshow e accoglienza clienti, con un autista discreto che attende al posto vostro."
+      }
+    }
+  },
+  "servicePages": {
+    "airport": {
+      "kicker": "Transfer aeroportuali",
+      "title": "Dal gate all'auto, senza una pausa",
+      "intro": "Il vostro autista segue il volo prima ancora che atterriate. Qualunque sia il ritardo, qualunque sia il terminal, l'auto è lì.",
+      "bodyKicker": "Come funziona",
+      "bodyHeading": "Un transfer che assorbe il caos del viaggio",
+      "paragraphs": [
+        "L'aeroporto è il punto in cui i viaggi si complicano: un volo in arrivo in ritardo, una coincidenza persa, un'ora persa al nastro bagagli. Noi pianifichiamo tenendo conto di tutto questo. Il numero del volo viene registrato alla prenotazione e monitorato in tempo reale. Se atterrate con novanta minuti di ritardo, il ritiro si sposta con voi, senza supplementi.",
+        "All'arrivo il vostro autista vi accoglie dentro il terminal con un cartello con il vostro nome, si occupa dei bagagli e vi accompagna all'auto. In partenza calcoliamo il margine che il percorso e la stagione richiedono davvero, non quello ottimistico suggerito da un'app di navigazione.",
+        "Serviamo soprattutto Ginevra e Zurigo, ma anche Basilea, Berna, Lugano, Lione-Saint-Exupéry, Milano Malpensa e Monaco di Baviera. I terminal dell'aviazione privata di Ginevra e Sion sono gestiti allo stesso modo, con coordinamento in pista dove l'operatore lo consente."
+      ],
+      "includedKicker": "Sempre incluso",
+      "includedHeading": "Cosa comprende ogni transfer aeroportuale",
+      "included": [
+        "Monitoraggio del volo in tempo reale, con orario di ritiro adattato automaticamente",
+        "60 minuti di attesa gratuita sugli arrivi internazionali, 30 sui voli nazionali",
+        "Accoglienza dentro il terminal con cartello nominativo",
+        "Assistenza ai bagagli, inclusi sci, sacche da golf e seggiolini",
+        "Prezzo fisso tutto compreso — pedaggi, parcheggio e attesa inclusi",
+        "Numero diretto del vostro autista, inviato la sera precedente"
+      ],
+      "routesKicker": "Tratte frequenti",
+      "routesHeading": "Dove andiamo più spesso",
+      "routes": [
+        { "from": "Aeroporto di Ginevra", "to": "Centro di Ginevra" },
+        { "from": "Aeroporto di Ginevra", "to": "Losanna" },
+        { "from": "Aeroporto di Ginevra", "to": "Montreux" },
+        { "from": "Aeroporto di Ginevra", "to": "Annecy" },
+        { "from": "Aeroporto di Zurigo", "to": "Centro di Zurigo" },
+        { "from": "Milano Malpensa", "to": "Lugano" }
+      ],
+      "faq": [
+        {
+          "q": "Cosa succede se il mio volo è in ritardo?",
+          "a": "Per voi non cambia nulla. Monitoriamo il volo e adattiamo automaticamente il ritiro. I ritardi non vengono mai addebitati come tempo di attesa."
+        },
+        {
+          "q": "Dove esattamente mi aspetterà l'autista?",
+          "a": "Nella sala arrivi, dopo la dogana, con un cartello con il vostro nome. Se preferite un ritiro all'esterno, indicatelo alla prenotazione."
+        },
+        {
+          "q": "Potete trasportare sci, sacche da golf o bagagli ingombranti?",
+          "a": "Sì — segnalatelo alla prenotazione e assegneremo la Classe V, che accoglie comodamente sci e valigie di grandi dimensioni."
+        },
+        {
+          "q": "Fornite seggiolini per bambini?",
+          "a": "Sì, per ogni età e gratuitamente. Indicateci l'età dei bambini alla prenotazione per installare il seggiolino corretto."
+        },
+        {
+          "q": "Il prezzo è davvero fisso?",
+          "a": "Sì. L'importo indicato comprende pedaggi, parcheggio, attesa e IVA. Nessuna maggiorazione e nessuna sorpresa all'arrivo."
+        }
+      ]
+    },
+    "ski": {
+      "kicker": "Transfer per le stazioni sciistiche",
+      "title": "Strade di montagna, affrontate come si deve",
+      "intro": "Gomme invernali, catene a bordo e un autista che ha affrontato questi passi sotto la neve. Voi guardate il paesaggio, al resto pensiamo noi.",
+      "bodyKicker": "Come funziona",
+      "bodyHeading": "Il tratto tra l'aeroporto e lo chalet",
+      "paragraphs": [
+        "Il transfer verso una stazione sciistica è la parte del viaggio che più spesso viene sottovalutata. La neve chiude i passi, il traffico si blocca nei sabati di cambio settimana e gli ultimi chilometri fino a uno chalet possono essere molto più ripidi di quanto suggerisse il calcolatore di percorso. I nostri autisti percorrono queste strade per tutto l'inverno e pianificano in base alle condizioni reali, non all'orario teorico.",
+        "Ogni veicolo monta gomme invernali omologate da novembre ad aprile e porta con sé le catene. Verifichiamo lo stato dei passi e delle strade la mattina stessa del transfer e, se il Gran San Bernardo o la Forclaz sono chiusi, modifichiamo il percorso prima ancora che vi accorgiate del problema.",
+        "La maggior parte della nostra attività invernale collega Ginevra a Verbier, Zermatt, Courchevel, Val d'Isère, Chamonix e Megève, ma serviamo qualsiasi località del Vallese, del Canton Vaud, della Savoia e della Valle d'Aosta. I transfer di gruppo in Classe V accolgono sette passeggeri con sci e snowboard."
+      ],
+      "includedKicker": "Sempre incluso",
+      "includedHeading": "Cosa comprende ogni transfer in montagna",
+      "included": [
+        "Gomme invernali montate da novembre ad aprile, catene a bordo",
+        "Trasporto di sci e snowboard senza supplemento",
+        "Verifica di passi e chiusure stradali la mattina della partenza",
+        "Consegna davanti allo chalet ovunque la strada lo consenta",
+        "Coperte, acqua e ricarica del telefono in abitacolo",
+        "Un prezzo fisso per tutto il gruppo, non a persona"
+      ],
+      "routesKicker": "Tratte frequenti",
+      "routesHeading": "Le località che serviamo ogni settimana",
+      "routes": [
+        { "from": "Aeroporto di Ginevra", "to": "Verbier" },
+        { "from": "Aeroporto di Ginevra", "to": "Chamonix" },
+        { "from": "Aeroporto di Ginevra", "to": "Courchevel" },
+        { "from": "Aeroporto di Ginevra", "to": "Megève" },
+        { "from": "Aeroporto di Zurigo", "to": "Zermatt (Täsch)" },
+        { "from": "Milano Malpensa", "to": "Cervinia" }
+      ],
+      "faq": [
+        {
+          "q": "Potete arrivare fino a Zermatt?",
+          "a": "Zermatt è chiusa alle auto: vi accompagniamo al terminal di Täsch e vi aiutiamo a salire sulla navetta ferroviaria con i bagagli. Da lì il viaggio dura dodici minuti."
+        },
+        {
+          "q": "E se un passo è chiuso?",
+          "a": "Verifichiamo lo stato delle strade la mattina della partenza e modifichiamo il percorso in anticipo. Il prezzo indicato non cambia in caso di deviazione."
+        },
+        {
+          "q": "C'è spazio per sci e snowboard?",
+          "a": "Sì. La Classe V trasporta sette passeggeri con tutta l'attrezzatura. Indicateci alla prenotazione la dimensione del gruppo e il materiale."
+        },
+        {
+          "q": "Operate anche nei sabati di cambio settimana?",
+          "a": "Sì, e li pianifichiamo con attenzione. I sabati di gennaio e febbraio sono i più intensi della stagione, quindi prevediamo tempo aggiuntivo."
+        },
+        {
+          "q": "Con quanto anticipo conviene prenotare?",
+          "a": "Per le vacanze di febbraio e le settimane di Natale e Capodanno, il prima possibile. Al di fuori di questi picchi, qualche giorno è di solito sufficiente."
+        }
+      ]
+    },
+    "business": {
+      "kicker": "Viaggi executive e di lavoro",
+      "title": "Un'auto che attende, perché voi non lo facciate mai",
+      "intro": "Mezze giornate a disposizione, roadshow con più tappe e accoglienza clienti, con la discrezione che i vostri incontri richiedono.",
+      "bodyKicker": "Come funziona",
+      "bodyHeading": "Pensato per una giornata di lavoro, non per un solo tragitto",
+      "paragraphs": [
+        "Un viaggio di lavoro raramente si riduce a un singolo tragitto da A a B. Una mattina in banca a Ginevra, un pranzo a Losanna, un cliente nel pomeriggio a Nyon e un volo alle diciannove. Lo quotiamo come mezza giornata o giornata intera, con la stessa auto e lo stesso autista dal primo all'ultimo appuntamento.",
+        "Il vostro autista attende tra un impegno e l'altro, mantiene l'abitacolo alla temperatura richiesta e non avvia conversazioni se non siete voi a farlo. Le telefonate fatte sul sedile posteriore restano sul sedile posteriore: ogni autista lavora sotto accordo di riservatezza.",
+        "Ci occupiamo anche dell'accoglienza di clienti e delegazioni, spesso il primo momento in cui un'azienda viene giudicata. Il vostro ospite viene accolto per nome, accompagnato su una Mercedes-Benz impeccabile e portato nel vostro ufficio senza dover mai pensare alla logistica."
+      ],
+      "includedKicker": "Sempre incluso",
+      "includedHeading": "Cosa comprende il servizio a disposizione",
+      "included": [
+        "Stesso veicolo e stesso autista per tutta la durata del servizio",
+        "Tempo di attesa tra le tappe incluso nella tariffa giornaliera",
+        "Accordo di riservatezza firmato da ogni autista",
+        "Wi-Fi a bordo, cavi di ricarica e acqua in bottiglia",
+        "Modifiche al programma accolte in giornata quando possibile",
+        "Fatturazione mensile disponibile per i clienti aziendali abituali"
+      ],
+      "routesKicker": "Servizi tipici",
+      "routesHeading": "Come le aziende ci utilizzano",
+      "routes": [
+        { "from": "Mezza giornata", "to": "4 ore, più tappe" },
+        { "from": "Giornata intera", "to": "8 ore, autista a disposizione" },
+        { "from": "Accoglienza clienti", "to": "Aeroporto fino al vostro ufficio" },
+        { "from": "Roadshow", "to": "Ginevra · Losanna · Zurigo" },
+        { "from": "Evento serale", "to": "Transfer di rientro per gli ospiti" },
+        { "from": "Transfrontaliero", "to": "Ginevra · Lione · Milano" }
+      ],
+      "faq": [
+        {
+          "q": "Come funziona il servizio a mezza giornata o giornata intera?",
+          "a": "Una mezza giornata corrisponde a quattro ore e una giornata intera a otto, calcolate dal primo ritiro. Auto e autista restano con voi per tutta la durata, attesa tra le tappe inclusa."
+        },
+        {
+          "q": "Il programma può cambiare durante la giornata?",
+          "a": "Sì. Tappe aggiuntive e variazioni di orario sono accolte quando il programma lo consente. Oltre le ore prenotate si applica la tariffa oraria concordata."
+        },
+        {
+          "q": "Fatturate direttamente alle aziende?",
+          "a": "Sì. I clienti aziendali abituali ricevono una fatturazione mensile e un referente unico per tutte le prenotazioni."
+        },
+        {
+          "q": "La riservatezza è garantita?",
+          "a": "Ogni autista firma un accordo di riservatezza. Conversazioni, destinazioni e identità dei passeggeri non vengono mai discusse all'esterno."
+        },
+        {
+          "q": "Potete accogliere i nostri clienti e visitatori?",
+          "a": "Sì, ed è uno dei servizi più richiesti. Li accogliamo per nome, ci occupiamo dei bagagli e li accompagniamo al vostro indirizzo."
+        }
+      ]
+    }
   },
   "fleet": {
-    "heading": "La nostra flotta",
-    "intro": "Tre veicoli mantenuti secondo lo standard che il nostro team richiede per ogni corsa — silenziosi, spaziosi o premium, a seconda delle esigenze.",
+    "kicker": "I veicoli",
+    "heading": "Tre auto, tre impieghi",
+    "intro": "Una berlina per il lavoro, un SUV elettrico per la città, un van per gruppi e attrezzatura. Tutte con meno di cinque anni, tutte revisionate secondo programma.",
     "from": "da",
     "currency": "CHF",
-    "reserveBtn": "Prenota"
+    "reserveBtn": "Prenota",
+    "imageNote": "Foto illustrativa"
+  },
+  "fleetPage": {
+    "kicker": "La nostra flotta",
+    "title": "Scelte per le strade che percorriamo davvero",
+    "intro": "Autostrade svizzere, passi alpini e centri storici chiedono cose diverse a un'auto. Ne teniamo tre perché viaggiate sempre in quella giusta.",
+    "standardsKicker": "I nostri standard",
+    "standardsHeading": "Come viene tenuto ogni veicolo",
+    "standards": [
+      "Ogni auto ha meno di cinque anni e segue il programma di manutenzione della casa",
+      "Interni puliti e risistemati dopo ogni singola corsa",
+      "Gomme invernali montate da novembre ad aprile, senza eccezioni",
+      "Completamente assicurate per il trasporto di persone nei quattro Paesi che serviamo",
+      "Acqua, ricarica del telefono e Wi-Fi a bordo di serie",
+      "Seggiolini per bambini di ogni età, forniti gratuitamente su richiesta"
+    ]
   },
   "vehicles": {
     "eclass": {
       "name": "Mercedes-Benz Classe E",
-      "tagline": "L'eleganza del business",
+      "tagline": "La berlina executive di tutti i giorni",
       "category": "Berlina executive",
-      "seats": "3 posti",
+      "seats": "3 passeggeri",
       "bags": "3 bagagli",
       "features": [
-        "Comfort di guida superiore",
-        "Illuminazione d'atmosfera",
-        "Wi-Fi a bordo",
-        "Marcia silenziosa e composta"
+        "Marcia silenziosa e composta sulle lunghe distanze",
+        "Climatizzazione posteriore e illuminazione d'atmosfera",
+        "Wi-Fi e cavi di ricarica a bordo",
+        "La nostra auto più richiesta per i viaggi di lavoro"
       ]
     },
     "teslaY": {
-      "name": "Tesla Model Y",
-      "tagline": "Eleganza silenziosa",
-      "category": "SUV executive elettrico",
-      "seats": "4 posti",
+      "name": "Tesla Model Y (2025)",
+      "tagline": "Silenziosa, elettrica, perfetta in città",
+      "category": "SUV elettrico",
+      "seats": "4 passeggeri",
       "bags": "4 bagagli",
       "features": [
-        "100% elettrico, zero emissioni",
-        "Tetto panoramico in vetro",
-        "Acqua e Wi-Fi a bordo",
-        "Abitacolo estremamente silenzioso"
+        "100% elettrica — zero emissioni a ogni corsa",
+        "Model year 2025 con abitacolo rinnovato e ancora più silenzioso",
+        "Tetto panoramico in vetro e ampio spazio per le gambe dietro",
+        "Ideale per i transfer urbani e i tragitti brevi da e per l'aeroporto"
       ]
     },
     "vclass": {
       "name": "Mercedes-Benz Classe V",
-      "tagline": "Spazio per il vostro gruppo",
+      "tagline": "Gruppi, sci e tutto il resto",
       "category": "Van di lusso",
-      "seats": "7 posti",
+      "seats": "7 passeggeri",
       "bags": "8 bagagli",
       "features": [
-        "Fino a 7 passeggeri",
-        "Ampio spazio per bagagli e attrezzatura da sci",
-        "Cabina climatizzata",
-        "Rinfreschi a bordo"
+        "Sette veri posti con lo spazio per usarli davvero",
+        "Accoglie sci, snowboard e sacche da golf senza box da tetto",
+        "Climatizzazione indipendente davanti e dietro",
+        "Il nostro veicolo di riferimento per famiglie e transfer sciistici"
       ]
     }
   },
-  "services": {
-    "heading": "I nostri servizi",
-    "intro": "Uno sguardo a cosa significa viaggiare con Black Excellence Transport.",
-    "videoCaption": "Il vostro autista, sempre puntuale",
+  "areas": {
+    "kicker": "Copertura",
+    "heading": "Dove andiamo",
+    "intro": "Dalla nostra base di Ginevra copriamo la Svizzera da un capo all'altro, oltre alle regioni alpine di Francia e Italia e alla Germania meridionale. Selezionate un Paese per vedere le destinazioni che serviamo più spesso.",
+    "countries": {
+      "ch": "Svizzera",
+      "fr": "Francia",
+      "it": "Italia",
+      "de": "Germania"
+    },
+    "outsideNote": "La vostra destinazione non è in elenco? Chiedeteci — se è raggiungibile in auto da Ginevra, vi faremo un preventivo."
+  },
+  "why": {
+    "kicker": "Perché noi",
+    "heading": "Cosa fa la differenza",
     "items": [
-      {
-        "title": "Aeroporto e aviazione privata",
-        "description": "Accoglienza personalizzata all'aeroporto di Ginevra, monitoraggio del volo in tempo reale e transfer impeccabili per la clientela dell'aviazione privata."
-      },
-      {
-        "title": "Servizio champagne a bordo",
-        "description": "Champagne fresco e rinfreschi in cabina, su richiesta, per celebrazioni e occasioni speciali."
-      },
-      {
-        "title": "Viaggi alpini e transfrontalieri",
-        "description": "Stazioni sciistiche, ritiri in montagna e viaggi transfrontalieri attraverso le Alpi, gestiti porta a porta."
-      },
-      {
-        "title": "Ginevra, porta a porta",
-        "description": "Riunioni di lavoro, eventi e spostamenti in città a Ginevra, con la stessa discrezione e puntualità ogni volta."
-      }
+      "Un prezzo fisso tutto compreso concordato prima della partenza — pedaggi, attesa e IVA inclusi",
+      "Una conferma da parte di una persona entro trenta minuti, non una coda automatizzata",
+      "Autisti che parlano inglese, francese, tedesco e italiano",
+      "Voli monitorati in tempo reale, perché un ritardo non vi costi mai una nuova prenotazione",
+      "Veicoli con meno di cinque anni, puliti e risistemati dopo ogni corsa",
+      "Raggiungibili su WhatsApp o per telefono, giorno e notte, prima e durante il viaggio"
     ]
   },
-  "booking": {
-    "heading1": "Prenotazione",
-    "heading2": "rapida",
-    "intro": "Indicate le vostre date e i vostri dati: la richiesta ci arriva direttamente via e-mail e il nostro team conferma entro 30 minuti, 7 giorni su 7.",
-    "bullet1": "Monitoraggio del volo in tempo reale per i transfer aeroportuali",
-    "bullet2": "Tariffa fissa, concordata prima della corsa",
-    "bullet3": "Disponibile anche su WhatsApp",
-    "contactHeading": "Serve una risposta immediata? Contattate direttamente il vostro autista.",
-    "callBtn": "Chiama",
-    "whatsappBtn": "WhatsApp",
-    "whatsappMessage": "Buongiorno, vorrei prenotare una corsa con Black Excellence Transport.",
-    "vehicleLabel": "Veicolo desiderato",
-    "dateLabel": "Data di ritiro",
-    "timeLabel": "Orario",
-    "nameLabel": "Nome completo",
+  "about": {
+    "kicker": "Chi siamo",
+    "title": "Una piccola società che risponde al telefono",
+    "intro": "Black Elite Transfers è un servizio di autista privato con sede a Ginevra, fondato sull'idea che l'affidabilità sia l'unico lusso che conti davvero.",
+    "storyKicker": "La nostra storia",
+    "storyHeading": "Perché abbiamo iniziato",
+    "storyParagraphs": [
+      "Abbiamo creato Black Elite Transfers dopo troppi viaggi andati male sempre allo stesso modo: un autista che non si presenta, un prezzo che raddoppia in una sera di pioggia, un'auto che arriva con il bicchiere di caffè del cliente precedente nella portiera.",
+      "Così abbiamo costruito l'opposto. I prezzi vengono fissati alla prenotazione e non cambiano mai. Ogni richiesta è confermata da una persona, di solito entro mezz'ora. La stessa auto e lo stesso autista restano con voi per tutto il servizio, e l'abitacolo viene risistemato dopo ogni singola corsa.",
+      "Siamo una squadra piccola e intendiamo restarlo. Man mano che la clientela cresce, coinvolgiamo autisti che conosciamo personalmente e formiamo noi stessi, perché la differenza tra un buon transfer e uno scadente sta quasi sempre nella persona al volante."
+    ],
+    "valuesKicker": "Come lavoriamo",
+    "valuesHeading": "Le regole che ci imponiamo",
+    "values": [
+      "Se indichiamo un prezzo, quello è il prezzo — qualunque siano traffico, meteo o orario",
+      "Ogni prenotazione è confermata da una persona che l'ha letta davvero",
+      "Arriviamo in anticipo. Essere puntuali significa esserci prima di voi",
+      "Ciò che si dice in auto resta in auto, sotto accordo firmato",
+      "Se non possiamo svolgere un servizio come si deve, lo diciamo invece di accettarlo",
+      "Rispondiamo personalmente su WhatsApp e al telefono, anche di notte"
+    ]
+  },
+  "contact": {
+    "kicker": "Contattateci",
+    "title": "Raccontateci il vostro viaggio",
+    "intro": "Compilate il modulo per ricevere un prezzo fisso tutto compreso — oppure scriveteci direttamente se vi serve una risposta nei prossimi minuti.",
+    "directKicker": "Linea diretta",
+    "directHeading": "Raggiungeteci subito",
+    "directIntro": "Per corse in giornata o richieste urgenti, WhatsApp e il telefono sono sempre più rapidi del modulo.",
+    "whatsappHint": "Risposta più rapida, giorno e notte",
+    "phoneHint": "Parlate direttamente con noi",
+    "promises": [
+      "I preventivi sono fissi e tutto compreso — pedaggi, attesa e IVA inclusi",
+      "La maggior parte delle richieste riceve risposta entro trenta minuti",
+      "Per ricevere un preventivo non servono pagamenti né dati della carta",
+      "Rispondiamo in italiano, inglese, francese o tedesco"
+    ]
+  },
+  "quote": {
+    "intro": "Raccontateci il viaggio e vi invieremo un prezzo fisso, tutto compreso.",
+    "oneWay": "Solo andata",
+    "oneWayHint": "Un singolo tragitto, da A a B",
+    "roundTrip": "Andata e ritorno",
+    "roundTripHint": "Vi attendiamo, oppure torniamo a prendervi",
+    "pickupLocation": "Luogo di ritiro",
+    "pickupPlaceholder": "Aeroporto, hotel, indirizzo o località",
+    "dropoffLocation": "Destinazione",
+    "dropoffPlaceholder": "Dove vi portiamo?",
+    "pickupDate": "Data di ritiro",
+    "pickupTime": "Ora di ritiro",
+    "returnDate": "Data di ritorno",
+    "returnTime": "Ora di ritorno",
+    "passengers": "Passeggeri",
+    "luggage": "Bagagli",
+    "preferredVehicle": "Veicolo preferito",
+    "noPreference": "Nessuna preferenza",
+    "fullName": "Nome completo",
     "namePlaceholder": "Mario Rossi",
-    "phoneLabel": "Telefono",
-    "phonePlaceholder": "+41 79 000 00 00",
-    "submit": "Conferma la richiesta",
+    "email": "Indirizzo e-mail",
+    "phone": "Telefono",
+    "specialRequests": "Richieste particolari",
+    "notesPlaceholder": "Seggiolini, tappe aggiuntive, sci, qualsiasi altra cosa utile da sapere",
+    "submit": "Richiedi il preventivo",
     "sending": "Invio in corso…",
-    "success": "La vostra richiesta è stata inviata via e-mail. Vi risponderemo a breve.",
-    "errorText": "L'invio non è riuscito. Vi preghiamo di contattarci direttamente su",
+    "success": "Grazie — la vostra richiesta è stata inviata. Vi risponderemo a breve con un prezzo fisso.",
+    "errorText": "L'invio non è riuscito. Contattateci direttamente su",
     "errorOr": "o per telefono al",
-    "idleNote": "Nessun pagamento è richiesto in questa fase."
+    "noPayment": "In questa fase non sono richiesti pagamenti né dati della carta."
+  },
+  "booking": {
+    "whatsappMessage": "Buongiorno, vorrei un preventivo per un viaggio con Black Elite Transfers."
+  },
+  "cta": {
+    "heading": "Pronti quando lo siete voi",
+    "intro": "Inviateci il viaggio e vi risponderemo con un prezzo fisso, tutto compreso. Senza account, senza carta di credito, senza impegno.",
+    "primary": "Richiedi un preventivo"
   },
   "footer": {
-    "location": "Ginevra, Svizzera — disponibile 24 ore su 24, 7 giorni su 7",
+    "tagline": "Servizio di autista privato con sede a Ginevra, per la Svizzera, le Alpi e le regioni limitrofe.",
+    "navTitle": "Navigazione",
+    "location": "Ginevra, Svizzera",
+    "availability": "Disponibili 24 ore su 24, tutto l'anno",
     "rights": "Tutti i diritti riservati.",
-    "description": "Servizio di autista privato indipendente in Svizzera. Una guida discreta, puntuale e raffinata a bordo di una flotta Mercedes-Benz e Tesla, per i vostri viaggi di lavoro, transfer aeroportuali ed escursioni alpine.",
-    "quickLinksTitle": "Link rapidi",
-    "followTitle": "Seguici",
-    "contactTitle": "Contatti",
-    "homeLabel": "Home"
+    "madeIn": "In viaggio da Ginevra"
   },
   "install": {
-    "title": "Installa Black Excellence Transport",
+    "title": "Installa Black Elite Transfers",
     "iosText1": "Tocca",
     "iosShare": "Condividi",
     "iosText2": "poi",
@@ -128,8 +409,5 @@
     "androidText": "Accedi più rapidamente al tuo autista, come un'app.",
     "installBtn": "Installa",
     "laterBtn": "Più tardi"
-  },
-  "languageSwitcher": {
-    "label": "Lingua"
   }
 }

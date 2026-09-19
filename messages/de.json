@@ -1,126 +1,404 @@
 {
   "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
     "fleet": "Unsere Flotte",
     "services": "Leistungen",
-    "booking": "Buchung",
     "contact": "Kontakt",
-    "reserve": "Buchen"
+    "book": "Fahrt buchen"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "faqKicker": "Gut zu wissen",
+    "faqHeading": "Häufige Fragen",
+    "quoteKicker": "Festpreis",
+    "quoteHeading": "Angebot anfordern"
   },
   "hero": {
-    "line1": "Ihr Chauffeur.",
-    "line2": "Unsere Exzellenz.",
-    "line3": "Jede Fahrt zählt.",
-    "paragraph": "Flughafentransfers, Geschäftsreisen und Langstreckenfahrten mit einer Tesla- und Mercedes-Benz-Flotte. Unser Team ist rund um die Uhr für Sie da, mit einem Festpreis, der vor der Fahrt vereinbart wird.",
-    "ctaPrimary": "Sofortangebot",
-    "ctaSecondary": "Flotte entdecken"
+    "kicker": "Privatchauffeur · Genf und die Alpen",
+    "line1": "Ausgeruht ankommen.",
+    "line2": "Pünktlich ankommen.",
+    "line3": "Mit Stil ankommen.",
+    "paragraph": "Black Elite Transfers bringt Sie durch die Schweiz und bis in die Alpen — im Mercedes-Benz oder Tesla, gefahren von einem Chauffeur, der die Strassen, das Wetter und die Abkürzungen kennt.",
+    "ctaPrimary": "Festpreis anfragen",
+    "ctaSecondary": "Flotte ansehen",
+    "badges": [
+      "Festpreise, keine Aufschläge",
+      "Flugverfolgung inklusive",
+      "Rund um die Uhr verfügbar",
+      "Vier Sprachen an Bord"
+    ]
+  },
+  "homeIntro": {
+    "kicker": "Wer wir sind",
+    "heading": "Ein Chauffeurservice mit einem einzigen Versprechen",
+    "paragraph1": "Wir sind ein in Genf ansässiges Chauffeurunternehmen für die Schweiz, die französischen und italienischen Alpen und Süddeutschland. Jede Fahrt wird im Voraus kalkuliert, von einem Menschen bestätigt und von jemandem gefahren, der Ihren Zeitplan wie seinen eigenen behandelt.",
+    "paragraph2": "Keine Warteschlange in einer App, keine Preisaufschläge, keine Frage, ob das Auto kommt. Sie buchen, wir bestätigen innerhalb von dreissig Minuten, und wir warten, wenn Sie ankommen.",
+    "stats": [
+      { "value": "24/7", "label": "Disposition und Fahrdienst, das ganze Jahr" },
+      { "value": "4", "label": "Länder, die wir von Genf aus bedienen" },
+      { "value": "30 Min.", "label": "Durchschnittliche Zeit bis zur Bestätigung" }
+    ]
+  },
+  "services": {
+    "kicker": "Was wir tun",
+    "heading": "Drei Arten, Sie zu fahren",
+    "intro": "Flughafentransfers, Bergfahrten und Geschäftsreisen — jede mit eigenem Tempo, eigenem Fahrzeug und eigener Sorgfalt.",
+    "items": {
+      "airport": {
+        "title": "Flughafentransfers",
+        "teaser": "Persönlicher Empfang in Genf, Zürich, Basel, Lyon oder Mailand, mit Flugverfolgung vom Start bis zur Landung."
+      },
+      "ski": {
+        "title": "Transfers zu Skiorten",
+        "teaser": "Von der Tür bis zum Chalet nach Verbier, Zermatt, Courchevel und weiter — Winterreifen, Skiträger, bergerfahrene Fahrer."
+      },
+      "business": {
+        "title": "Geschäfts- und Führungskräftereisen",
+        "teaser": "Halbtages- und Tagesmiete, Roadshows und Kundenabholung, mit einem diskreten Chauffeur, der für Sie wartet."
+      }
+    }
+  },
+  "servicePages": {
+    "airport": {
+      "kicker": "Flughafentransfers",
+      "title": "Vom Gate ins Auto, ohne Pause",
+      "intro": "Ihr Fahrer beobachtet Ihren Flug, bevor Sie landen. Egal welche Verspätung, egal welches Terminal — das Auto ist da.",
+      "bodyKicker": "So funktioniert es",
+      "bodyHeading": "Ein Transfer, der das Chaos des Reisens auffängt",
+      "paragraphs": [
+        "Am Flughafen gehen Reisen schief: ein verspäteter Zubringer, ein verpasster Anschluss, eine Stunde an der Gepäckausgabe. Wir planen all das ein. Ihre Flugnummer wird bei der Buchung erfasst und in Echtzeit verfolgt. Landen Sie neunzig Minuten später, verschiebt sich die Abholung einfach mit — ohne Aufpreis.",
+        "Bei der Ankunft empfängt Sie Ihr Chauffeur im Terminal mit einem Namensschild, hilft beim Gepäck und begleitet Sie zum Wagen. Beim Abflug planen wir den Puffer ein, den Strecke und Jahreszeit tatsächlich brauchen — nicht den optimistischen einer Navigations-App.",
+        "Am häufigsten fahren wir Genf und Zürich an, ausserdem Basel, Bern, Lugano, Lyon-Saint-Exupéry, Mailand Malpensa und München. Die Terminals der Privatluftfahrt in Genf und Sion behandeln wir genauso, mit Koordination auf dem Vorfeld, sofern der Betreiber es erlaubt."
+      ],
+      "includedKicker": "Immer inbegriffen",
+      "includedHeading": "Was jeder Flughafentransfer umfasst",
+      "included": [
+        "Flugverfolgung in Echtzeit, Abholzeit wird automatisch angepasst",
+        "60 Minuten kostenlose Wartezeit bei internationalen Ankünften, 30 bei Inlandsflügen",
+        "Empfang im Terminal mit Namensschild",
+        "Gepäckhilfe, auch für Ski, Golftaschen und Kindersitze",
+        "Fester Komplettpreis — Maut, Parkgebühren und Wartezeit inklusive",
+        "Direkte Nummer Ihres Fahrers, am Vorabend zugesandt"
+      ],
+      "routesKicker": "Häufige Strecken",
+      "routesHeading": "Wohin wir am häufigsten fahren",
+      "routes": [
+        { "from": "Flughafen Genf", "to": "Genf Stadtzentrum" },
+        { "from": "Flughafen Genf", "to": "Lausanne" },
+        { "from": "Flughafen Genf", "to": "Montreux" },
+        { "from": "Flughafen Genf", "to": "Annecy" },
+        { "from": "Flughafen Zürich", "to": "Zürich Stadtzentrum" },
+        { "from": "Mailand Malpensa", "to": "Lugano" }
+      ],
+      "faq": [
+        {
+          "q": "Was passiert, wenn mein Flug Verspätung hat?",
+          "a": "Für Sie ändert sich nichts. Wir verfolgen den Flug und passen die Abholung automatisch an. Verspätungen werden nie als Wartezeit berechnet."
+        },
+        {
+          "q": "Wo genau trifft mich der Fahrer?",
+          "a": "In der Ankunftshalle hinter dem Zoll, mit einem Schild mit Ihrem Namen. Wenn Sie eine Abholung am Strassenrand bevorzugen, sagen Sie es bei der Buchung."
+        },
+        {
+          "q": "Können Sie Ski, Golfschläger oder Übergepäck transportieren?",
+          "a": "Ja — geben Sie es bei der Buchung an, dann setzen wir die V-Klasse ein, die Ski und grosse Koffer bequem aufnimmt."
+        },
+        {
+          "q": "Stellen Sie Kindersitze zur Verfügung?",
+          "a": "Ja, für jedes Alter und kostenfrei. Bitte nennen Sie uns bei der Buchung das Alter der Kinder, damit wir den passenden Sitz einbauen."
+        },
+        {
+          "q": "Ist der Preis wirklich fest?",
+          "a": "Ja. Der genannte Betrag enthält Maut, Parkgebühren, Wartezeit und Mehrwertsteuer. Keine Aufschläge, keine Überraschung am Ende."
+        }
+      ]
+    },
+    "ski": {
+      "kicker": "Transfers zu Skiorten",
+      "title": "Bergstrassen, richtig gefahren",
+      "intro": "Winterreifen, Ketten an Bord und ein Fahrer, der diese Pässe im Schneesturm gemeistert hat. Sie geniessen die Aussicht, wir übernehmen den Rest.",
+      "bodyKicker": "So funktioniert es",
+      "bodyHeading": "Die Strecke zwischen Flughafen und Chalet",
+      "paragraphs": [
+        "Der Transfer zum Skiort ist der Teil der Reise, den die meisten unterschätzen. Schnee sperrt Pässe, an Wechselsamstagen staut sich der Verkehr, und die letzten Kilometer zum Chalet können steiler sein, als jeder Routenplaner vermuten lässt. Unsere Fahrer sind den ganzen Winter auf diesen Strassen unterwegs und planen nach den Bedingungen, nicht nach dem Fahrplan.",
+        "Jedes Fahrzeug fährt von November bis April auf echten Winterreifen und führt Ketten mit. Wir prüfen den Pass- und Strassenzustand am Morgen Ihres Transfers, und wenn der Grosse Sankt Bernhard oder die Forclaz gesperrt ist, planen wir um, bevor Sie überhaupt merken, dass es ein Problem gab.",
+        "Der Grossteil unserer Winterfahrten führt von Genf nach Verbier, Zermatt, Courchevel, Val d'Isère, Chamonix und Megève, doch wir bedienen jeden Ort im Wallis, in der Waadt, in Savoyen und im Aostatal. Gruppentransfers in der V-Klasse fassen sieben Passagiere samt Ski und Snowboards."
+      ],
+      "includedKicker": "Immer inbegriffen",
+      "includedHeading": "Was jeder Bergtransfer umfasst",
+      "included": [
+        "Winterreifen von November bis April, Ketten an Bord",
+        "Transport von Ski und Snowboards ohne Aufpreis",
+        "Prüfung von Pässen und Strassensperrungen am Morgen der Fahrt",
+        "Zustellung bis zur Chaletür, wo die Strasse es zulässt",
+        "Decken, Wasser und Ladegeräte im Innenraum",
+        "Ein Festpreis für die ganze Gruppe, nicht pro Person"
+      ],
+      "routesKicker": "Häufige Strecken",
+      "routesHeading": "Orte, die wir wöchentlich anfahren",
+      "routes": [
+        { "from": "Flughafen Genf", "to": "Verbier" },
+        { "from": "Flughafen Genf", "to": "Chamonix" },
+        { "from": "Flughafen Genf", "to": "Courchevel" },
+        { "from": "Flughafen Genf", "to": "Megève" },
+        { "from": "Flughafen Zürich", "to": "Zermatt (Täsch)" },
+        { "from": "Mailand Malpensa", "to": "Cervinia" }
+      ],
+      "faq": [
+        {
+          "q": "Fahren Sie bis nach Zermatt?",
+          "a": "Zermatt ist autofrei, daher fahren wir zum Terminal Täsch und helfen Ihnen mit dem Gepäck in den Pendelzug. Von dort sind es zwölf Minuten."
+        },
+        {
+          "q": "Und wenn ein Pass gesperrt ist?",
+          "a": "Wir prüfen den Strassenzustand am Morgen der Fahrt und planen vorab um. Der genannte Preis ändert sich durch einen Umweg nicht."
+        },
+        {
+          "q": "Ist Platz für Ski und Snowboards?",
+          "a": "Ja. Die V-Klasse fasst sieben Passagiere mit vollständiger Skiausrüstung. Nennen Sie uns bei der Buchung Gruppengrösse und Material."
+        },
+        {
+          "q": "Fahren Sie auch an Wechselsamstagen?",
+          "a": "Ja, und wir planen dafür. Die Samstage im Januar und Februar sind die vollsten der Saison, daher rechnen wir zusätzliche Zeit ein."
+        },
+        {
+          "q": "Wie früh sollte ich einen Skitransfer buchen?",
+          "a": "Für die Februarferien sowie die Weihnachts- und Neujahrswochen so früh wie möglich. Ausserhalb dieser Spitzen genügen meist ein paar Tage."
+        }
+      ]
+    },
+    "business": {
+      "kicker": "Geschäfts- und Führungskräftereisen",
+      "title": "Ein Auto, das wartet, damit Sie es nie tun",
+      "intro": "Halbtagesmiete, Roadshows mit mehreren Stationen und Kundenabholung, gefahren mit der Diskretion, die Ihre Termine verlangen.",
+      "bodyKicker": "So funktioniert es",
+      "bodyHeading": "Gebaut für einen Arbeitstag, nicht für eine einzelne Fahrt",
+      "paragraphs": [
+        "Geschäftsreisen passen selten in eine einzige Fahrt von A nach B. Ein Vormittag bei der Bank in Genf, Mittagessen in Lausanne, nachmittags ein Kunde in Nyon und um neunzehn Uhr ein Flug. Wir kalkulieren das als Halbtages- oder Tagesmiete, mit demselben Auto und demselben Fahrer von der ersten Abholung bis zur letzten Station.",
+        "Ihr Chauffeur wartet zwischen den Terminen, hält die Temperatur, die Sie gewünscht haben, und beginnt kein Gespräch, wenn Sie es nicht tun. Telefonate auf dem Rücksitz bleiben auf dem Rücksitz — jeder Fahrer arbeitet unter einer Vertraulichkeitsvereinbarung.",
+        "Wir übernehmen auch die Abholung von Kunden und Delegationen — oft der erste Moment, in dem ein Unternehmen beurteilt wird. Ihr Gast wird mit Namen empfangen, in einem gepflegten Mercedes-Benz gefahren und in Ihr Büro gebracht, ohne je über die Logistik nachdenken zu müssen."
+      ],
+      "includedKicker": "Immer inbegriffen",
+      "includedHeading": "Was die Fahrzeugmiete umfasst",
+      "included": [
+        "Dasselbe Fahrzeug und derselbe Chauffeur für die gesamte Buchung",
+        "Wartezeit zwischen den Stationen im Tagessatz enthalten",
+        "Vertraulichkeitsvereinbarung, von jedem Fahrer unterzeichnet",
+        "WLAN an Bord, Ladekabel und Flaschenwasser",
+        "Änderungen am Ablauf am selben Tag, soweit möglich",
+        "Monatliche Rechnungsstellung für regelmässige Firmenkunden"
+      ],
+      "routesKicker": "Typische Einsätze",
+      "routesHeading": "Wie Unternehmen uns einsetzen",
+      "routes": [
+        { "from": "Halbtagesmiete", "to": "4 Stunden, mehrere Stationen" },
+        { "from": "Tagesmiete", "to": "8 Stunden, Fahrer auf Abruf" },
+        { "from": "Kundenabholung", "to": "Flughafen bis zu Ihrem Büro" },
+        { "from": "Roadshow", "to": "Genf · Lausanne · Zürich" },
+        { "from": "Abendveranstaltung", "to": "Rücktransfers für Ihre Gäste" },
+        { "from": "Grenzüberschreitend", "to": "Genf · Lyon · Mailand" }
+      ],
+      "faq": [
+        {
+          "q": "Wie funktioniert die Halbtages- oder Tagesmiete?",
+          "a": "Ein halber Tag umfasst vier Stunden, ein ganzer acht — gerechnet ab der ersten Abholung. Auto und Fahrer bleiben durchgehend bei Ihnen, inklusive Wartezeit zwischen den Stationen."
+        },
+        {
+          "q": "Kann sich der Ablauf im Laufe des Tages ändern?",
+          "a": "Ja. Zusätzliche Stationen und Zeitänderungen sind möglich, soweit der Plan es zulässt. Über die gebuchten Stunden hinaus gilt der vereinbarte Stundensatz."
+        },
+        {
+          "q": "Stellen Sie Unternehmen direkt in Rechnung?",
+          "a": "Ja. Regelmässige Firmenkunden erhalten eine monatliche Rechnung und einen festen Ansprechpartner für alle Buchungen."
+        },
+        {
+          "q": "Ist Vertraulichkeit gewährleistet?",
+          "a": "Jeder Fahrer unterzeichnet eine Vertraulichkeitsvereinbarung. Gespräche, Ziele und Identitäten der Fahrgäste werden nie nach aussen getragen."
+        },
+        {
+          "q": "Können Sie unsere Kunden und Besucher abholen?",
+          "a": "Ja, das ist eine unserer meistgefragten Leistungen. Wir empfangen sie mit Namen, übernehmen das Gepäck und bringen sie zu Ihrer Adresse."
+        }
+      ]
+    }
   },
   "fleet": {
-    "heading": "Unsere Flotte",
-    "intro": "Drei Fahrzeuge, gepflegt nach dem Standard, den unser Team für jede Fahrt verlangt — leise, geräumig oder gehoben, je nach Bedarf.",
+    "kicker": "Die Fahrzeuge",
+    "heading": "Drei Autos, drei Aufgaben",
+    "intro": "Eine Limousine fürs Geschäft, ein elektrisches SUV für die leise Stadtfahrt, ein Van für Gruppen und Gepäck. Alle unter fünf Jahre alt, alle planmässig gewartet.",
     "from": "ab",
     "currency": "CHF",
-    "reserveBtn": "Buchen"
+    "reserveBtn": "Buchen",
+    "imageNote": "Illustrationsfoto"
+  },
+  "fleetPage": {
+    "kicker": "Unsere Flotte",
+    "title": "Ausgewählt für die Strassen, die wir wirklich fahren",
+    "intro": "Schweizer Autobahnen, Alpenpässe und Innenstädte verlangen Unterschiedliches von einem Auto. Wir halten drei bereit, damit Sie immer im richtigen sitzen.",
+    "standardsKicker": "Unsere Standards",
+    "standardsHeading": "Wie jedes Fahrzeug gepflegt wird",
+    "standards": [
+      "Jedes Auto ist unter fünf Jahre alt und wird nach Herstellervorgabe gewartet",
+      "Innenraum nach jeder einzelnen Fahrt gereinigt und hergerichtet",
+      "Winterreifen von November bis April, ohne Ausnahme",
+      "Vollständig versichert für Personenbeförderung in allen vier Ländern",
+      "Wasser, Ladegeräte und WLAN serienmässig an Bord",
+      "Kindersitze für jedes Alter, auf Wunsch kostenlos"
+    ]
   },
   "vehicles": {
     "eclass": {
       "name": "Mercedes-Benz E-Klasse",
-      "tagline": "Business, verfeinert",
+      "tagline": "Die Business-Limousine für jeden Tag",
       "category": "Business-Limousine",
-      "seats": "3 Plätze",
+      "seats": "3 Passagiere",
       "bags": "3 Gepäckstücke",
       "features": [
-        "Großzügiger Fahrkomfort",
-        "Ambiente-Innenbeleuchtung",
-        "WLAN an Bord",
-        "Leise, ruhige Fahrt"
+        "Leise, ruhige Fahrt auch über lange Strecken",
+        "Klimatisierung im Fond und Ambientebeleuchtung",
+        "WLAN und Ladekabel an Bord",
+        "Unser meistgefragtes Auto für Geschäftsreisen"
       ]
     },
     "teslaY": {
-      "name": "Tesla Model Y",
-      "tagline": "Stille Eleganz",
-      "category": "Elektrisches Business-SUV",
-      "seats": "4 Plätze",
+      "name": "Tesla Model Y (2025)",
+      "tagline": "Leise, elektrisch, stadttauglich",
+      "category": "Elektro-SUV",
+      "seats": "4 Passagiere",
       "bags": "4 Gepäckstücke",
       "features": [
-        "100% elektrisch, null Emissionen",
-        "Panorama-Glasdach",
-        "Wasser & WLAN an Bord",
-        "Besonders leise Kabine"
+        "Vollelektrisch — null Emissionen auf jeder Fahrt",
+        "Modelljahr 2025 mit überarbeitetem, leiserem Innenraum",
+        "Panorama-Glasdach und grosszügige Beinfreiheit hinten",
+        "Ideal für Stadttransfers und kürzere Flughafenfahrten"
       ]
     },
     "vclass": {
       "name": "Mercedes-Benz V-Klasse",
-      "tagline": "Platz für Ihre Gruppe",
+      "tagline": "Gruppen, Ski und alles andere",
       "category": "Luxus-Van",
-      "seats": "7 Plätze",
+      "seats": "7 Passagiere",
       "bags": "8 Gepäckstücke",
       "features": [
-        "Bis zu 7 Passagiere",
-        "Viel Platz für Gepäck und Skiausrüstung",
-        "Klimatisierte Kabine",
-        "Erfrischungen an Bord"
+        "Sieben vollwertige Sitze mit echtem Platzangebot",
+        "Nimmt Ski, Snowboards und Golftaschen ohne Dachbox auf",
+        "Getrennte Klimatisierung vorn und hinten",
+        "Unser Standardfahrzeug für Familien und Skitransfers"
       ]
     }
   },
-  "services": {
-    "heading": "Unsere Leistungen",
-    "intro": "Ein Einblick, wie sich eine Fahrt mit Black Excellence Transport anfühlt.",
-    "videoCaption": "Ihr Fahrer, immer pünktlich",
+  "areas": {
+    "kicker": "Einsatzgebiet",
+    "heading": "Wohin wir fahren",
+    "intro": "Von Genf aus decken wir die Schweiz von einem Ende zum anderen ab, dazu die Alpenregionen Frankreichs und Italiens sowie Süddeutschland. Wählen Sie ein Land, um die Ziele zu sehen, die wir am häufigsten anfahren.",
+    "countries": {
+      "ch": "Schweiz",
+      "fr": "Frankreich",
+      "it": "Italien",
+      "de": "Deutschland"
+    },
+    "outsideNote": "Ihr Ziel steht nicht auf der Liste? Fragen Sie uns — wenn es von Genf aus mit dem Auto erreichbar ist, machen wir Ihnen ein Angebot."
+  },
+  "why": {
+    "kicker": "Warum wir",
+    "heading": "Was den Unterschied macht",
     "items": [
-      {
-        "title": "Flughafen & Privatluftfahrt",
-        "description": "Persönlicher Empfang am Flughafen Genf, Flugverfolgung in Echtzeit und reibungslose Transfers für Kunden der Privatluftfahrt."
-      },
-      {
-        "title": "Champagner-Service an Bord",
-        "description": "Gekühlter Champagner und Erfrischungen in der Kabine, auf Wunsch, für Feiern und besondere Anlässe."
-      },
-      {
-        "title": "Alpine und grenzüberschreitende Fahrten",
-        "description": "Skiorte, Bergretreats und grenzüberschreitende Fahrten durch die Alpen, von Tür zu Tür organisiert."
-      },
-      {
-        "title": "Genf, von Tür zu Tür",
-        "description": "Geschäftstermine, Veranstaltungen und Stadtfahrten in Genf, stets mit derselben Diskretion und Pünktlichkeit."
-      }
+      "Ein fester Komplettpreis, vor der Fahrt vereinbart — Maut, Wartezeit und Mehrwertsteuer inklusive",
+      "Bestätigung durch einen Menschen innerhalb von dreissig Minuten, keine automatische Warteschlange",
+      "Fahrer, die Englisch, Französisch, Deutsch und Italienisch sprechen",
+      "Flüge in Echtzeit verfolgt, damit Verspätungen Sie nie eine Neubuchung kosten",
+      "Fahrzeuge unter fünf Jahren, nach jeder Fahrt gereinigt und hergerichtet",
+      "Erreichbar über WhatsApp oder Telefon, Tag und Nacht, vor und während Ihrer Fahrt"
     ]
   },
-  "booking": {
-    "heading1": "Schnelle",
-    "heading2": "Buchung",
-    "intro": "Teilen Sie uns Ihre Daten mit: Ihre Anfrage erreicht uns direkt per E-Mail, und unser Team bestätigt innerhalb von 30 Minuten, 7 Tage die Woche.",
-    "bullet1": "Echtzeit-Flugverfolgung für Flughafentransfers",
-    "bullet2": "Festpreis, vor der Fahrt vereinbart",
-    "bullet3": "Auch über WhatsApp erreichbar",
-    "contactHeading": "Sofortige Antwort nötig? Kontaktieren Sie Ihren Chauffeur direkt.",
-    "callBtn": "Anrufen",
-    "whatsappBtn": "WhatsApp",
-    "whatsappMessage": "Guten Tag, ich möchte eine Fahrt mit Black Excellence Transport buchen.",
-    "vehicleLabel": "Gewünschtes Fahrzeug",
-    "dateLabel": "Abholdatum",
-    "timeLabel": "Uhrzeit",
-    "nameLabel": "Vollständiger Name",
+  "about": {
+    "kicker": "Über uns",
+    "title": "Ein kleines Unternehmen, das ans Telefon geht",
+    "intro": "Black Elite Transfers ist ein Genfer Chauffeurservice, gegründet auf der Überzeugung, dass Verlässlichkeit der einzige Luxus ist, der wirklich zählt.",
+    "storyKicker": "Unsere Geschichte",
+    "storyHeading": "Warum wir angefangen haben",
+    "storyParagraphs": [
+      "Wir haben Black Elite Transfers gegründet, nachdem zu viele Fahrten auf immer dieselbe Weise schiefgingen: ein Fahrer, der nicht kam, ein Preis, der sich an einem Regenabend verdoppelte, ein Auto, in dessen Türfach noch der Kaffeebecher des Vorgängers steckte.",
+      "Also haben wir das Gegenteil gebaut. Preise werden bei der Buchung festgelegt und bewegen sich nie. Jede Anfrage wird von einem Menschen bestätigt, meist innerhalb einer halben Stunde. Dasselbe Auto und derselbe Fahrer bleiben über den gesamten Auftrag bei Ihnen, und der Innenraum wird nach jeder einzelnen Fahrt hergerichtet.",
+      "Wir sind ein kleines Team und wollen es bleiben. Mit wachsender Kundschaft holen wir Fahrer dazu, die wir persönlich kennen und selbst einarbeiten — denn der Unterschied zwischen einem guten und einem schlechten Transfer liegt fast immer bei der Person am Steuer."
+    ],
+    "valuesKicker": "Wie wir arbeiten",
+    "valuesHeading": "Die Regeln, an die wir uns halten",
+    "values": [
+      "Wenn wir einen Preis nennen, gilt dieser Preis — unabhängig von Verkehr, Wetter oder Uhrzeit",
+      "Jede Buchung wird von einem Menschen bestätigt, der sie gelesen hat",
+      "Wir kommen früh. Pünktlich sein heisst, vor Ihnen da zu sein",
+      "Was im Auto gesagt wird, bleibt im Auto — vertraglich zugesichert",
+      "Wenn wir eine Fahrt nicht richtig ausführen können, sagen wir es, statt sie anzunehmen",
+      "Wir gehen selbst ans Telefon und antworten selbst auf WhatsApp, auch nachts"
+    ]
+  },
+  "contact": {
+    "kicker": "Kontakt",
+    "title": "Erzählen Sie uns von Ihrer Fahrt",
+    "intro": "Füllen Sie das Formular für einen festen Komplettpreis aus — oder schreiben Sie uns direkt, wenn Sie in den nächsten Minuten eine Antwort brauchen.",
+    "directKicker": "Direkter Draht",
+    "directHeading": "Erreichen Sie uns sofort",
+    "directIntro": "Für Fahrten am selben Tag oder dringende Anliegen sind WhatsApp und Telefon immer schneller als das Formular.",
+    "whatsappHint": "Schnellste Antwort, Tag und Nacht",
+    "phoneHint": "Sprechen Sie direkt mit uns",
+    "promises": [
+      "Angebote sind fest und all-inclusive — Maut, Wartezeit und Mehrwertsteuer inklusive",
+      "Die meisten Anfragen werden innerhalb von dreissig Minuten beantwortet",
+      "Für ein Angebot sind weder Zahlung noch Kartendaten erforderlich",
+      "Wir antworten auf Deutsch, Englisch, Französisch oder Italienisch"
+    ]
+  },
+  "quote": {
+    "intro": "Beschreiben Sie uns die Fahrt, und wir senden Ihnen einen festen Komplettpreis.",
+    "oneWay": "Einfache Fahrt",
+    "oneWayHint": "Eine Fahrt, von A nach B",
+    "roundTrip": "Hin- und Rückfahrt",
+    "roundTripHint": "Wir warten, oder wir holen Sie wieder ab",
+    "pickupLocation": "Abholort",
+    "pickupPlaceholder": "Flughafen, Hotel, Adresse oder Ferienort",
+    "dropoffLocation": "Zielort",
+    "dropoffPlaceholder": "Wohin bringen wir Sie?",
+    "pickupDate": "Abholdatum",
+    "pickupTime": "Abholzeit",
+    "returnDate": "Rückfahrtdatum",
+    "returnTime": "Rückfahrtzeit",
+    "passengers": "Passagiere",
+    "luggage": "Gepäckstücke",
+    "preferredVehicle": "Gewünschtes Fahrzeug",
+    "noPreference": "Keine Präferenz",
+    "fullName": "Vollständiger Name",
     "namePlaceholder": "Max Mustermann",
-    "phoneLabel": "Telefon",
-    "phonePlaceholder": "+41 79 000 00 00",
-    "submit": "Anfrage bestätigen",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefon",
+    "specialRequests": "Besondere Wünsche",
+    "notesPlaceholder": "Kindersitze, zusätzliche Stopps, Ski, alles Weitere, das wir wissen sollten",
+    "submit": "Angebot anfordern",
     "sending": "Wird gesendet…",
-    "success": "Ihre Anfrage wurde per E-Mail gesendet. Wir melden uns in Kürze bei Ihnen.",
-    "errorText": "Der Versand ist fehlgeschlagen. Bitte kontaktieren Sie uns direkt per",
+    "success": "Vielen Dank — Ihre Anfrage wurde gesendet. Wir melden uns in Kürze mit einem Festpreis.",
+    "errorText": "Der Versand ist fehlgeschlagen. Bitte erreichen Sie uns direkt über",
     "errorOr": "oder telefonisch unter",
-    "idleNote": "In diesem Schritt ist keine Zahlung erforderlich."
+    "noPayment": "In diesem Schritt sind weder Zahlung noch Kartendaten erforderlich."
+  },
+  "booking": {
+    "whatsappMessage": "Guten Tag, ich hätte gerne ein Angebot für eine Fahrt mit Black Elite Transfers."
+  },
+  "cta": {
+    "heading": "Bereit, wenn Sie es sind",
+    "intro": "Schicken Sie uns die Fahrt, und wir melden uns mit einem festen Komplettpreis. Kein Konto, keine Kartendaten, keine Verpflichtung.",
+    "primary": "Angebot anfordern"
   },
   "footer": {
-    "location": "Genf, Schweiz — rund um die Uhr verfügbar",
+    "tagline": "Privater Chauffeurservice mit Sitz in Genf, für die Schweiz, die Alpen und die angrenzenden Regionen.",
+    "navTitle": "Navigation",
+    "location": "Genf, Schweiz",
+    "availability": "Rund um die Uhr verfügbar, das ganze Jahr",
     "rights": "Alle Rechte vorbehalten.",
-    "description": "Unabhängiger privater Chauffeurservice in der Schweiz. Diskretes, pünktliches und stilvolles Fahren mit einer Mercedes-Benz- und Tesla-Flotte für Geschäftsreisen, Flughafentransfers und Ausflüge in die Alpen.",
-    "quickLinksTitle": "Schnellzugriff",
-    "followTitle": "Folgen Sie uns",
-    "contactTitle": "Kontakt",
-    "homeLabel": "Startseite"
+    "madeIn": "Unterwegs ab Genf"
   },
   "install": {
-    "title": "Black Excellence Transport installieren",
+    "title": "Black Elite Transfers installieren",
     "iosText1": "Tippen Sie auf",
     "iosShare": "Teilen",
     "iosText2": "dann auf",
@@ -128,8 +406,5 @@
     "androidText": "Schnellerer Zugriff auf Ihren Chauffeur, wie eine App.",
     "installBtn": "Installieren",
     "laterBtn": "Später"
-  },
-  "languageSwitcher": {
-    "label": "Sprache"
   }
 }

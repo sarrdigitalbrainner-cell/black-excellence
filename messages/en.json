@@ -1,126 +1,407 @@
 {
   "nav": {
+    "home": "Home",
+    "about": "About",
     "fleet": "Our Fleet",
     "services": "Services",
-    "booking": "Booking",
     "contact": "Contact",
-    "reserve": "Reserve"
+    "book": "Book your ride"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "faqKicker": "Good to know",
+    "faqHeading": "Frequently asked",
+    "quoteKicker": "Fixed price",
+    "quoteHeading": "Request your quote"
   },
   "hero": {
-    "line1": "Your chauffeur.",
-    "line2": "Our excellence.",
-    "line3": "Every journey matters.",
-    "paragraph": "Airport transfers, business travel and long-distance journeys aboard a Tesla and Mercedes-Benz fleet. Our team is with you 24/7, with a fixed price agreed before you travel.",
-    "ctaPrimary": "Instant quote",
-    "ctaSecondary": "Discover the fleet"
+    "kicker": "Private chauffeur · Geneva & the Alps",
+    "line1": "Arrive rested.",
+    "line2": "Arrive on time.",
+    "line3": "Arrive in style.",
+    "paragraph": "Black Elite Transfers moves you across Switzerland and into the Alps in a Mercedes-Benz or Tesla, driven by a chauffeur who knows the roads, the weather and the shortcuts.",
+    "ctaPrimary": "Get a fixed quote",
+    "ctaSecondary": "See the fleet",
+    "badges": [
+      "Fixed prices, no surge",
+      "Flight tracking included",
+      "Available 24/7",
+      "Four languages on board"
+    ]
+  },
+  "homeIntro": {
+    "kicker": "Who we are",
+    "heading": "A chauffeur service built around one promise",
+    "paragraph1": "We are a Geneva-based private chauffeur company serving Switzerland, the French and Italian Alps and southern Germany. Every journey is quoted in advance, confirmed by a human, and driven by someone who treats your schedule as their own.",
+    "paragraph2": "No app queues, no surge pricing, no wondering whether the car will show up. You book, we confirm within thirty minutes, and we are waiting when you arrive.",
+    "stats": [
+      {
+        "value": "24/7",
+        "label": "Dispatch and driving, every day of the year"
+      },
+      { "value": "4", "label": "Countries covered from our Geneva base" },
+      { "value": "30 min", "label": "Average time to confirm a booking" }
+    ]
+  },
+  "services": {
+    "kicker": "What we do",
+    "heading": "Three ways we drive you",
+    "intro": "Airport runs, mountain transfers and executive travel — each with its own pace, its own vehicle and its own attention to detail.",
+    "items": {
+      "airport": {
+        "title": "Airport Transfers",
+        "teaser": "Meet-and-greet at Geneva, Zurich, Basel, Lyon or Milan, with your flight tracked from wheels-up to landing."
+      },
+      "ski": {
+        "title": "Ski Resort Transfers",
+        "teaser": "Door-to-chalet journeys to Verbier, Zermatt, Courchevel and beyond — winter tyres, ski racks, mountain-trained drivers."
+      },
+      "business": {
+        "title": "Executive & Business Travel",
+        "teaser": "Half-day and full-day hire, roadshows and client collection, with a discreet chauffeur who waits so you never do."
+      }
+    }
+  },
+  "servicePages": {
+    "airport": {
+      "kicker": "Airport transfers",
+      "title": "From the gate to the car, without a pause",
+      "intro": "Your driver is already watching your flight before you land. Whatever the delay, whatever the terminal, the car is there.",
+      "bodyKicker": "How it works",
+      "bodyHeading": "A transfer that absorbs the chaos of travel",
+      "paragraphs": [
+        "Airports are where journeys go wrong — a delayed inbound, a missed connection, an hour lost at baggage reclaim. We plan around all of it. Your flight number is logged at booking, and our dispatch watches it in real time. If you land ninety minutes late, the pickup simply moves with you at no extra cost.",
+        "For arrivals, your chauffeur meets you inside the terminal with a name board, helps with luggage and walks you to the car. For departures, we build in the buffer that the route and the season actually need — not the optimistic one a navigation app suggests.",
+        "We cover Geneva and Zurich most often, but also Basel, Bern, Lugano, Lyon-Saint-Exupéry, Milan Malpensa and Munich. Private aviation terminals at Geneva and Sion are handled the same way, with airside coordination where the operator allows it."
+      ],
+      "includedKicker": "Always included",
+      "includedHeading": "What comes with every airport transfer",
+      "included": [
+        "Live flight tracking, with pickup time adjusted automatically",
+        "60 minutes of free waiting on international arrivals, 30 on domestic",
+        "Meet-and-greet inside the terminal with a name board",
+        "Luggage assistance, including skis, golf bags and child seats",
+        "Fixed all-inclusive price — tolls, parking and waiting are in it",
+        "Direct number for your driver, sent the evening before"
+      ],
+      "routesKicker": "Popular routes",
+      "routesHeading": "Where we go most often",
+      "routes": [
+        { "from": "Geneva Airport", "to": "Geneva city centre" },
+        { "from": "Geneva Airport", "to": "Lausanne" },
+        { "from": "Geneva Airport", "to": "Montreux" },
+        { "from": "Geneva Airport", "to": "Annecy" },
+        { "from": "Zurich Airport", "to": "Zurich city centre" },
+        { "from": "Milan Malpensa", "to": "Lugano" }
+      ],
+      "faq": [
+        {
+          "q": "What happens if my flight is delayed?",
+          "a": "Nothing changes for you. We track the flight and adjust the pickup automatically. Delays are never charged as waiting time."
+        },
+        {
+          "q": "Where exactly will the driver meet me?",
+          "a": "Inside the arrivals hall, past customs, holding a board with your name. If you prefer a kerbside pickup instead, tell us when booking."
+        },
+        {
+          "q": "Can you carry skis, golf clubs or oversized luggage?",
+          "a": "Yes — tell us at booking and we will assign the V-Class, which takes skis and large cases comfortably."
+        },
+        {
+          "q": "Do you provide child seats?",
+          "a": "Yes, for all ages, free of charge. Please give us the children's ages when you book so we fit the right seat."
+        },
+        {
+          "q": "Is the price really fixed?",
+          "a": "Yes. The figure we quote includes tolls, parking, waiting and VAT. There is no surge pricing and no surprise at the end."
+        }
+      ]
+    },
+    "ski": {
+      "kicker": "Ski resort transfers",
+      "title": "Mountain roads, handled properly",
+      "intro": "Winter tyres, chains on board and a driver who has taken these passes in a blizzard. You watch the scenery; we handle the rest.",
+      "bodyKicker": "How it works",
+      "bodyHeading": "The stretch between the airport and the chalet",
+      "paragraphs": [
+        "The transfer to a ski resort is the part of the trip most people underestimate. Snow closes passes, traffic backs up on Saturday changeover days, and the last fifteen minutes up to a chalet can be steeper than anything the route planner suggested. Our drivers do these roads all winter and plan for the conditions rather than the timetable.",
+        "Every vehicle runs proper winter tyres from November to April and carries chains. We check pass and road status the morning of your transfer, and if the Grand-Saint-Bernard or the Forclaz is closed we reroute before you notice there was a problem.",
+        "Most of our winter work runs from Geneva to Verbier, Zermatt, Courchevel, Val d'Isère, Chamonix and Megève, but we serve any resort in the Valais, Vaud, Savoie and Aosta regions. Group transfers in the V-Class take seven passengers with skis and boards."
+      ],
+      "includedKicker": "Always included",
+      "includedHeading": "What comes with every mountain transfer",
+      "included": [
+        "Winter tyres fitted November to April, chains carried on board",
+        "Ski and snowboard carriage at no extra charge",
+        "Pass and road-closure check on the morning of travel",
+        "Chalet door delivery wherever the road allows access",
+        "Blankets, water and phone charging in the cabin",
+        "One fixed price for the whole group, not per person"
+      ],
+      "routesKicker": "Popular routes",
+      "routesHeading": "Resorts we drive to weekly",
+      "routes": [
+        { "from": "Geneva Airport", "to": "Verbier" },
+        { "from": "Geneva Airport", "to": "Chamonix" },
+        { "from": "Geneva Airport", "to": "Courchevel" },
+        { "from": "Geneva Airport", "to": "Megève" },
+        { "from": "Zurich Airport", "to": "Zermatt (Täsch)" },
+        { "from": "Milan Malpensa", "to": "Cervinia" }
+      ],
+      "faq": [
+        {
+          "q": "Can you drive all the way to Zermatt?",
+          "a": "Zermatt is car-free, so we drive to the Täsch terminal and help you onto the shuttle train with your luggage. It is a twelve-minute ride from there."
+        },
+        {
+          "q": "What if a mountain pass is closed?",
+          "a": "We check road status the morning of travel and reroute in advance. The quoted price does not change because of a detour."
+        },
+        {
+          "q": "Is there space for skis and boards?",
+          "a": "Yes. The V-Class carries seven passengers with full ski equipment. Tell us your group size and gear at booking."
+        },
+        {
+          "q": "Do you do Saturday changeover days?",
+          "a": "Yes, and we plan for them. Saturdays in January and February are the busiest of the season, so we build extra time into the schedule."
+        },
+        {
+          "q": "How far in advance should I book a ski transfer?",
+          "a": "For February half-term and the Christmas and New Year weeks, as early as you can. Outside those peaks, a few days is usually enough."
+        }
+      ]
+    },
+    "business": {
+      "kicker": "Executive & business travel",
+      "title": "A car that waits, so you never do",
+      "intro": "Half-day hire, multi-stop roadshows and client collection, driven with the discretion your meetings require.",
+      "bodyKicker": "How it works",
+      "bodyHeading": "Built around a working day, not a single trip",
+      "paragraphs": [
+        "Business travel rarely fits into one A-to-B journey. A morning at the bank in Geneva, lunch in Lausanne, an afternoon client in Nyon and a flight out at seven. We price that as a half-day or full-day hire, with the same car and the same driver from first pickup to last drop-off.",
+        "Your chauffeur waits between stops, keeps the cabin at the temperature you asked for, and does not make conversation unless you start it. Calls taken in the back of our cars stay in the back of our cars — every driver works under a confidentiality agreement.",
+        "We handle client and delegation collection too, which is often where a company is judged first. Your visitor is met by name, driven in a clean Mercedes-Benz, and delivered to your office without ever having to think about the logistics."
+      ],
+      "includedKicker": "Always included",
+      "includedHeading": "What comes with executive hire",
+      "included": [
+        "Same vehicle and same chauffeur for the whole booking",
+        "Waiting time between stops included in the day rate",
+        "Confidentiality agreement signed by every driver",
+        "On-board Wi-Fi, charging cables and bottled water",
+        "Itinerary changes accommodated on the day where possible",
+        "Monthly invoicing available for regular corporate clients"
+      ],
+      "routesKicker": "Typical assignments",
+      "routesHeading": "How companies use us",
+      "routes": [
+        { "from": "Half-day hire", "to": "4 hours, multi-stop" },
+        { "from": "Full-day hire", "to": "8 hours, driver on call" },
+        { "from": "Client collection", "to": "Airport to your office" },
+        { "from": "Roadshow", "to": "Geneva · Lausanne · Zurich" },
+        { "from": "Evening event", "to": "Return transfers for guests" },
+        { "from": "Cross-border", "to": "Geneva · Lyon · Milan" }
+      ],
+      "faq": [
+        {
+          "q": "How does half-day or full-day hire work?",
+          "a": "A half-day is four hours and a full day is eight, counted from your first pickup. The car and driver stay with you throughout, including waiting between stops."
+        },
+        {
+          "q": "Can the itinerary change during the day?",
+          "a": "Yes. Extra stops and timing changes are accommodated where the schedule allows. Anything beyond the booked hours is charged at the agreed hourly rate."
+        },
+        {
+          "q": "Do you invoice companies directly?",
+          "a": "Yes. Regular corporate clients are set up with monthly invoicing and a single point of contact for all bookings."
+        },
+        {
+          "q": "Is confidentiality guaranteed?",
+          "a": "Every driver signs a confidentiality agreement. Conversations, destinations and passenger identities are never discussed outside the company."
+        },
+        {
+          "q": "Can you collect our clients and visitors?",
+          "a": "Yes, and it is one of our most requested services. We meet them by name, handle the luggage and deliver them to your address."
+        }
+      ]
+    }
   },
   "fleet": {
-    "heading": "Our Fleet",
-    "intro": "Three vehicles maintained to the standard our team demands for every journey — silent, spacious or premium, whatever you need.",
+    "kicker": "The vehicles",
+    "heading": "Three cars, three jobs",
+    "intro": "A sedan for business, an electric SUV for quiet city work, a van for groups and gear. All under five years old, all serviced on schedule.",
     "from": "from",
     "currency": "CHF",
-    "reserveBtn": "Reserve"
+    "reserveBtn": "Reserve",
+    "imageNote": "Illustrative photo"
+  },
+  "fleetPage": {
+    "kicker": "Our fleet",
+    "title": "Chosen for the roads we actually drive",
+    "intro": "Swiss motorways, Alpine passes and city centres ask different things of a car. We run three so you always travel in the right one.",
+    "standardsKicker": "Our standards",
+    "standardsHeading": "How every vehicle is kept",
+    "standards": [
+      "Every car is under five years old and serviced on the manufacturer's schedule",
+      "Interior cleaned and reset between every single journey",
+      "Winter tyres fitted from November to April, without exception",
+      "Fully insured for passenger transport across all four countries we serve",
+      "Water, phone charging and Wi-Fi on board as standard",
+      "Child seats for every age, provided free on request"
+    ]
   },
   "vehicles": {
     "eclass": {
       "name": "Mercedes-Benz E-Class",
-      "tagline": "Business, refined",
+      "tagline": "The everyday executive car",
       "category": "Executive Sedan",
-      "seats": "3 seats",
+      "seats": "3 passengers",
       "bags": "3 bags",
       "features": [
-        "Extended cabin comfort",
-        "Ambient interior lighting",
-        "Wi-Fi on board",
-        "Quiet, composed ride"
+        "Quiet, composed ride over long distances",
+        "Rear-seat climate control and ambient lighting",
+        "Wi-Fi and charging cables on board",
+        "Our most-requested car for business travel"
       ]
     },
     "teslaY": {
-      "name": "Tesla Model Y",
-      "tagline": "Silent elegance",
-      "category": "Electric Executive SUV",
-      "seats": "4 seats",
+      "name": "Tesla Model Y (2025)",
+      "tagline": "Silent, electric, city-friendly",
+      "category": "Electric SUV",
+      "seats": "4 passengers",
       "bags": "4 bags",
       "features": [
-        "Fully electric, zero emissions",
-        "Panoramic glass roof",
-        "Bottled water & Wi-Fi",
-        "Whisper-quiet cabin"
+        "Fully electric — zero emissions on every journey",
+        "2025 model with the refreshed, quieter cabin",
+        "Panoramic glass roof and generous rear legroom",
+        "Ideal for city transfers and shorter airport runs"
       ]
     },
     "vclass": {
       "name": "Mercedes-Benz V-Class",
-      "tagline": "Room for your group",
+      "tagline": "Groups, skis and everything else",
       "category": "Luxury Van",
-      "seats": "7 seats",
+      "seats": "7 passengers",
       "bags": "8 bags",
       "features": [
-        "Seats up to 7 passengers",
-        "Generous space for luggage & ski gear",
-        "Climate-controlled cabin",
-        "Refreshments on board"
+        "Seven full seats with room to actually use them",
+        "Takes skis, snowboards and golf bags without a roof box",
+        "Individual climate control front and rear",
+        "Our go-to vehicle for families and ski transfers"
       ]
     }
   },
-  "services": {
-    "heading": "Our Services",
-    "intro": "A closer look at what a journey with Black Excellence Transport feels like.",
-    "videoCaption": "Your driver, always on time",
+  "areas": {
+    "kicker": "Coverage",
+    "heading": "Where we drive",
+    "intro": "From our Geneva base we cover Switzerland end to end, plus the Alpine regions of France and Italy and southern Germany. Select a country to see the destinations we serve most.",
+    "countries": {
+      "ch": "Switzerland",
+      "fr": "France",
+      "it": "Italy",
+      "de": "Germany"
+    },
+    "outsideNote": "Travelling somewhere not listed? Ask us — if it is drivable from Geneva, we will quote it."
+  },
+  "why": {
+    "kicker": "Why us",
+    "heading": "What makes the difference",
     "items": [
-      {
-        "title": "Airport & Private Aviation",
-        "description": "Meet & greet at Geneva Airport, live flight tracking, and seamless transfers for private aviation clients."
-      },
-      {
-        "title": "Onboard Champagne Service",
-        "description": "Chilled champagne and refreshments in the cabin, on request, for celebrations and special occasions."
-      },
-      {
-        "title": "Alpine & Cross-Border Journeys",
-        "description": "Ski resorts, mountain retreats and cross-border trips through the Alps, handled door to door."
-      },
-      {
-        "title": "Geneva, Door to Door",
-        "description": "Business meetings, events and city travel across Geneva, with the same discretion and punctuality every time."
-      }
+      "A fixed, all-inclusive price agreed before you travel — tolls, waiting and VAT included",
+      "Confirmation from a person within thirty minutes, not an automated queue",
+      "Drivers who speak English, French, German and Italian",
+      "Flights tracked in real time so delays never cost you a rebooking",
+      "Vehicles under five years old, cleaned and reset between every journey",
+      "Reachable on WhatsApp or by phone, day or night, before and during your journey"
     ]
   },
-  "booking": {
-    "heading1": "Quick",
-    "heading2": "Booking",
-    "intro": "Share your dates and details: your request reaches us directly by e-mail, and our team confirms within 30 minutes, 7 days a week.",
-    "bullet1": "Live flight tracking for airport transfers",
-    "bullet2": "Fixed price, agreed before the journey",
-    "bullet3": "Also available on WhatsApp",
-    "contactHeading": "Need an immediate answer? Contact your chauffeur directly.",
-    "callBtn": "Call",
-    "whatsappBtn": "WhatsApp",
-    "whatsappMessage": "Hello, I'd like to book a journey with Black Excellence Transport.",
-    "vehicleLabel": "Preferred vehicle",
-    "dateLabel": "Pick-up date",
-    "timeLabel": "Time",
-    "nameLabel": "Full name",
+  "about": {
+    "kicker": "About us",
+    "title": "A small company that answers the phone",
+    "intro": "Black Elite Transfers is a Geneva-based private chauffeur service built on the idea that reliability is the only luxury that actually matters.",
+    "storyKicker": "Our story",
+    "storyHeading": "Why we started",
+    "storyParagraphs": [
+      "We started Black Elite Transfers after too many journeys that went wrong in the same predictable ways — a driver who did not show, a price that doubled on a rainy evening, a car that arrived with someone else's coffee cup in the door.",
+      "So we built the opposite. Prices are fixed at booking and never move. Every request is confirmed by a person, usually within half an hour. The same car and driver stay with you for the whole assignment, and the interior is reset between every single journey.",
+      "We are a small team and we intend to stay one. As we take on more clients we bring on drivers we know personally and train them ourselves, because the difference between a good transfer and a bad one is almost always the person behind the wheel."
+    ],
+    "valuesKicker": "How we work",
+    "valuesHeading": "The rules we hold ourselves to",
+    "values": [
+      "If we quote a price, that is the price — whatever the traffic, weather or hour",
+      "Every booking is confirmed by a human being who has read it",
+      "We arrive early. Being on time means being there before you are",
+      "What is said in the car stays in the car, under signed agreement",
+      "If we cannot do a journey properly, we say so rather than take the booking",
+      "We answer WhatsApp and the phone ourselves, including at night"
+    ]
+  },
+  "contact": {
+    "kicker": "Get in touch",
+    "title": "Tell us about the journey",
+    "intro": "Fill in the form for a fixed, all-inclusive quote — or message us directly if you need an answer in the next few minutes.",
+    "directKicker": "Direct line",
+    "directHeading": "Reach us right now",
+    "directIntro": "For same-day journeys or anything urgent, WhatsApp and phone are always faster than the form.",
+    "whatsappHint": "Fastest reply, day or night",
+    "phoneHint": "Speak to us directly",
+    "promises": [
+      "Quotes are fixed and all-inclusive — tolls, waiting and VAT included",
+      "Most requests are answered within thirty minutes",
+      "No payment or card details required to receive a quote",
+      "We reply in English, French, German or Italian"
+    ]
+  },
+  "quote": {
+    "intro": "Tell us about the journey and we will send back a fixed, all-inclusive price.",
+    "oneWay": "One way",
+    "oneWayHint": "A single journey, A to B",
+    "roundTrip": "Round trip",
+    "roundTripHint": "We wait, or we come back for you",
+    "pickupLocation": "Pickup location",
+    "pickupPlaceholder": "Airport, hotel, address or resort",
+    "dropoffLocation": "Drop-off location",
+    "dropoffPlaceholder": "Where are we taking you?",
+    "pickupDate": "Pickup date",
+    "pickupTime": "Pickup time",
+    "returnDate": "Return date",
+    "returnTime": "Return time",
+    "passengers": "Passengers",
+    "luggage": "Luggage",
+    "preferredVehicle": "Preferred vehicle",
+    "noPreference": "No preference",
+    "fullName": "Full name",
     "namePlaceholder": "John Smith",
-    "phoneLabel": "Phone",
-    "phonePlaceholder": "+41 79 000 00 00",
-    "submit": "Confirm request",
+    "email": "Email address",
+    "phone": "Phone",
+    "specialRequests": "Special requests",
+    "notesPlaceholder": "Child seats, extra stops, skis, anything else we should know",
+    "submit": "Request my quote",
     "sending": "Sending…",
-    "success": "Your request has been sent by e-mail. We'll get back to you shortly.",
-    "errorText": "Sending failed. Please contact us directly by",
+    "success": "Thank you — your request has been sent. We will come back to you with a fixed price shortly.",
+    "errorText": "Sending failed. Please reach us directly on",
     "errorOr": "or by phone at",
-    "idleNote": "No payment is required at this stage."
+    "noPayment": "No payment or card details required at this stage."
+  },
+  "booking": {
+    "whatsappMessage": "Hello, I would like a quote for a journey with Black Elite Transfers."
+  },
+  "cta": {
+    "heading": "Ready when you are",
+    "intro": "Send us the journey and we will come back with a fixed, all-inclusive price. No account, no card details, no obligation.",
+    "primary": "Request a quote"
   },
   "footer": {
-    "location": "Geneva, Switzerland — available 24/7",
+    "tagline": "Private chauffeur service based in Geneva, covering Switzerland, the Alps and neighbouring regions.",
+    "navTitle": "Navigate",
+    "location": "Geneva, Switzerland",
+    "availability": "Available 24/7, year round",
     "rights": "All rights reserved.",
-    "description": "Independent private chauffeur service in Switzerland. Discreet, punctual and refined driving aboard a Mercedes-Benz and Tesla fleet, for your business trips, airport transfers and alpine getaways.",
-    "quickLinksTitle": "Quick Links",
-    "followTitle": "Follow Us",
-    "contactTitle": "Contact",
-    "homeLabel": "Home"
+    "madeIn": "Driven from Geneva"
   },
   "install": {
-    "title": "Install Black Excellence Transport",
+    "title": "Install Black Elite Transfers",
     "iosText1": "Tap",
     "iosShare": "Share",
     "iosText2": "then",
@@ -128,8 +409,5 @@
     "androidText": "Get faster access to your chauffeur, like an app.",
     "installBtn": "Install",
     "laterBtn": "Later"
-  },
-  "languageSwitcher": {
-    "label": "Language"
   }
 }

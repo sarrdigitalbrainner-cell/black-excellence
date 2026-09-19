@@ -1,22 +1,16 @@
 import createMiddleware from "next-intl/middleware";
+import { locales, localePrefix } from "./i18n/navigation";
 
 export default createMiddleware({
-  locales: ["en", "fr", "de", "it"],
+  locales,
   defaultLocale: "en",
-  // "en" reste à la racine ("/"), les autres langues sont préfixées
-  // ("/fr", "/de", "/it") — pas de redirection surprise pour le client
-  // qui arrive sur le domaine principal.
-  localePrefix: "as-needed",
-  // Désactivé : sans ça, la détection automatique de la langue du
-  // navigateur redirige "/" vers "/fr" (ou "/de", "/it") pour un
-  // visiteur dont le navigateur est configuré dans cette langue,
-  // même s'il a explicitement choisi l'anglais via le sélecteur.
-  localeDetection: false,
+  // L'anglais reste à la racine ("/"), les autres langues sont
+  // préfixées ("/fr", "/de", "/it").
+  localePrefix,
 });
 
 export const config = {
-  // Applique le middleware à toutes les routes sauf les fichiers
-  // statiques (tout chemin contenant une extension, ex. .png, .jpg,
-  // .mp4, .json...), les routes API et les internes Next.js.
+  // Toutes les routes sauf l'API, les fichiers internes de Next et
+  // les assets statiques (icônes PWA, manifest, service worker…).
   matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };
