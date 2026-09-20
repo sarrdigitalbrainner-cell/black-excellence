@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ABOUT_IMAGE, HERO_IMAGE } from "@/lib/data";
+import { HISTORY_IMAGE, HERO_IMAGE } from "@/lib/data";
 import { SectionHeading, FadeUp } from "@/components/Reveal";
 import { PageHero, Highlights, CtaBanner } from "@/components/Sections";
 import ServiceAreas from "@/components/ServiceAreas";
@@ -39,7 +39,7 @@ export default function AboutContent() {
           <FadeUp delay={0.2}>
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
               <Image
-                src={ABOUT_IMAGE}
+                src={HISTORY_IMAGE}
                 alt=""
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

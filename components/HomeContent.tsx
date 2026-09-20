@@ -8,7 +8,6 @@ import { Link } from "@/i18n/navigation";
 import {
   VEHICLE_IDS,
   SERVICE_IDS,
-  HERO_IMAGE,
   HERO_VIDEO,
   ABOUT_IMAGE,
 } from "@/lib/data";
@@ -43,12 +42,14 @@ function Hero() {
         style={{ y: bgY, opacity: bgOpacity }}
         className="absolute inset-0"
       >
-        <Image
-          src={HERO_IMAGE}
-          alt=""
-          fill
-          priority
-          className="object-cover"
+        <video
+          className="h-full w-full object-cover"
+          src={HERO_VIDEO.src}
+          poster={HERO_VIDEO.poster}
+          autoPlay
+          muted
+          loop
+          playsInline
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/55 to-neutral-950/25" />
@@ -179,7 +180,7 @@ function Intro() {
           </FadeUp>
         </div>
 
-        {/* Visuel avec vidéo incrustée */}
+        {/* Visuel */}
         <FadeUp delay={0.2}>
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
@@ -193,23 +194,6 @@ function Intro() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 to-transparent" />
             </div>
-
-            {/* Vidéo en médaillon */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-8 -left-8 hidden w-44 overflow-hidden rounded-xl border border-gold/30 shadow-[0_24px_60px_-20px_rgba(212,175,55,0.5)] sm:block"
-            >
-              <video
-                className="aspect-[9/14] w-full object-cover"
-                src={HERO_VIDEO.src}
-                poster={HERO_VIDEO.poster}
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-            </motion.div>
 
             <div className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full bg-gold/10 blur-3xl" />
           </div>

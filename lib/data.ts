@@ -17,22 +17,17 @@ export const VEHICLES: Record<
 > = {
   eclass: {
     price: 179,
-    image:
-      "https://images.unsplash.com/photo-1762393060999-ba7e0cc31379?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/fleet-e-class.jpg",
     accent: "#D4AF37",
   },
   teslaY: {
     price: 149,
-    // Tesla Model Y "Juniper" (millésime 2025) — à remplacer par une
-    // photo du véhicule réel du client dès qu'elle est disponible.
-    image:
-      "https://images.unsplash.com/photo-1740170512963-94852dc65820?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/fleet-tesla-y.jpg",
     accent: "#8FB8FF",
   },
   vclass: {
     price: 219,
-    image:
-      "https://images.unsplash.com/photo-1578557904035-f68542b3770e?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/fleet-v-class.jpg",
     accent: "#D4AF37",
   },
 };
@@ -51,22 +46,22 @@ export const SERVICES: Record<
     hero: "https://images.unsplash.com/photo-1684838200815-36eef38f353c?auto=format&fit=crop&w=2000&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1684838200815-36eef38f353c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578557904035-f68542b3770e?auto=format&fit=crop&w=1200&q=80",
+      "/images/business-jet-transfer.jpg",
     ],
   },
   ski: {
     slug: "/services/ski-resort-transfers",
-    hero: "https://images.unsplash.com/photo-1762393060999-ba7e0cc31379?auto=format&fit=crop&w=2000&q=80",
+    hero: "/images/ski-transfer-van.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1762393060999-ba7e0cc31379?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578557904035-f68542b3770e?auto=format&fit=crop&w=1200&q=80",
+      "/images/ski-transfer-van.jpg",
+      "/images/fleet-v-class.jpg",
     ],
   },
   business: {
     slug: "/services/business-travel",
-    hero: "https://images.unsplash.com/photo-1757584666096-59deb41f1124?auto=format&fit=crop&w=2000&q=80",
+    hero: "/images/business-jet-transfer.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1757584666096-59deb41f1124?auto=format&fit=crop&w=1200&q=80",
+      "/images/business-jet-transfer.jpg",
       "https://images.unsplash.com/photo-1760552973872-231e623c793f?auto=format&fit=crop&w=1200&q=80",
     ],
   },
@@ -152,8 +147,12 @@ export const HERO_VIDEO = {
     "https://images.pexels.com/videos/8345154/pexels-photo-8345154.jpeg?auto=compress&w=1200",
 };
 
+// Bannière statique pour les pages intérieures (À propos, Contact).
 export const HERO_IMAGE =
   "https://images.unsplash.com/photo-1617814065893-00757125efab?auto=format&fit=crop&w=2400&q=80";
 
-export const ABOUT_IMAGE =
-  "https://images.unsplash.com/photo-1757584666096-59deb41f1124?auto=format&fit=crop&w=1600&q=80";
+// Visuel de la section "Qui nous sommes" sur la page d'accueil.
+export const ABOUT_IMAGE = "/images/fleet-v-class.jpg";
+
+// Visuel de la section "Notre histoire" sur la page À propos.
+export const HISTORY_IMAGE = "/images/geneva-swiss-flag.jpg";
