@@ -39,8 +39,14 @@
         "value": "24/7",
         "label": "Centrale e guida, ogni giorno dell'anno"
       },
-      { "value": "4", "label": "Paesi serviti dalla nostra base di Ginevra" },
-      { "value": "30 min", "label": "Tempo medio di conferma di una prenotazione" }
+      {
+        "value": "4",
+        "label": "Paesi serviti dalla nostra base di Ginevra"
+      },
+      {
+        "value": "30 min",
+        "label": "Tempo medio di conferma di una prenotazione"
+      }
     ]
   },
   "services": {
@@ -87,12 +93,30 @@
       "routesKicker": "Tratte frequenti",
       "routesHeading": "Dove andiamo più spesso",
       "routes": [
-        { "from": "Aeroporto di Ginevra", "to": "Centro di Ginevra" },
-        { "from": "Aeroporto di Ginevra", "to": "Losanna" },
-        { "from": "Aeroporto di Ginevra", "to": "Montreux" },
-        { "from": "Aeroporto di Ginevra", "to": "Annecy" },
-        { "from": "Aeroporto di Zurigo", "to": "Centro di Zurigo" },
-        { "from": "Milano Malpensa", "to": "Lugano" }
+        {
+          "from": "Aeroporto di Ginevra",
+          "to": "Centro di Ginevra"
+        },
+        {
+          "from": "Aeroporto di Ginevra",
+          "to": "Losanna"
+        },
+        {
+          "from": "Aeroporto di Ginevra",
+          "to": "Montreux"
+        },
+        {
+          "from": "Aeroporto di Ginevra",
+          "to": "Annecy"
+        },
+        {
+          "from": "Aeroporto di Zurigo",
+          "to": "Centro di Zurigo"
+        },
+        {
+          "from": "Milano Malpensa",
+          "to": "Lugano"
+        }
       ],
       "faq": [
         {
@@ -141,12 +165,30 @@
       "routesKicker": "Tratte frequenti",
       "routesHeading": "Le località che serviamo ogni settimana",
       "routes": [
-        { "from": "Aeroporto di Ginevra", "to": "Verbier" },
-        { "from": "Aeroporto di Ginevra", "to": "Chamonix" },
-        { "from": "Aeroporto di Ginevra", "to": "Courchevel" },
-        { "from": "Aeroporto di Ginevra", "to": "Megève" },
-        { "from": "Aeroporto di Zurigo", "to": "Zermatt (Täsch)" },
-        { "from": "Milano Malpensa", "to": "Cervinia" }
+        {
+          "from": "Aeroporto di Ginevra",
+          "to": "Verbier"
+        },
+        {
+          "from": "Aeroporto di Ginevra",
+          "to": "Chamonix"
+        },
+        {
+          "from": "Aeroporto di Ginevra",
+          "to": "Courchevel"
+        },
+        {
+          "from": "Aeroporto di Ginevra",
+          "to": "Megève"
+        },
+        {
+          "from": "Aeroporto di Zurigo",
+          "to": "Zermatt (Täsch)"
+        },
+        {
+          "from": "Milano Malpensa",
+          "to": "Cervinia"
+        }
       ],
       "faq": [
         {
@@ -195,12 +237,30 @@
       "routesKicker": "Servizi tipici",
       "routesHeading": "Come le aziende ci utilizzano",
       "routes": [
-        { "from": "Mezza giornata", "to": "4 ore, più tappe" },
-        { "from": "Giornata intera", "to": "8 ore, autista a disposizione" },
-        { "from": "Accoglienza clienti", "to": "Aeroporto fino al vostro ufficio" },
-        { "from": "Roadshow", "to": "Ginevra · Losanna · Zurigo" },
-        { "from": "Evento serale", "to": "Transfer di rientro per gli ospiti" },
-        { "from": "Transfrontaliero", "to": "Ginevra · Lione · Milano" }
+        {
+          "from": "Mezza giornata",
+          "to": "4 ore, più tappe"
+        },
+        {
+          "from": "Giornata intera",
+          "to": "8 ore, autista a disposizione"
+        },
+        {
+          "from": "Accoglienza clienti",
+          "to": "Aeroporto fino al vostro ufficio"
+        },
+        {
+          "from": "Roadshow",
+          "to": "Ginevra · Losanna · Zurigo"
+        },
+        {
+          "from": "Evento serale",
+          "to": "Transfer di rientro per gli ospiti"
+        },
+        {
+          "from": "Transfrontaliero",
+          "to": "Ginevra · Lione · Milano"
+        }
       ],
       "faq": [
         {
@@ -228,8 +288,8 @@
   },
   "fleet": {
     "kicker": "I veicoli",
-    "heading": "Tre auto, tre impieghi",
-    "intro": "Una berlina per il lavoro, un SUV elettrico per la città, un van per gruppi e attrezzatura. Tutte con meno di cinque anni, tutte revisionate secondo programma.",
+    "heading": "Cinque veicoli, uno standard",
+    "intro": "Dalla berlina executive al van di gruppo fino a 19 posti, con due opzioni 100% elettriche nel mezzo. Tutti con meno di cinque anni, tutti revisionati secondo programma.",
     "from": "da",
     "currency": "CHF",
     "reserveBtn": "Prenota",
@@ -288,6 +348,32 @@
         "Accoglie sci, snowboard e sacche da golf senza box da tetto",
         "Climatizzazione indipendente davanti e dietro",
         "Il nostro veicolo di riferimento per famiglie e transfer sciistici"
+      ]
+    },
+    "eqs": {
+      "name": "Mercedes-Benz EQS SUV",
+      "tagline": "L'ammiraglia silenziosa",
+      "category": "SUV elettrico ammiraglia",
+      "seats": "4 passeggeri",
+      "bags": "4 bagagli",
+      "features": [
+        "Ammiraglia 100% elettrica, l'abitacolo più silenzioso di Mercedes",
+        "Autonomia estesa per i lunghi viaggi transfrontalieri",
+        "Sedili posteriori massaggianti e illuminazione d'atmosfera",
+        "Un gradino sopra la Model Y per una presenza maggiore"
+      ]
+    },
+    "sprinter": {
+      "name": "Mercedes-Benz Sprinter",
+      "tagline": "Per i gruppi che viaggiano insieme",
+      "category": "Van di gruppo",
+      "seats": "Fino a 19 passeggeri",
+      "bags": "20 bagagli",
+      "features": [
+        "Fino a 19 passeggeri in un comfort autentico",
+        "20 bagagli, senza box da tetto",
+        "Servizio facchinaggio e accoglienza personalizzata inclusi",
+        "Il veicolo di riferimento per delegazioni e cortei nuziali"
       ]
     }
   },

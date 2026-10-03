@@ -8,9 +8,17 @@
 
 /* --- FLOTTE ------------------------------------------------------ */
 
-export const VEHICLE_IDS = ["eclass", "teslaY", "vclass"] as const;
+export const VEHICLE_IDS = [
+  "eclass",
+  "teslaY",
+  "eqs",
+  "vclass",
+  "sprinter",
+] as const;
 export type VehicleId = (typeof VEHICLE_IDS)[number];
 
+// Toutes les photos montrent un véhicule noir — présentation uniforme
+// sur l'ensemble de la flotte, y compris les deux nouveaux ajouts.
 export const VEHICLES: Record<
   VehicleId,
   { price: number; image: string; accent: string }
@@ -25,9 +33,24 @@ export const VEHICLES: Record<
     image: "/images/fleet-tesla-y.jpg",
     accent: "#8FB8FF",
   },
+  eqs: {
+    price: 199,
+    // Mercedes-Benz EQS SUV noir, cadre urbain — le modèle EQC fourni
+    // en référence a été abandonné par Mercedes en 2023 ; l'EQS SUV
+    // est son remplaçant actuel, donc le choix le plus pertinent.
+    image:
+      "https://images.pexels.com/photos/29779239/pexels-photo-29779239.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    accent: "#9FD8FF",
+  },
   vclass: {
     price: 219,
     image: "/images/fleet-v-class.jpg",
+    accent: "#D4AF37",
+  },
+  sprinter: {
+    price: 349,
+    image:
+      "https://images.pexels.com/photos/19871521/pexels-photo-19871521.jpeg?auto=compress&cs=tinysrgb&w=1600",
     accent: "#D4AF37",
   },
 };

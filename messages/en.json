@@ -39,8 +39,14 @@
         "value": "24/7",
         "label": "Dispatch and driving, every day of the year"
       },
-      { "value": "4", "label": "Countries covered from our Geneva base" },
-      { "value": "30 min", "label": "Average time to confirm a booking" }
+      {
+        "value": "4",
+        "label": "Countries covered from our Geneva base"
+      },
+      {
+        "value": "30 min",
+        "label": "Average time to confirm a booking"
+      }
     ]
   },
   "services": {
@@ -87,12 +93,30 @@
       "routesKicker": "Popular routes",
       "routesHeading": "Where we go most often",
       "routes": [
-        { "from": "Geneva Airport", "to": "Geneva city centre" },
-        { "from": "Geneva Airport", "to": "Lausanne" },
-        { "from": "Geneva Airport", "to": "Montreux" },
-        { "from": "Geneva Airport", "to": "Annecy" },
-        { "from": "Zurich Airport", "to": "Zurich city centre" },
-        { "from": "Milan Malpensa", "to": "Lugano" }
+        {
+          "from": "Geneva Airport",
+          "to": "Geneva city centre"
+        },
+        {
+          "from": "Geneva Airport",
+          "to": "Lausanne"
+        },
+        {
+          "from": "Geneva Airport",
+          "to": "Montreux"
+        },
+        {
+          "from": "Geneva Airport",
+          "to": "Annecy"
+        },
+        {
+          "from": "Zurich Airport",
+          "to": "Zurich city centre"
+        },
+        {
+          "from": "Milan Malpensa",
+          "to": "Lugano"
+        }
       ],
       "faq": [
         {
@@ -141,12 +165,30 @@
       "routesKicker": "Popular routes",
       "routesHeading": "Resorts we drive to weekly",
       "routes": [
-        { "from": "Geneva Airport", "to": "Verbier" },
-        { "from": "Geneva Airport", "to": "Chamonix" },
-        { "from": "Geneva Airport", "to": "Courchevel" },
-        { "from": "Geneva Airport", "to": "Megève" },
-        { "from": "Zurich Airport", "to": "Zermatt (Täsch)" },
-        { "from": "Milan Malpensa", "to": "Cervinia" }
+        {
+          "from": "Geneva Airport",
+          "to": "Verbier"
+        },
+        {
+          "from": "Geneva Airport",
+          "to": "Chamonix"
+        },
+        {
+          "from": "Geneva Airport",
+          "to": "Courchevel"
+        },
+        {
+          "from": "Geneva Airport",
+          "to": "Megève"
+        },
+        {
+          "from": "Zurich Airport",
+          "to": "Zermatt (Täsch)"
+        },
+        {
+          "from": "Milan Malpensa",
+          "to": "Cervinia"
+        }
       ],
       "faq": [
         {
@@ -195,12 +237,30 @@
       "routesKicker": "Typical assignments",
       "routesHeading": "How companies use us",
       "routes": [
-        { "from": "Half-day hire", "to": "4 hours, multi-stop" },
-        { "from": "Full-day hire", "to": "8 hours, driver on call" },
-        { "from": "Client collection", "to": "Airport to your office" },
-        { "from": "Roadshow", "to": "Geneva · Lausanne · Zurich" },
-        { "from": "Evening event", "to": "Return transfers for guests" },
-        { "from": "Cross-border", "to": "Geneva · Lyon · Milan" }
+        {
+          "from": "Half-day hire",
+          "to": "4 hours, multi-stop"
+        },
+        {
+          "from": "Full-day hire",
+          "to": "8 hours, driver on call"
+        },
+        {
+          "from": "Client collection",
+          "to": "Airport to your office"
+        },
+        {
+          "from": "Roadshow",
+          "to": "Geneva · Lausanne · Zurich"
+        },
+        {
+          "from": "Evening event",
+          "to": "Return transfers for guests"
+        },
+        {
+          "from": "Cross-border",
+          "to": "Geneva · Lyon · Milan"
+        }
       ],
       "faq": [
         {
@@ -228,8 +288,8 @@
   },
   "fleet": {
     "kicker": "The vehicles",
-    "heading": "Three cars, three jobs",
-    "intro": "A sedan for business, an electric SUV for quiet city work, a van for groups and gear. All under five years old, all serviced on schedule.",
+    "heading": "Five vehicles, one standard",
+    "intro": "From an executive sedan to a 19-seat group van, with two fully electric options in between. All under five years old, all serviced on schedule.",
     "from": "from",
     "currency": "CHF",
     "reserveBtn": "Reserve",
@@ -288,6 +348,32 @@
         "Takes skis, snowboards and golf bags without a roof box",
         "Individual climate control front and rear",
         "Our go-to vehicle for families and ski transfers"
+      ]
+    },
+    "eqs": {
+      "name": "Mercedes-Benz EQS SUV",
+      "tagline": "The quiet flagship",
+      "category": "Electric Flagship SUV",
+      "seats": "4 passengers",
+      "bags": "4 bags",
+      "features": [
+        "Fully electric flagship, Mercedes' quietest cabin",
+        "Extended range for longer cross-border journeys",
+        "Massaging rear seats and ambient lighting",
+        "A step up from the Model Y for clients who want more presence"
+      ]
+    },
+    "sprinter": {
+      "name": "Mercedes-Benz Sprinter",
+      "tagline": "For groups who travel together",
+      "category": "Group Van",
+      "seats": "Up to 19 passengers",
+      "bags": "20 bags",
+      "features": [
+        "Seats up to 19 passengers in genuine comfort",
+        "20 bags of luggage space, no roof box needed",
+        "Porter service and meet & greet included",
+        "The vehicle of choice for delegations and wedding parties"
       ]
     }
   },

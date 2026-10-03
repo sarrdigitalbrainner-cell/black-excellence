@@ -39,8 +39,14 @@
         "value": "24/7",
         "label": "Régulation et conduite, tous les jours de l'année"
       },
-      { "value": "4", "label": "Pays desservis depuis notre base genevoise" },
-      { "value": "30 min", "label": "Délai moyen de confirmation d'une réservation" }
+      {
+        "value": "4",
+        "label": "Pays desservis depuis notre base genevoise"
+      },
+      {
+        "value": "30 min",
+        "label": "Délai moyen de confirmation d'une réservation"
+      }
     ]
   },
   "services": {
@@ -87,12 +93,30 @@
       "routesKicker": "Trajets fréquents",
       "routesHeading": "Où nous allons le plus souvent",
       "routes": [
-        { "from": "Aéroport de Genève", "to": "Centre-ville de Genève" },
-        { "from": "Aéroport de Genève", "to": "Lausanne" },
-        { "from": "Aéroport de Genève", "to": "Montreux" },
-        { "from": "Aéroport de Genève", "to": "Annecy" },
-        { "from": "Aéroport de Zurich", "to": "Centre-ville de Zurich" },
-        { "from": "Milan Malpensa", "to": "Lugano" }
+        {
+          "from": "Aéroport de Genève",
+          "to": "Centre-ville de Genève"
+        },
+        {
+          "from": "Aéroport de Genève",
+          "to": "Lausanne"
+        },
+        {
+          "from": "Aéroport de Genève",
+          "to": "Montreux"
+        },
+        {
+          "from": "Aéroport de Genève",
+          "to": "Annecy"
+        },
+        {
+          "from": "Aéroport de Zurich",
+          "to": "Centre-ville de Zurich"
+        },
+        {
+          "from": "Milan Malpensa",
+          "to": "Lugano"
+        }
       ],
       "faq": [
         {
@@ -141,12 +165,30 @@
       "routesKicker": "Trajets fréquents",
       "routesHeading": "Les stations que nous desservons chaque semaine",
       "routes": [
-        { "from": "Aéroport de Genève", "to": "Verbier" },
-        { "from": "Aéroport de Genève", "to": "Chamonix" },
-        { "from": "Aéroport de Genève", "to": "Courchevel" },
-        { "from": "Aéroport de Genève", "to": "Megève" },
-        { "from": "Aéroport de Zurich", "to": "Zermatt (Täsch)" },
-        { "from": "Milan Malpensa", "to": "Cervinia" }
+        {
+          "from": "Aéroport de Genève",
+          "to": "Verbier"
+        },
+        {
+          "from": "Aéroport de Genève",
+          "to": "Chamonix"
+        },
+        {
+          "from": "Aéroport de Genève",
+          "to": "Courchevel"
+        },
+        {
+          "from": "Aéroport de Genève",
+          "to": "Megève"
+        },
+        {
+          "from": "Aéroport de Zurich",
+          "to": "Zermatt (Täsch)"
+        },
+        {
+          "from": "Milan Malpensa",
+          "to": "Cervinia"
+        }
       ],
       "faq": [
         {
@@ -195,12 +237,30 @@
       "routesKicker": "Prestations types",
       "routesHeading": "Comment les entreprises nous sollicitent",
       "routes": [
-        { "from": "Demi-journée", "to": "4 heures, plusieurs arrêts" },
-        { "from": "Journée complète", "to": "8 heures, chauffeur à disposition" },
-        { "from": "Accueil client", "to": "Aéroport vers votre bureau" },
-        { "from": "Roadshow", "to": "Genève · Lausanne · Zurich" },
-        { "from": "Soirée d'entreprise", "to": "Navettes retour pour vos invités" },
-        { "from": "Transfrontalier", "to": "Genève · Lyon · Milan" }
+        {
+          "from": "Demi-journée",
+          "to": "4 heures, plusieurs arrêts"
+        },
+        {
+          "from": "Journée complète",
+          "to": "8 heures, chauffeur à disposition"
+        },
+        {
+          "from": "Accueil client",
+          "to": "Aéroport vers votre bureau"
+        },
+        {
+          "from": "Roadshow",
+          "to": "Genève · Lausanne · Zurich"
+        },
+        {
+          "from": "Soirée d'entreprise",
+          "to": "Navettes retour pour vos invités"
+        },
+        {
+          "from": "Transfrontalier",
+          "to": "Genève · Lyon · Milan"
+        }
       ],
       "faq": [
         {
@@ -228,8 +288,8 @@
   },
   "fleet": {
     "kicker": "Les véhicules",
-    "heading": "Trois voitures, trois usages",
-    "intro": "Une berline pour les affaires, un SUV électrique pour la ville, un van pour les groupes et le matériel. Tous de moins de cinq ans, tous entretenus à échéance.",
+    "heading": "Cinq véhicules, une seule exigence",
+    "intro": "D'une berline exécutive à un van de groupe jusqu'à 19 places, avec deux options 100% électriques entre les deux. Tous de moins de cinq ans, tous entretenus à échéance.",
     "from": "dès",
     "currency": "CHF",
     "reserveBtn": "Réserver",
@@ -288,6 +348,32 @@
         "Accueille skis, snowboards et sacs de golf sans coffre de toit",
         "Climatisation individuelle à l'avant et à l'arrière",
         "Notre véhicule de référence pour les familles et les transferts ski"
+      ]
+    },
+    "eqs": {
+      "name": "Mercedes-Benz EQS SUV",
+      "tagline": "Le fleuron silencieux",
+      "category": "SUV électrique amiral",
+      "seats": "4 passagers",
+      "bags": "4 bagages",
+      "features": [
+        "Fleuron 100% électrique, l'habitacle le plus silencieux de Mercedes",
+        "Autonomie étendue pour les longs trajets transfrontaliers",
+        "Sièges arrière massants et éclairage d'ambiance",
+        "Un cran au-dessus de la Model Y pour une présence renforcée"
+      ]
+    },
+    "sprinter": {
+      "name": "Mercedes-Benz Sprinter",
+      "tagline": "Pour les groupes qui voyagent ensemble",
+      "category": "Van de groupe",
+      "seats": "Jusqu'à 19 passagers",
+      "bags": "20 bagages",
+      "features": [
+        "Jusqu'à 19 passagers dans un vrai confort",
+        "20 bagages sans coffre de toit",
+        "Service de portage et accueil personnalisé inclus",
+        "Le véhicule de référence pour les délégations et les mariages"
       ]
     }
   },
