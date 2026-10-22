@@ -17,8 +17,8 @@ export const VEHICLE_IDS = [
 ] as const;
 export type VehicleId = (typeof VEHICLE_IDS)[number];
 
-// Toutes les photos montrent un véhicule noir — présentation uniforme
-// sur l'ensemble de la flotte, y compris les deux nouveaux ajouts.
+// Les 5 photos sont des rendus de marque BLACKELITE : véhicule noir,
+// même salle d'exposition en marbre — présentation uniforme.
 export const VEHICLES: Record<
   VehicleId,
   { price: number; image: string; accent: string }
@@ -35,11 +35,9 @@ export const VEHICLES: Record<
   },
   eqs: {
     price: 199,
-    // Mercedes-Benz EQS SUV noir, cadre urbain — le modèle EQC fourni
-    // en référence a été abandonné par Mercedes en 2023 ; l'EQS SUV
-    // est son remplaçant actuel, donc le choix le plus pertinent.
-    image:
-      "https://images.pexels.com/photos/29779239/pexels-photo-29779239.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    // Mercedes-Benz EQS (berline) — remplace l'EQC (modèle abandonné par
+    // Mercedes en 2023).
+    image: "/images/fleet-eqs.jpg",
     accent: "#9FD8FF",
   },
   vclass: {
@@ -49,8 +47,7 @@ export const VEHICLES: Record<
   },
   sprinter: {
     price: 349,
-    image:
-      "https://images.pexels.com/photos/19871521/pexels-photo-19871521.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    image: "/images/fleet-sprinter.jpg",
     accent: "#D4AF37",
   },
 };

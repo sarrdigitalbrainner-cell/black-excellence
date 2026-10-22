@@ -35,7 +35,7 @@ dynamic rendering ».
 |---|---|
 | `/` | Hero, présentation, aperçu des services, flotte, zones desservies, atouts, CTA |
 | `/about` | Histoire de la société, valeurs, zones desservies |
-| `/fleet` | Les 3 véhicules en détail + standards d'entretien |
+| `/fleet` | Les 5 véhicules en détail + standards d'entretien |
 | `/services/airport-transfers` | Transferts aéroport |
 | `/services/ski-resort-transfers` | Transferts stations de ski |
 | `/services/business-travel` | Déplacements d'affaires |
@@ -87,17 +87,15 @@ dans `SERVICE_AREAS` (`lib/data.ts`), les noms de pays dans
 
 ## Flotte
 
-Mercedes-Benz Classe E · Tesla Model Y (2025) · Mercedes-Benz Classe V.
-Tarifs et images dans `VEHICLES` (`lib/data.ts`), textes dans
-`vehicles.*` des fichiers de traduction.
+Mercedes-Benz Classe E · Tesla Model Y (2025) · Mercedes-Benz EQS ·
+Mercedes-Benz Classe V · Mercedes-Benz Sprinter.
 
-**À vérifier avant mise en ligne** : la photo utilisée pour la Tesla
-provient d'Unsplash et correspond au millésime 2025 (« Juniper »), mais
-aucune banque d'images gratuite ne propose les vrais véhicules du
-client dans un décor suisse identifiable. Une mention « Photo
-d'illustration » s'affiche donc sur chaque carte. Dès que le client
-fournit ses propres photos, remplacez les URLs dans `lib/data.ts` et
-supprimez la mention (clé `fleet.imageNote`).
+Les 5 visuels sont des rendus de marque BLACKELITE (véhicule noir, même
+salle d'exposition en marbre) stockés dans `public/images/fleet-*.jpg`.
+Tarifs et chemins d'images dans `VEHICLES` (`lib/data.ts`), textes dans
+`vehicles.*` des fichiers de traduction. La mention « Photo
+d'illustration » (clé `fleet.imageNote`) reste affichée : supprimez-la
+quand les photos des vrais véhicules du client seront en ligne.
 
 ## Langues
 
